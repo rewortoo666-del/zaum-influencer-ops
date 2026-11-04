@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAUM Influencer Hub</title>
+  <!-- Tailwind CSS CDN для быстрой и чистой верстки -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Навигация -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+          Z
+        </div>
+        <div>
+          <h1 class="text-base font-bold leading-none text-slate-900">ZAUM • Influencer Ops</h1>
+          <p class="text-xs text-slate-500 mt-1">Управление интеграциями и аналитика</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          ● База активна
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
+
+    <!-- KPI / Первый экран -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+        <div class="text-xs font-medium text-slate-500 uppercase tracking-wider">Всего кампаний</div>
+        <div class="mt-2 text-2xl sm:text-3xl font-extrabold text-slate-900" id="stat-total">0</div>
+        <div class="mt-1 text-xs text-slate-400">Интеграций в пайплайне</div>
+      </div>
+      <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+        <div class="text-xs font-medium text-slate-500 uppercase tracking-wider">Общий бюджет</div>
+        <div class="mt-2 text-2xl sm:text-3xl font-extrabold text-indigo-600" id="stat-budget">0 ₽</div>
+        <div class="mt-1 text-xs text-slate-400">Размещение + себестоимость</div>
+      </div>
+      <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+        <div class="text-xs font-medium text-slate-500 uppercase tracking-wider">Суммарный охват</div>
+        <div class="mt-2 text-2xl sm:text-3xl font-extrabold text-slate-900" id="stat-reach">0</div>
+        <div class="mt-1 text-xs text-slate-400">Просмотры рилс + сторис</div>
+      </div>
+      <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+        <div class="text-xs font-medium text-slate-500 uppercase tracking-wider">Средний CPM</div>
+        <div class="mt-2 text-2xl sm:text-3xl font-extrabold text-emerald-600" id="stat-cpm">0 ₽</div>
+        <div class="mt-1 text-xs text-slate-400">По всем размещениям</div>
+      </div>
+    </div>
+
+    <!-- Панель управления и фильтрации -->
+    <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs space-y-4">
+      <!-- Статусы воронки -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 text-sm no-scrollbar">
+        <button onclick="setStatusFilter('all')" class="status-btn px-3.5 py-1.5 rounded-xl font-medium transition text-white bg-indigo-600 shadow-xs" data-status="all">Все</button>
+        <button onclick="setStatusFilter('Согласование')" class="status-btn px-3.5 py-1.5 rounded-xl font-medium transition text-slate-600 hover:bg-slate-100" data-status="Согласование">Согласование</button>
+        <button onclick="setStatusFilter('Запланировано')" class="status-btn px-3.5 py-1.5 rounded-xl font-medium transition text-slate-600 hover:bg-slate-100" data-status="Запланировано">Запланировано</button>
+        <button onclick="setStatusFilter('Опубликовано')" class="status-btn px-3.5 py-1.5 rounded-xl font-medium transition text-slate-600 hover:bg-slate-100" data-status="Опубликовано">Опубликовано</button>
+        <button onclick="setStatusFilter('Результаты получены')" class="status-btn px-3.5 py-1.5 rounded-xl font-medium transition text-slate-600 hover:bg-slate-100" data-status="Результаты получены">Результаты получены</button>
+      </div>
+
+      <!-- Поиск и дропдауны -->
+      <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-1 border-t border-slate-100">
+        <div class="sm:col-span-6 relative">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Поиск по блогеру, артикулу или комментарию..." 
+            oninput="handleFilter()"
+            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition"
+          >
+        </div>
+        <div class="sm:col-span-3">
+          <select id="platformFilter" onchange="handleFilter()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition">
+            <option value="all">Все площадки</option>
+            <option value="Telegram">Telegram</option>
+            <option value="VK">VK</option>
+            <option value="YouTube">YouTube</option>
+          </select>
+        </div>
+        <div class="sm:col-span-3">
+          <select id="budgetFilter" onchange="handleFilter()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition">
+            <option value="all">Любой тип оплаты</option>
+            <option value="Платное размещение">Платное</option>
+            <option value="Бартер">Бартер</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Сетка карточек блогеров -->
+    <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Рендерится через JS -->
+    </div>
+
+    <!-- Пустое состояние -->
+    <div id="emptyState" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200">
+      <div class="text-3xl mb-2">🔍</div>
+      <div class="text-slate-900 font-semibold">Ничего не найдено</div>
+      <div class="text-slate-500 text-sm mt-1">Попробуйте изменить параметры поиска или фильтров</div>
+    </div>
+
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-400">
+    Тестовое задание ZAUM • Демо-прототип для работы с инфлюенсерами
+  </footer>
+
+  <!-- Скрипт с данными из таблицы и логикой фильтрации -->
+  <script>
+    // Исходные данные, оцифрованные из демонстрационной таблицы
+    const bloggersData = [
+      { id: 1, sku: 'DEMO-102', blogger: 'Блогер 001', platform: 'Telegram', budgetType: 'Платное размещение', followers: 23200, age: '25-34', geo: 'РФ 65%', stories: 3200, reels: 9600, price: 6300, cost: 940, format: 'Короткое видео', status: 'Согласование', date: '2026-11-02', url: 'https://example.com/demo1', comment: 'Нужна дата публикации', cpm: 1968.75 },
+      { id: 2, sku: 'DEMO-103', blogger: 'Блогер 002', platform: 'VK', budgetType: 'Платное размещение', followers: 31400, age: '35-44', geo: 'РФ 90%', stories: 3900, reels: 15600, price: 7600, cost: 980, format: 'Пост', status: 'Опубликовано', date: '2026-11-03', url: 'https://example.com/demo2', comment: 'Проверить результаты', cpm: 1948.71 },
+      { id: 3, sku: 'DEMO-104', blogger: 'Блогер 003', platform: 'YouTube', budgetType: 'Бартер', followers: 39600, age: '18-24', geo: 'РФ 80%', stories: 4600, reels: 9200, price: 8900, cost: 1020, format: 'Обзор', status: 'Результаты получены', date: '2026-11-04', url: 'https://example.com/demo3', comment: 'Демонстрационные данные', cpm: 1934.78 },
+      { id: 4, sku: 'DEMO-105', blogger: 'Блогер 004', platform: 'Telegram', budgetType: 'Платное размещение', followers: 47800, age: '25-34', geo: 'РФ 65%', stories: 5300, reels: 15900, price: 10200, cost: 1060, format: 'Короткое видео', status: 'Запланировано', date: '2026-11-05', url: 'https://example.com/demo4', comment: 'Нужна дата публикации', cpm: 1924.52 },
+      { id: 5, sku: 'DEMO-106', blogger: 'Блогер 005', platform: 'VK', budgetType: 'Платное размещение', followers: 56000, age: '35-44', geo: 'РФ 90%', stories: 6000, reels: 24000, price: 11500, cost: 1100, format: 'Пост', status: 'Согласование', date: '2026-11-06', url: 'https://example.com/demo5', comment: 'Проверить результаты', cpm: 1916.66 },
+      { id: 6, sku: 'DEMO-107', blogger: 'Блогер 006', platform: 'YouTube', budgetType: 'Бартер', followers: 64200, age: '18-24', geo: 'РФ 80%', stories: 6700, reels: 13400, price: 12800, cost: 1140, format: 'Обзор', status: 'Опубликовано', date: '2026-11-07', url: 'https://example.com/demo6', comment: 'Демонстрационные данные', cpm: 1910.44 },
+      { id: 7, sku: 'DEMO-108', blogger: 'Блогер 007', platform: 'Telegram', budgetType: 'Платное размещение', followers: 72400, age: '25-34', geo: 'РФ 65%', stories: 7400, reels: 22200, price: 14100, cost: 1180, format: 'Короткое видео', status: 'Результаты получены', date: '2026-11-08', url: 'https://example.com/demo7', comment: 'Нужна дата публикации', cpm: 1905.40 },
+      { id: 8, sku: 'DEMO-109', blogger: 'Блогер 008', platform: 'VK', budgetType: 'Платное размещение', followers: 80600, age: '35-44', geo: 'РФ 90%', stories: 8100, reels: 32400, price: 15400, cost: 1220, format: 'Пост', status: 'Запланировано', date: '2026-11-09', url: 'https://example.com/demo8', comment: 'Проверить результаты', cpm: 1901.23 },
+      { id: 9, sku: 'DEMO-110', blogger: 'Блогер 009', platform: 'YouTube', budgetType: 'Бартер', followers: 88800, age: '18-24', geo: 'РФ 80%', stories: 8800, reels: 17600, price: 16700, cost: 1260, format: 'Обзор', status: 'Согласование', date: '2026-11-10', url: 'https://example.com/demo9', comment: 'Демонстрационные данные', cpm: 1897.72 },
+      { id: 10, sku: 'DEMO-111', blogger: 'Блогер 010', platform: 'Telegram', budgetType: 'Платное размещение', followers: 97000, age: '25-34', geo: 'РФ 65%', stories: 9500, reels: 28500, price: 18000, cost: 1300, format: 'Короткое видео', status: 'Опубликовано', date: '2026-11-11', url: 'https://example.com/demo10', comment: 'Нужна дата публикации', cpm: 1894.73 },
+      { id: 11, sku: 'DEMO-112', blogger: 'Блогер 011', platform: 'VK', budgetType: 'Платное размещение', followers: 105200, age: '35-44', geo: 'РФ 90%', stories: 10200, reels: 40800, price: 19300, cost: 1340, format: 'Пост', status: 'Результаты получены', date: '2026-11-12', url: 'https://example.com/demo11', comment: 'Проверить результаты', cpm: 1892.15 },
+      { id: 12, sku: 'DEMO-113', blogger: 'Блогер 012', platform: 'YouTube', budgetType: 'Бартер', followers: 113400, age: '18-24', geo: 'РФ 80%', stories: 10900, reels: 21800, price: 20600, cost: 1380, format: 'Обзор', status: 'Запланировано', date: '2026-11-13', url: 'https://example.com/demo12', comment: 'Демонстрационные данные', cpm: 1889.90 },
+      { id: 13, sku: 'DEMO-114', blogger: 'Блогер 013', platform: 'Telegram', budgetType: 'Платное размещение', followers: 121600, age: '25-34', geo: 'РФ 65%', stories: 11600, reels: 34800, price: 21900, cost: 1420, format: 'Короткое видео', status: 'Согласование', date: '2026-11-14', url: 'https://example.com/demo13', comment: 'Нужна дата публикации', cpm: 1887.93 },
+      { id: 14, sku: 'DEMO-115', blogger: 'Блогер 014', platform: 'VK', budgetType: 'Платное размещение', followers: 129800, age: '35-44', geo: 'РФ 90%', stories: 12300, reels: 49200, price: 23200, cost: 1460, format: 'Пост', status: 'Опубликовано', date: '2026-11-15', url: 'https://example.com/demo14', comment: 'Проверить результаты', cpm: 1886.17 },
+      { id: 15, sku: 'DEMO-116', blogger: 'Блогер 015', platform: 'YouTube', budgetType: 'Бартер', followers: 138000, age: '18-24', geo: 'РФ 80%', stories: 13000, reels: 26000, price: 24500, cost: 1500, format: 'Обзор', status: 'Результаты получены', date: '2026-11-16', url: 'https://example.com/demo15', comment: 'Демонстрационные данные', cpm: 1884.61 }
+    ];
+
+    let currentStatus = 'all';
+
+    function getStatusBadge(status) {
+      switch(status) {
+        case 'Согласование':
+          return '<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">Согласование</span>';
+        case 'Запланировано':
+          return '<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">Запланировано</span>';
+        case 'Опубликовано':
+          return '<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">Опубликовано</span>';
+        case 'Результаты получены':
+          return '<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Результаты получены</span>';
+        default:
+          return `<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">${status}</span>`;
+      }
+    }
+
+    function getPlatformIcon(platform) {
+      if (platform === 'Telegram') return '<span class="text-sky-500 font-bold">TG</span>';
+      if (platform === 'VK') return '<span class="text-blue-600 font-bold">VK</span>';
+      if (platform === 'YouTube') return '<span class="text-rose-600 font-bold">YT</span>';
+      return platform;
+    }
+
+    function setStatusFilter(status) {
+      currentStatus = status;
+      document.querySelectorAll('.status-btn').forEach(btn => {
+        if (btn.dataset.status === status) {
+          btn.className = 'status-btn px-3.5 py-1.5 rounded-xl font-medium transition text-white bg-indigo-600 shadow-xs';
+        } else {
+          btn.className = 'status-btn px-3.5 py-1.5 rounded-xl font-medium transition text-slate-600 hover:bg-slate-100';
+        }
+      });
+      handleFilter();
+    }
+
+    function handleFilter() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const platform = document.getElementById('platformFilter').value;
+      const budget = document.getElementById('budgetFilter').value;
+
+      const filtered = bloggersData.filter(item => {
+        const matchStatus = currentStatus === 'all' || item.status === currentStatus;
+        const matchPlatform = platform === 'all' || item.platform === platform;
+        const matchBudget = budget === 'all' || item.budgetType === budget;
+        const matchQuery = !query || 
+          item.blogger.toLowerCase().includes(query) ||
+          item.sku.toLowerCase().includes(query) ||
+          item.comment.toLowerCase().includes(query);
+
+        return matchStatus && matchPlatform && matchBudget && matchQuery;
+      });
+
+      render(filtered);
+    }
+
+    function updateKPI(data) {
+      const total = data.length;
+      const totalBudget = data.reduce((acc, curr) => acc + curr.price + curr.cost, 0);
+      const totalReach = data.reduce((acc, curr) => acc + curr.stories + curr.reels, 0);
+      const avgCPM = total > 0 ? Math.round(data.reduce((acc, curr) => acc + curr.cpm, 0) / total) : 0;
+
+      document.getElementById('stat-total').textContent = total;
+      document.getElementById('stat-budget').textContent = totalBudget.toLocaleString('ru-RU') + ' ₽';
+      document.getElementById('stat-reach').textContent = totalReach.toLocaleString('ru-RU');
+      document.getElementById('stat-cpm').textContent = avgCPM.toLocaleString('ru-RU') + ' ₽';
+    }
+
+    function render(data) {
+      updateKPI(data);
+      const grid = document.getElementById('cardsGrid');
+      const empty = document.getElementById('emptyState');
+
+      if (data.length === 0) {
+        grid.innerHTML = '';
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      empty.classList.add('hidden');
+      grid.innerHTML = data.map(item => `
+        <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <!-- Верх карточки -->
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono font-medium">${item.sku}</span>
+                  <span class="text-xs font-semibold">${getPlatformIcon(item.platform)}</span>
+                </div>
+                <h3 class="font-bold text-slate-900 text-lg mt-1">${item.blogger}</h3>
+              </div>
+              <div>${getStatusBadge(item.status)}</div>
+            </div>
+
+            <!-- Характеристики -->
+            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div>
+                <span class="text-slate-400">Формат:</span>
+                <span class="font-medium text-slate-700 ml-1">${item.format}</span>
+              </div>
+              <div>
+                <span class="text-slate-400">Дата:</span>
+                <span class="font-medium text-slate-700 ml-1">${item.date}</span>
+              </div>
+              <div>
+                <span class="text-slate-400">Подписчики:</span>
+                <span class="font-medium text-slate-700 ml-1">${item.followers.toLocaleString('ru-RU')}</span>
+              </div>
+              <div>
+                <span class="text-slate-400">ЦА:</span>
+                <span class="font-medium text-slate-700 ml-1">${item.age} (${item.geo})</span>
+              </div>
+            </div>
+
+            <!-- Блок метрик и стоимости -->
+            <div class="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-100/80 flex items-center justify-between text-xs">
+              <div>
+                <div class="text-slate-400">Стоимость / Товар</div>
+                <div class="font-bold text-slate-900 text-sm mt-0.5">${item.price.toLocaleString('ru-RU')} ₽ <span class="text-slate-400 font-normal">+${item.cost} ₽</span></div>
+              </div>
+              <div class="text-right">
+                <div class="text-slate-400">Рилс / Сторис</div>
+                <div class="font-semibold text-slate-800 text-sm mt-0.5">${item.reels.toLocaleString('ru-RU')} / ${item.stories.toLocaleString('ru-RU')}</div>
+              </div>
+            </div>
+
+            <!-- Комментарий -->
+            ${item.comment ? `
+              <div class="mt-3 text-xs text-slate-500 bg-amber-50/60 text-amber-900 px-3 py-1.5 rounded-lg border border-amber-200/50">
+                💬 ${item.comment}
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- Низ карточки -->
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
+              CPM: ~${Math.round(item.cpm)} ₽
+            </span>
+            <a href="${item.url}" target="_blank" class="text-xs text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center gap-1">
+              Ссылка на пост →
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Инициализация
+    render(bloggersData);
+  </script>
+</body>
+</html>
