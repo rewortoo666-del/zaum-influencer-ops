@@ -6544,7 +6544,13 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const c = CATS.find(x => x.id === currentCat);
       if (c && (c.brand || c.brands)) return { id: p.cat, label: catLabel(p.cat), sort: 1 };
       const n = normName(p.base);
-      if (p.cat === "glasses" || p.cat === "cases" || p.cat === "accessories") {
+      if (p.cat === "glasses") {   /* стёкла: по брендам, линзы камеры — отдельной группой */
+        const br = String(p.brand || "Прочее").toUpperCase();
+        const lens = /lens|линз|camera|камер/i.test(n);
+        const bi = br === "SUPGLASS" ? 0 : br === "REMAX" ? 10 : 20;
+        return { id: br + (lens ? "|lens" : ""), label: br + (lens ? " · Линзы камеры" : " · Стёкла"), sort: bi + (lens ? 1 : 0) };
+      }
+      if (p.cat === "cases" || p.cat === "accessories") {
         const m = phoneModel(n);
         if (m) return m;
         const o = otherDevice(n);
@@ -6604,7 +6610,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
         if (currentSub === null) {                         /* уровень 2: модели / бренды / типы */
           lastSubs = subs;
           const used = {};
-          crumb.innerHTML = '<span class="cc-title">' + catLabel(currentCat) + ' <small>· выберите ' + (currentCat === "cases" || currentCat === "glasses" || currentCat === "accessories" ? "модель" : "раздел") + '</small></span>' +
+          crumb.innerHTML = '<span class="cc-title">' + catLabel(currentCat) + ' <small>· выберите ' + (currentCat === "cases" || currentCat === "accessories" ? "модель" : "раздел") + '</small></span>' +
             '<button class="cc-btn" type="button" onclick="openSub(-1)">Все (' + listByCat(currentCat).length + ')</button>';
           showTiles(subs.map((g, i) => '<button class="ptile" type="button" onclick="openSub(' + i + ')">' + imgTag(coverImg(g.items, used)) +
             '<span class="ptile-shade"></span><span class="ptile-body"><b>' + coEsc(g.label) + '</b><i>' + g.items.length + ' поз.</i></span></button>').join(""), true);
