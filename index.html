@@ -388,6 +388,7 @@
       -webkit-text-fill-color: transparent;
       position: relative; z-index: 1;
     }
+    .metric b.metric-wide { font-size: 13px; letter-spacing: -0.03em; white-space: nowrap; }
     .metric span {
       display: block; margin-top: 4px; font-size: 9px; line-height: 1.25;
       font-weight: 700; color: #6b7c93;
@@ -5045,7 +5046,7 @@
 .pm-post-btn:active { transform: scale(.98); }
 
 /* ===== v5: ввод количества, быстрый набор, доставка ===== */
-.benefits { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.benefits { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
 .qty-input { box-sizing: border-box; text-align: center; font-family: inherit; font-weight: 800; color: #0b1b33; background: #fff;
   border: 1px solid rgba(0,119,255,.3); border-radius: 10px; -moz-appearance: textfield; appearance: textfield; }
 .qty-input::-webkit-outer-spin-button, .qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -5181,15 +5182,19 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     <section class="benefits" aria-label="Преимущества">
       <div class="benefit">
         <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17.5" cy="18.5" r="1.6"/></svg></div>
-        <span>Доставка по РФ<br>и СДЭК</span>
+        <span>Отправка по РФ<br>(СДЭК и автобусы)</span>
       </div>
       <div class="benefit">
         <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 2.8 7.9 7 9 4.2-1.1 7-4.8 7-9V6l-7-3z"/><path d="m8.8 12 2.1 2.1 4.3-4.3"/></svg></div>
-        <span>100%<br>оригинал</span>
+        <span>100% оригинал<br>(заводская пломба)</span>
       </div>
       <div class="benefit">
-        <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M18.5 5.5 5.5 18.5"/><circle cx="8" cy="8" r="2.4"/><circle cx="16" cy="16" r="2.4"/></svg></div>
-        <span>Опт от 1 шт<br>5 000 ₽</span>
+        <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5.5h5V20"/></svg></div>
+        <span>Прямой склад<br>(павильон П42-44)</span>
+      </div>
+      <div class="benefit">
+        <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14.5 3v4.5H19"/><path d="M9 12.5h7M9 16h7"/></svg></div>
+        <span>Актуальный прайс<br>(21 поставщик в базе)</span>
       </div>
     </section>
 
@@ -5299,7 +5304,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       </article>
       <article class="metric">
         <div class="metric-ico"><svg viewBox="0 0 24 24"><path d="M12 3 14.2 8l5.3.5-4 3.6 1.2 5.2L12 14.8 7.3 17.3 8.5 12 4.5 8.5 9.8 8z"/></svg></div>
-        <b>14</b><span>брендов</span>
+        <b>14+</b><span>брендов</span>
       </article>
       <article class="metric">
         <div class="metric-ico"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 2.8 7.9 7 9 4.2-1.1 7-4.8 7-9V6l-7-3z"/><path d="m8.8 12 2.1 2.1 4.3-4.3"/></svg></div>
@@ -5307,7 +5312,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       </article>
       <article class="metric">
         <div class="metric-ico"><svg viewBox="0 0 24 24"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17.5" cy="18.5" r="1.6"/></svg></div>
-        <b>18:00</b><span>отгрузка день в день</span>
+        <b class="metric-wide">СДЭК / РФ</b><span>отправка заказов</span>
       </article>
     </section>
 
@@ -6192,8 +6197,16 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     let PRODUCTS = (window.EMBEDDED_PRODUCTS || []).map(normalizeProductFromDB).filter(Boolean);
 
     /* Общее число позиций: всё, что показывает «N позиций», берётся из PRODUCTS.length */
+    function uniquePosCount() {
+      var seen = Object.create(null), n = 0;
+      for (var i = 0; i < PRODUCTS.length; i++) {
+        var p = PRODUCTS[i], k = String(p.brand || "") + "|" + String(p.name || "");
+        if (!seen[k]) { seen[k] = 1; n++; }
+      }
+      return n;
+    }
     function fmtPosCount() {
-      return String(PRODUCTS.length).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00A0");
+      return String(uniquePosCount()).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00A0");
     }
     function updateCatalogCounts() {
       if (!PRODUCTS.length) return;
