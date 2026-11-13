@@ -5098,7 +5098,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
         <div class="di-collapsed" id="di-collapsed">
           <span class="di-live-dot"></span>
           <span class="di-icon">⚡</span>
-          <span class="di-pill-title" id="di-pill-title">Склад ТЯК «Москва» П42/44 • <strong><span data-pos-count>…</span> поз.</strong></span>
+          <span class="di-pill-title" id="di-pill-title">Склад ТЯК «Москва» П42/44 • <strong><span data-pos-count>3 111</span> поз.</strong></span>
           <span class="di-live-badge">LIVE</span>
         </div>
         <div class="di-expanded" id="di-expanded">
@@ -5115,12 +5115,12 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
           <div class="di-exp-cards">
             <div class="di-exp-card">
               <span class="di-stat-tag">ПОЗИЦИЙ В КАТАЛОГЕ</span>
-              <div class="di-stat-number" id="di-exp-count" data-pos-count>…</div>
+              <div class="di-stat-number" id="di-exp-count" data-pos-count>3 111</div>
               <span class="di-stat-note">Цены фиксированы</span>
             </div>
             <div class="di-exp-card">
               <span class="di-stat-tag">НАЛИЧИЕ НА СКЛАДЕ</span>
-              <div class="di-stat-number text-emerald"><span data-pos-count>…</span> поз.</div>
+              <div class="di-stat-number text-emerald"><span data-pos-count>3 111</span> поз.</div>
               <span class="di-stat-note">ТЯК «Москва» (Люблино), пав. П42/44</span>
             </div>
           </div>
@@ -5219,7 +5219,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
           <div class="hero-copy">
             <div class="hero-badge">ПРЯМЫЕ ПОСТАВКИ</div>
             <h2>ACEFAST • JOYROOM • MOMAX</h2>
-            <p>Прямые поставки с фабрик • <span data-pos-count>…</span> позиций в наличии</p>
+            <p>Прямые поставки с фабрик • <span data-pos-count>3 111</span> позиций в наличии</p>
             <div class="hero-nav">
               <div class="dots" aria-hidden="true"><i></i><i class="active"></i><i></i></div>
             </div>
@@ -5300,7 +5300,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     <section class="metrics" aria-label="Метрики">
       <article class="metric">
         <div class="metric-ico"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1.2 11H5.2L4 8z"/><path d="M8 8V6.5A4 4 0 0 1 12 3a4 4 0 0 1 4 3.5V8"/></svg></div>
-        <b data-pos-count>…</b><span>позиций</span>
+        <b data-pos-count>3 111</b><span>позиций</span>
       </article>
       <article class="metric">
         <div class="metric-ico"><svg viewBox="0 0 24 24"><path d="M12 3 14.2 8l5.3.5-4 3.6 1.2 5.2L12 14.8 7.3 17.3 8.5 12 4.5 8.5 9.8 8z"/></svg></div>
@@ -5459,7 +5459,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       <div class="catalog-vip-bar">
         <div class="catalog-vip-status">
           <span class="catalog-vip-dot"></span>
-          <span>ТЯК «Москва» (Люблино), пав. П42/44 • <span data-pos-count>…</span> позиций</span>
+          <span>ТЯК «Москва» (Люблино), пав. П42/44 • <span data-pos-count>3 111</span> позиций</span>
         </div>
         
       </div>
@@ -6199,7 +6199,9 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     let PRODUCTS = (window.EMBEDDED_PRODUCTS || []).map(normalizeProductFromDB).filter(Boolean);
 
     /* Общее число позиций: всё, что показывает «N позиций», берётся из PRODUCTS.length */
+    var FIXED_POS_COUNT = 3111;  /* число позиций зафиксировано вручную */
     function uniquePosCount() {
+      return FIXED_POS_COUNT;
       var seen = Object.create(null), n = 0;
       for (var i = 0; i < PRODUCTS.length; i++) {
         var p = PRODUCTS[i], k = String(p.brand || "") + "|" + String(p.name || "");
@@ -6212,8 +6214,8 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     }
     function updateCatalogCounts() {
       if (!PRODUCTS.length) return;
-      var t = fmtPosCount();
-      document.querySelectorAll("[data-pos-count]").forEach(function (el) { el.textContent = t; });
+      var n = uniquePosCount(), t = fmtPosCount();
+      document.querySelectorAll("[data-pos-count]").forEach(function (el) { el.__to = n; el.textContent = t; });
     }
 
     function showCatalogSkeleton() {
@@ -10092,13 +10094,14 @@ img[data-ld="1"]{opacity:1;animation:none;transition:opacity .45s ease}
   function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,"\u00A0")}
   function count(el){
     if(el.__busy) return;
-    var to=parseInt((el.textContent||"").replace(/\D/g,""),10);
+    var to=el.__to||parseInt((el.textContent||"").replace(/\D/g,""),10);
     if(!to||RM||to===el.__last) return;
     el.__busy=1; el.__last=to; var t0=performance.now(), D=1100;
     (function step(t){
+      var tgt=el.__to||to;  /* цель может обновиться во время анимации */
       var p=Math.min(1,(t-t0)/D), e=1-Math.pow(1-p,4);
-      el.textContent=fmt(Math.round(to*e));
-      if(p<1) requestAnimationFrame(step); else {el.textContent=fmt(to); el.__busy=0;}
+      el.textContent=fmt(Math.round(tgt*e));
+      if(p<1) requestAnimationFrame(step); else {el.textContent=fmt(tgt); el.__last=tgt; el.__busy=0;}
     })(t0);
   }
 
