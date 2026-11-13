@@ -5471,9 +5471,9 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
         <button class="search-clear" type="button" onclick="clearCatalogSearch()" aria-label="Очистить">×</button>
       </div>
 
+      <div class="chips" id="cat-chips"></div>
       <div class="cat-crumb" id="cat-crumb"></div>
       <div class="ptiles" id="cat-tiles" style="margin-bottom:12px"></div>
-      <div class="chips" id="cat-chips"></div>
 
       <div id="offline-catalog-banner" class="offline-catalog-banner" style="display:none;align-items:center;gap:8px;margin-bottom:10px;padding:10px 12px;border-radius:12px;background:#fff8eb;border:1px solid #f59e0b;color:#92400e;font-size:12px;font-weight:700;">
         <span>⚠️</span>
@@ -6409,7 +6409,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
         <div class="product-photo">
           <button class="fav-btn ${liked ? "on" : ""}" type="button" aria-label="В избранное" onclick="event.stopPropagation();toggleFav('${p.id}', this)">${liked ? "♥" : "♡"}</button>
           ${badge}
-          <img src="${p.img}" alt="${p.base}" loading="lazy" onerror="this.remove();this.parentNode.classList.add('is-ph')">
+          <img src="${p.img}" alt="${p.base}" loading="lazy" onerror="var w=this.parentNode;this.remove();if(w)w.classList.add('is-ph')">
           
         </div>
         <h4 class="js-title">${title}</h4>
@@ -6471,6 +6471,18 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       onCatalogSearch("", true);
     }
 
+    /* Запрос вида «17 Pro» / «18 Pro Max» / «15»: ищем именно эту модель, а не любое вхождение
+       («17 Pro» не должен тянуть «17 Pro Max», «15» — «15 Pro» и «6.15») */
+    function modelQueryRe(q) {
+      var m = /^(?:i\s?phone\s*|iph\s*|ip\s*)?(1[0-8]|[6-9])\s*(pro\s*max|promax|pro|plus|air|mini|e)?$/i.exec(String(q).trim());
+      if (!m) return null;
+      var suf = (m[2] || "").toLowerCase().replace(/\s+/g, ""), tail;
+      if (suf === "promax") tail = "\\s*pro\\s*max";
+      else if (suf === "pro") tail = "\\s*pro(?!\\s*max)";
+      else if (suf) tail = "\\s*" + suf;
+      else tail = "(?!\\s*(?:pro|plus|air|mini|max|e(?![a-z])))";
+      return new RegExp("(?<![\\d.,])" + m[1] + tail + "(?![a-z0-9])", "i");
+    }
     function filterBySearch(list) {
       var res = list;
       if (currentCatalogFilter === "in-stock") {
@@ -6484,12 +6496,13 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       }
 
       if (!catalogQuery) return res;
+      const qRe = modelQueryRe(catalogQuery);
       return res.filter(p => {
         const hay = p._hay || (p._hay = [
           p.base, p.article, p.unit, p.condition, p.shop,
           ...(p.vars || []).map(v => v.label + " " + v.name)
         ].join(" ").toLowerCase());
-        return hay.includes(catalogQuery);
+        return qRe ? qRe.test(hay) : hay.includes(catalogQuery);
       });
     }
 
@@ -10194,6 +10207,14 @@ body::before{content:"";position:fixed;inset:-20vmax;z-index:-1;pointer-events:n
 .v2-page{animation:v2Up .5s cubic-bezier(.16,1,.3,1) both}
 @media (prefers-reduced-motion:reduce){body::before,.story-ring,.st-card,.st-card::before,.st-card::after,.st-emoji,.st-go::after,.home-how-step .how-ico,.st-body h3,.st-body p,.v2-page{animation:none!important}}
 </style>
+<script id="tab-closes-sheet-js">
+/* переключение вкладки нижней панели закрывает открытую карточку товара */
+document.addEventListener("click",function(e){
+  var t=e.target.closest&&e.target.closest(".tab"); if(!t) return;
+  var m=document.getElementById("product-modal");
+  if(m&&m.classList.contains("active")&&typeof closeProduct==="function") closeProduct();
+},true);
+</script>
 <script id="design-v2-js">
 (function(){
   var isl=document.getElementById("di-collapsed"); var wrap=isl&&isl.closest&&isl.closest("[role=region]");
@@ -10261,6 +10282,8 @@ body::before{content:"";position:fixed;inset:-20vmax;z-index:-1;pointer-events:n
 })();
 </script>
 <style id="perf-fix">
+.pf-hero{margin-top:16px}
+#screen-catalog{padding-bottom:150px}
 /* ===== PERF: убираем всё, что перерисовывается на каждом кадре в каталоге ===== */
 .product-card, .product-card.card-enter { animation: none !important; will-change: auto !important; }
 .product-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
@@ -10270,6 +10293,8 @@ body::before{content:"";position:fixed;inset:-20vmax;z-index:-1;pointer-events:n
 .ptile { content-visibility: auto; contain-intrinsic-size: auto 120px; }
 body::before { animation: none !important; }
 .tabbar { backdrop-filter: blur(12px) saturate(140%) !important; -webkit-backdrop-filter: blur(12px) saturate(140%) !important; }
+.catalog-search input[type=search]{-webkit-appearance:none;appearance:none;border:0!important;box-shadow:none!important;background:transparent!important}
+.catalog-search input[type=search]::-webkit-search-cancel-button,.catalog-search input[type=search]::-webkit-search-decoration{-webkit-appearance:none;display:none}
 </style>
 </body>
 </html>
