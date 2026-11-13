@@ -7,10 +7,10 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
   >
   <meta name="theme-color" content="#f4f7fc">
-  <title>П42-44 SUPGLASS | Опт и розница</title>
-  <meta name="description" content="Оптово-розничный склад аксессуаров П42-44 SUPGLASS, ТК Садовод, линия П, пав. 42-44. Опт от 1 шт." />
-  <meta property="og:title" content="П42-44 SUPGLASS | Опт и розница" />
-  <meta property="og:description" content="Оптово-розничный склад аксессуаров П42-44 SUPGLASS, ТК Садовод, линия П, пав. 42-44. Опт от 1 шт." />
+  <title>П42/44 SUPGLASS | Оптовый склад</title>
+  <meta name="description" content="Оптовый склад аксессуаров П42/44 SUPGLASS, ТЯК «Москва» (Люблино), пав. П42/44. Только опт." />
+  <meta property="og:title" content="П42/44 SUPGLASS | Оптовый склад" />
+  <meta property="og:description" content="Оптовый склад аксессуаров П42/44 SUPGLASS, ТЯК «Москва» (Люблино), пав. П42/44. Только опт." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -69,7 +69,7 @@
     .logo svg { width: 38px; height: 38px; filter: drop-shadow(0 0 10px rgba(0, 140, 255, 0.55)); }
     .brand-text { min-width: 0; overflow: hidden; }
     .brand-text h1 {
-      font-size: 15px; font-weight: 800; line-height: 0.98;
+      font-size: 19px; font-weight: 800; line-height: 0.95;
       letter-spacing: 0.08em; text-transform: uppercase; color: #0b1b33;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
@@ -214,7 +214,7 @@
       padding: 16px;
       overflow: hidden;
     }
-    .hero-copy { position: relative; z-index: 2; width: 52%; }
+    .hero-copy { position: relative; z-index: 2; width: 54%; }
     .hero-badge {
       display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px;
       background: linear-gradient(180deg, #1a86ff 0%, #0077ff 100%);
@@ -225,7 +225,7 @@
     .hero p { margin-top: 10px; font-size: 11px; line-height: 1.45; font-weight: 500; color: #4a5d75; }
 
     .hero-art {
-      position: absolute; right: 0; bottom: 0; width: 48%; height: 100%; z-index: 1;
+      position: absolute; right: 0; bottom: 0; width: 56%; height: 100%; z-index: 1;
       pointer-events: none;
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 26%);
       mask-image: linear-gradient(to right, transparent 0%, black 26%);
@@ -325,10 +325,10 @@
     @media (max-width: 400px) {
       .hero { min-height: 172px; }
       .hero-track, .hero-slide { height: 172px; }
-      .hero-copy { width: 52%; }
+      .hero-copy { width: 57%; }
       .hero h2 { font-size: 20px; }
       .hero p { font-size: 10px; }
-      .brand-text h1 { font-size: 15px; }
+      .brand-text h1 { font-size: 17px; }
       .contact-btn, .theme-btn, .menu-btn { width: 36px; height: 36px; }
     }
 
@@ -1248,7 +1248,7 @@
     }
     .tab { position:relative; }
 
-    /* ===== П42-44 SUPGLASS PROFILE REDESIGN ===== */
+    /* ===== П42/44 SUPGLASS PROFILE REDESIGN ===== */
     /* ===== PROFILE V2 ===== */
     .profile-page { padding-bottom: 22px; }
     .profile-updated {
@@ -4973,75 +4973,97 @@
 #cat-more:empty { display: none; }
 .cat-more-btn { width: 100%; height: 46px; margin: 12px 0 4px; border-radius: 14px; border: 1.5px solid #0077ff; background: #eaf3ff; color: #0077ff; font-size: 14px; font-weight: 800; }
 
+/* ===== v4: шапка, hero ===== */
+.header .brand-text h1 { font-size: 15px !important; letter-spacing: .05em !important; line-height: 1.05; }
+.header #header-sound-btn { display: none !important; }
+.hero .hero-copy { width: 52% !important; }
+.hero-badge { position: relative; }
+.hero-badge::after { content: ""; position: absolute; inset: -5px -7px; border-radius: 999px; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(60,170,255,.65), transparent 72%); filter: blur(7px); animation: badgeHalo 2.8s ease-in-out infinite; }
+@keyframes badgeHalo { 0%,100% { opacity: .35; transform: scale(.92); } 50% { opacity: 1; transform: scale(1.08); } }
+.hero-art img, .hero-art svg { transform: translate3d(calc(var(--px, 0) * -9px), calc(var(--py, 0) * -5px - var(--sy, 0) * .05px), 0) scale(1.05); transition: transform .28s ease-out; }
+@media (prefers-reduced-motion: reduce) { .hero-badge::after { animation: none; } .hero-art img, .hero-art svg { transform: none; transition: none; } }
 
-    /* ===== PREMIUM B2B HOME / STORIES / BRAND SHELF / SORT / CART ===== */
-    #header-sound-btn { display: none !important; }
-    .brand-text h1 { font-size: 15px !important; letter-spacing: .045em !important; }
-    .hero-copy { width: 52% !important; }
-    .hero-art { width: 48% !important; }
-    .hero-badge { animation: heroBadgePulse 4.2s ease-in-out infinite; }
-    @keyframes heroBadgePulse { 0%,100% { box-shadow: 0 8px 18px rgba(0,119,255,.25), 0 0 0 rgba(0,153,255,0); } 50% { box-shadow: 0 8px 22px rgba(0,119,255,.34), 0 0 20px rgba(0,153,255,.22); } }
-    .home-stories { display:flex; gap:13px; overflow-x:auto; margin:13px -2px 0; padding:3px 2px 7px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
-    .home-stories::-webkit-scrollbar,.brand-shelf::-webkit-scrollbar,.catalog-sort::-webkit-scrollbar { display:none; }
-    .story-bubble { flex:0 0 65px; width:65px; border:0; background:transparent; display:flex; flex-direction:column; align-items:center; gap:6px; color:#33445b; font:700 10px/1.2 Inter,sans-serif; cursor:pointer; }
-    .story-ring { width:59px; height:59px; padding:3px; border-radius:50%; display:grid; place-items:center; background:conic-gradient(from 20deg,#04c7ff,#5d5cff,#b84cff,#ff7a45,#04c7ff); box-shadow:0 5px 16px rgba(0,108,255,.16); transition:transform .25s ease,filter .25s ease; }
-    .story-ring::before { content:""; position:absolute; }
-    .story-thumb { width:51px; height:51px; border-radius:50%; display:grid; place-items:center; overflow:hidden; background:linear-gradient(145deg,#102845,#07182c); border:2px solid #f4f7fc; box-shadow:inset 0 0 18px rgba(0,153,255,.22); }
-    .story-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
-    .story-thumb .story-emoji { width:100%; height:100%; border:0; box-shadow:none; }
-    .story-emoji { width:51px; height:51px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(145deg,#102845,#07182c); border:2px solid #f4f7fc; color:#fff; font-size:23px; box-shadow:inset 0 0 18px rgba(0,153,255,.22); }
-    .story-bubble:active .story-ring { transform:scale(.94); filter:brightness(1.12); }
-    .brand-shelf-section { margin-top:20px; }
-    .brand-shelf { display:flex; gap:9px; overflow-x:auto; padding:2px 1px 8px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
-    .brand-shelf-card { flex:0 0 116px; min-height:83px; border:1px solid rgba(0,119,255,.13); border-radius:16px; padding:11px 10px; text-align:left; background:linear-gradient(145deg,#fff,#edf4ff); box-shadow:0 7px 18px rgba(20,55,100,.06),inset 0 1px 0 #fff; color:#10233d; display:flex; flex-direction:column; justify-content:space-between; gap:8px; cursor:pointer; transition:transform .2s ease,border-color .2s ease; }
-    .brand-shelf-card:active { transform:scale(.96); border-color:#168bff; }
-    .brand-shelf-name { font-size:14px; line-height:1.05; font-weight:900; letter-spacing:-.035em; }
-    .brand-shelf-count { color:#70829b; font-size:10px; font-weight:700; }
-    .brand-shelf-mark { width:25px; height:3px; border-radius:99px; background:linear-gradient(90deg,#0077ff,#36c7ff); }
-    .catalog-sort { display:flex; align-items:center; gap:6px; overflow-x:auto; margin:0 0 11px; padding:2px 0 5px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
-    .catalog-sort-label { flex:0 0 auto; font-size:10px; font-weight:800; color:#7a8ba2; margin-right:2px; }
-    .catalog-sort-btn { flex:0 0 auto; min-height:30px; padding:0 10px; border-radius:999px; background:#fff; border:1px solid rgba(15,40,80,.1); color:#41546d; font-size:10px; font-weight:800; white-space:nowrap; }
-    .catalog-sort-btn.active { color:#fff; border-color:#087cff; background:linear-gradient(135deg,#087cff,#00a4ff); box-shadow:0 4px 11px rgba(0,119,255,.2); }
-    .reseller-copy-btn { width:100%; min-height:44px; margin:9px 0 3px; padding:9px 12px; border:1px solid rgba(0,119,255,.22); border-radius:13px; background:linear-gradient(135deg,#f2f8ff,#fff); color:#075bb8; font-size:12px; font-weight:800; box-shadow:0 5px 14px rgba(0,90,180,.07); cursor:pointer; }
-    .reseller-copy-btn:active { transform:scale(.985); background:#eaf4ff; }
-    .co-delivery-progress { margin:14px 0 6px; padding:11px 12px; border:1px solid rgba(0,119,255,.13); border-radius:14px; background:linear-gradient(135deg,#f4f9ff,#fff); }
-    .co-progress-top { display:flex; align-items:center; justify-content:space-between; gap:8px; color:#425873; font-size:11px; font-weight:800; }
-    .co-progress-top b { color:#087cff; font-size:11px; }
-    .co-progress-track { height:7px; margin-top:9px; border-radius:99px; background:#dce8f6; overflow:hidden; }
-    .co-progress-track span { display:block; height:100%; width:0; border-radius:99px; background:linear-gradient(90deg,#0077ff,#12c8d6); box-shadow:0 0 12px rgba(0,145,255,.3); transition:width .35s cubic-bezier(.16,1,.3,1); }
-    .co-progress-note { margin-top:6px; color:#7a8ba2; font-size:10px; font-weight:700; }
+/* ===== v4: Stories ===== */
+.stories { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 10px; margin: 2px 0 6px; scrollbar-width: none; scroll-snap-type: x proximity; }
+.stories::-webkit-scrollbar, .brand-rail::-webkit-scrollbar, .cat-sort::-webkit-scrollbar { display: none; }
+.story { flex: 0 0 auto; width: 68px; display: flex; flex-direction: column; align-items: center; gap: 6px; border: 0; background: none; padding: 0; font-family: inherit; scroll-snap-align: start; }
+.story-ring { width: 64px; height: 64px; padding: 3px; border-radius: 50%; box-shadow: 0 0 14px rgba(46,123,255,.5);
+  background: conic-gradient(from 200deg, #00e5ff, #2e7bff, #a24dff, #ff3dcb, #00e5ff); transition: transform .2s; }
+.story:active .story-ring { transform: scale(.94); }
+.story-in { width: 100%; height: 100%; border-radius: 50%; border: 2.5px solid #fff; overflow: hidden; display: grid; place-items: center;
+  background: linear-gradient(135deg, #0a1d36, #0b4a9a); font-size: 24px; }
+.story-in img { width: 100%; height: 100%; object-fit: cover; display: block; background: #fff; }
+.story.seen .story-ring { background: #c9d4e3; box-shadow: none; }
+.story-lab { max-width: 68px; font-size: 11px; font-weight: 700; color: #0b1b33; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#story-modal { position: fixed; inset: 0; z-index: 2500; display: flex; align-items: center; justify-content: center; background: rgba(2,6,14,.9); opacity: 0; pointer-events: none; transition: opacity .22s; }
+#story-modal.open { opacity: 1; pointer-events: auto; }
+.st-card { position: relative; width: min(100%, 430px); height: 100dvh; display: flex; flex-direction: column; color: #fff; overflow: hidden;
+  background: radial-gradient(120% 70% at 80% 0%, rgba(46,123,255,.55), transparent 60%), linear-gradient(165deg, #081a33 0%, #0a2f63 60%, #0a5fc4 100%); }
+@media (min-width: 440px) { .st-card { height: min(92dvh, 780px); border-radius: 28px; box-shadow: 0 30px 80px rgba(0,0,0,.6); } }
+.st-bars { display: flex; gap: 4px; padding: calc(env(safe-area-inset-top, 0px) + 12px) 12px 0; }
+.st-bar { flex: 1; height: 3px; border-radius: 3px; background: rgba(255,255,255,.28); overflow: hidden; }
+.st-bar i { display: block; height: 100%; width: 0; background: #fff; }
+.st-bar.done i { width: 100%; }
+.st-bar.run i { animation: stFill var(--st-dur, 5s) linear forwards; }
+.st-card.paused .st-bar.run i { animation-play-state: paused; }
+@keyframes stFill { to { width: 100%; } }
+.st-top { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px 4px; }
+.st-who { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.st-dot { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); }
+.st-x { width: 34px; height: 34px; border: 0; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 15px; position: relative; z-index: 5; }
+.st-tap { position: absolute; top: 64px; bottom: 90px; width: 24%; border: 0; background: none; z-index: 3; }
+.st-tap.l { left: 0; } .st-tap.r { right: 0; }
+.st-body { position: relative; flex: 1; min-height: 0; overflow: auto; padding: 8px 22px 12px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+.st-emoji { font-size: 56px; line-height: 1; filter: drop-shadow(0 8px 18px rgba(0,180,255,.5)); }
+.st-body h3 { font-size: 28px; line-height: 1.08; font-weight: 800; letter-spacing: -.02em; }
+.st-body p { font-size: 14px; line-height: 1.5; color: #d3e5ff; }
+.st-items { position: relative; z-index: 4; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 4px; }
+.st-item { padding: 6px; border-radius: 14px; text-align: left; color: #fff; font-family: inherit; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); }
+.st-item img { width: 100%; height: 74px; object-fit: cover; border-radius: 10px; background: #fff; display: block; }
+.st-item span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin: 6px 0 3px; font-size: 10px; line-height: 1.2; color: #d3e5ff; }
+.st-item b { font-size: 12px; }
+.st-go { margin: 6px 16px calc(env(safe-area-inset-bottom, 0px) + 16px); height: 52px; border: 0; border-radius: 16px; color: #fff; font-size: 15px; font-weight: 800; position: relative; z-index: 5;
+  background: linear-gradient(90deg, #00c2ff, #2e7bff 60%, #7b5cff); box-shadow: 0 10px 26px rgba(0,140,255,.45); }
 
-    /* Full-screen stories viewer */
-    .story-modal { position:fixed; inset:0; z-index:2200; display:flex; justify-content:center; align-items:center; padding:12px; background:rgba(3,10,22,.92); opacity:0; pointer-events:none; transition:opacity .22s ease; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
-    .story-modal.open { opacity:1; pointer-events:auto; }
-    .story-dialog { width:min(100%,430px); height:min(92dvh,780px); min-height:520px; position:relative; display:flex; flex-direction:column; overflow:hidden; border-radius:27px; background:linear-gradient(160deg,#0a2039,#061326 72%); color:#fff; box-shadow:0 24px 80px rgba(0,0,0,.5); border:1px solid rgba(255,255,255,.12); }
-    .story-progress { position:absolute; z-index:5; top:12px; left:12px; right:12px; height:3px; display:flex; gap:4px; }
-    .story-progress-segment { height:3px; flex:1; border-radius:99px; overflow:hidden; background:rgba(255,255,255,.27); }
-    .story-progress-segment i { display:block; width:0; height:100%; border-radius:99px; background:#fff; }
-    .story-dialog-top { position:absolute; z-index:6; top:24px; left:17px; right:15px; display:flex; align-items:center; justify-content:space-between; }
-    .story-brand-mark { font-size:11px; letter-spacing:.08em; font-weight:800; text-shadow:0 1px 8px #00152c; }
-    .story-brand-mark b { color:#56bbff; }
-    .story-close { width:34px; height:34px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.22); border-radius:50%; background:rgba(2,12,26,.42); color:#fff; font-size:16px; }
-    .story-visual { height:57%; min-height:280px; position:relative; overflow:hidden; display:grid; place-items:center; background:radial-gradient(circle at 50% 42%,rgba(0,150,255,.35),transparent 50%),linear-gradient(145deg,#183e69,#07182d); }
-    .story-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(3,12,25,.05) 30%,#0a2039 100%); pointer-events:none; }
-    .story-visual img { width:100%; height:100%; object-fit:contain; position:absolute; inset:0; padding:38px 24px 0; z-index:1; filter:drop-shadow(0 16px 24px rgba(0,0,0,.3)); }
-    .story-visual img[hidden] { display:none; }
-    .story-visual-glow { width:220px; height:220px; position:absolute; border-radius:50%; background:rgba(0,153,255,.25); filter:blur(52px); }
-    .story-visual-icon { position:relative; z-index:2; font-size:100px; line-height:1; filter:drop-shadow(0 12px 22px rgba(0,0,0,.32)); }
-    .story-copy { position:relative; z-index:2; flex:1; padding:4px 24px 24px; display:flex; flex-direction:column; align-items:flex-start; }
-    .story-kicker { color:#6bc6ff; font-size:10px; font-weight:900; letter-spacing:.15em; }
-    .story-copy h2 { margin-top:10px; font-size:27px; line-height:1.08; letter-spacing:-.04em; font-weight:900; color:#fff; }
-    .story-copy p { margin-top:10px; color:#c0d0e3; font-size:13px; line-height:1.55; font-weight:500; }
-    .story-cta { width:100%; min-height:48px; margin-top:auto; padding:0 16px; border:0; border-radius:15px; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(100deg,#087cff,#04a8f4); color:#fff; font-size:13px; font-weight:900; box-shadow:0 9px 25px rgba(0,119,255,.3); }
-    .story-cta span { font-size:19px; }
-    .story-hit { position:absolute; top:65px; bottom:43%; z-index:4; width:28%; border:0; background:transparent; }
-    .story-hit-prev { left:0; }
-    .story-hit-next { right:0; }
-    .story-copy,.story-dialog-top,.story-progress { pointer-events:none; }
-    .story-close,.story-cta { pointer-events:auto; position:relative; z-index:7; }
-    @media (max-width:400px) { .story-dialog { min-height:480px; height:90dvh; } .story-visual { min-height:245px; height:53%; } .story-copy h2 { font-size:24px; } .brand-shelf-card { flex-basis:108px; } }
-    @media (prefers-reduced-motion:reduce) { .hero-badge { animation:none; } .story-modal,.story-cta,.story-visual img { transition:none; } }
+/* ===== v4: бренды, сортировка ===== */
+.brand-rail { display: flex; gap: 10px; overflow-x: auto; padding: 2px 2px 8px; scrollbar-width: none; scroll-snap-type: x proximity; }
+.brand-card { position: relative; flex: 0 0 142px; height: 96px; padding: 12px; border: 0; border-radius: 18px; overflow: hidden; text-align: left; color: #fff; font-family: inherit; scroll-snap-align: start;
+  background: linear-gradient(135deg, var(--b1), var(--b2)); box-shadow: 0 10px 24px rgba(15,40,90,.18); }
+.brand-card:active { transform: scale(.97); }
+.brand-card b { display: block; font-size: 15px; font-weight: 900; letter-spacing: .04em; }
+.brand-card i { display: block; margin-top: 3px; font-style: normal; font-size: 11px; font-weight: 700; opacity: .85; }
+.brand-card img { position: absolute; right: 10px; bottom: 10px; width: 52px; height: 52px; object-fit: cover; border-radius: 14px; background: #fff; box-shadow: 0 6px 14px rgba(0,0,0,.3); }
+.bc-go { position: absolute; left: 12px; bottom: 10px; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 999px; background: rgba(255,255,255,.18); }
+.cat-sort { display: flex; gap: 6px; overflow-x: auto; margin: 0 0 10px; scrollbar-width: none; }
+.sort-chip { flex: 1 0 auto; height: 30px; padding: 0 12px; border-radius: 999px; white-space: nowrap; font-family: inherit; font-size: 12px; font-weight: 800;
+  border: 1px solid rgba(15,40,80,.12); background: #fff; color: #4a5d75; }
+.sort-chip.on { background: #0077ff; border-color: #0077ff; color: #fff; box-shadow: 0 6px 14px rgba(0,119,255,.28); }
 
+/* ===== v4: корзина — прогресс, пост ===== */
+.pm-post-btn { width: 100%; height: 40px; margin-top: 8px; border-radius: 12px; border: 1.5px dashed rgba(0,119,255,.5); background: #eaf3ff; color: #0066ee; font-family: inherit; font-size: 12.5px; font-weight: 800; }
+.pm-post-btn:active { transform: scale(.98); }
+
+/* ===== v5: ввод количества, быстрый набор, доставка ===== */
+.benefits { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.qty-input { box-sizing: border-box; text-align: center; font-family: inherit; font-weight: 800; color: #0b1b33; background: #fff;
+  border: 1px solid rgba(0,119,255,.3); border-radius: 10px; -moz-appearance: textfield; appearance: textfield; }
+.qty-input::-webkit-outer-spin-button, .qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.qty-input:focus { outline: 2px solid rgba(0,119,255,.35); border-color: #0077ff; }
+.stepper .qty-input { width: 76px; height: 36px; font-size: 16px; }
+.co-qty .qty-input { width: 56px; height: 30px; font-size: 13px; }
+.product-card .card-actions { display: flex !important; flex-direction: column; gap: 5px; margin-top: 6px; }
+.qa { display: flex; align-items: center; gap: 3px; }
+.qa-b { flex: 0 0 26px; height: 28px; padding: 0; border-radius: 8px; border: 1px solid rgba(0,119,255,.28); background: #fff; color: #0077ff; font-size: 15px; font-weight: 800; line-height: 1; }
+.qa-b:active { transform: scale(.92); }
+.qa .qty-input { flex: 1 1 0; min-width: 0; width: 100%; height: 28px; padding: 0 2px; border-radius: 8px; font-size: 12px; }
+.product-card .take:disabled { opacity: .5; }
+.cart-bar { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 78px); z-index: 900; width: min(calc(100% - 24px), 406px); height: 46px;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border: 0; border-radius: 16px; color: #fff; font-family: inherit; font-size: 14px; font-weight: 600;
+  background: linear-gradient(90deg, #0a6bd6, #2e7bff); box-shadow: 0 12px 28px rgba(0,100,230,.45);
+  opacity: 0; pointer-events: none; transform: translate(-50%, 18px); transition: opacity .25s, transform .25s; }
+.cart-bar.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none; font-family: inherit; line-height: 1.35; }
 </style>
 </head>
 <body>
@@ -5058,8 +5080,8 @@
           <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0a1d36" stroke="#2ea4ff" stroke-width="1.6"/><text x="18" y="23" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="900" fill="#fff">SG</text></svg>
         </div>
       </div>
-      <div class="splash-brand">П42-44 SUPGLASS</div>
-      <div class="splash-sub">Оптово-розничный склад</div>
+      <div class="splash-brand">П42/44 SUPGLASS</div>
+      <div class="splash-sub">Оптовый склад</div>
       <div class="splash-bar-wrap"><div class="splash-bar" id="splash-bar"></div></div>
       <div class="splash-pct" id="splash-pct">0%</div>
       <div class="splash-status" id="splash-status">Запуск витрины<span class="splash-dots"><span>.</span><span>.</span><span>.</span></span></div>
@@ -5075,7 +5097,7 @@
         <div class="di-collapsed" id="di-collapsed">
           <span class="di-live-dot"></span>
           <span class="di-icon">⚡</span>
-          <span class="di-pill-title" id="di-pill-title">Склад Садовод П42-44 • <strong>2 110+ шт</strong></span>
+          <span class="di-pill-title" id="di-pill-title">Склад ТЯК «Москва» П42/44 • <strong><span data-pos-count>…</span> поз.</strong></span>
           <span class="di-live-badge">LIVE</span>
         </div>
         <div class="di-expanded" id="di-expanded">
@@ -5083,7 +5105,7 @@
             <div class="di-exp-brand">
               <span class="di-apple-logo"></span>
               <div>
-                <h4>П42-44 SUPGLASS PRO ACTIVITY</h4>
+                <h4>П42/44 SUPGLASS PRO ACTIVITY</h4>
                 <p id="di-exp-sub">Синхронизация в реальном времени</p>
               </div>
             </div>
@@ -5092,13 +5114,13 @@
           <div class="di-exp-cards">
             <div class="di-exp-card">
               <span class="di-stat-tag">ПОЗИЦИЙ В КАТАЛОГЕ</span>
-              <div class="di-stat-number" id="di-exp-usd-val">2 110+</div>
+              <div class="di-stat-number" id="di-exp-count" data-pos-count>…</div>
               <span class="di-stat-note">Цены фиксированы</span>
             </div>
             <div class="di-exp-card">
               <span class="di-stat-tag">НАЛИЧИЕ НА СКЛАДЕ</span>
-              <div class="di-stat-number text-emerald">2 110+ шт.</div>
-              <span class="di-stat-note">линия П, пав. 42-44</span>
+              <div class="di-stat-number text-emerald"><span data-pos-count>…</span> поз.</div>
+              <span class="di-stat-note">ТЯК «Москва» (Люблино), пав. П42/44</span>
             </div>
           </div>
           <div class="di-exp-actions">
@@ -5139,7 +5161,7 @@
           <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0a1d36" stroke="#2ea4ff" stroke-width="1.6"/><text x="18" y="23" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="900" fill="#fff">SG</text></svg>
         </div>
         <div class="brand-text">
-          <h1>П42-44 SUPGLASS</h1>
+          <h1>П42/44 SUPGLASS</h1>
           <p>Acefast • Mosbros • Joyroom • Momax • Hoco • K-DOO</p>
         </div>
       </div>
@@ -5154,13 +5176,7 @@
       </div>
     </header>
 
-    <section class="home-stories" id="home-stories" aria-label="Новости и разделы склада">
-      <button class="story-bubble" type="button" onclick="openStory(0)"><span class="story-ring"><span class="story-emoji">🔥</span></span><span>Привоз</span></button>
-      <button class="story-bubble" type="button" onclick="openStory(1)"><span class="story-ring"><span class="story-emoji">📍</span></span><span>П42-44</span></button>
-      <button class="story-bubble" type="button" onclick="openStory(2)"><span class="story-ring"><span class="story-emoji">⚡</span></span><span>Acefast</span></button>
-      <button class="story-bubble" type="button" onclick="openStory(3)"><span class="story-ring"><span class="story-emoji">📱</span></span><span>Чехлы 18/17</span></button>
-      <button class="story-bubble" type="button" onclick="openStory(4)"><span class="story-ring"><span class="story-emoji">🚚</span></span><span>Доставка</span></button>
-    </section>
+    <div class="stories" id="stories" aria-label="Stories"></div>
 
     <section class="benefits" aria-label="Преимущества">
       <div class="benefit">
@@ -5175,20 +5191,16 @@
         <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M18.5 5.5 5.5 18.5"/><circle cx="8" cy="8" r="2.4"/><circle cx="16" cy="16" r="2.4"/></svg></div>
         <span>Опт от 1 шт<br>5 000 ₽</span>
       </div>
-      <div class="benefit">
-        <div class="ben-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2"/><path d="M12 7.5V12l3 2"/></svg></div>
-        <span>Отгрузка<br>день в день</span>
-      </div>
     </section>
 
-    <section class="hero" id="homeHero" aria-label="Байеры П42-44 SUPGLASS">
+    <section class="hero" id="homeHero" aria-label="Байеры П42/44 SUPGLASS">
       <div class="hero-track" id="heroTrack">
 
         <article class="hero-slide is-active">
           <div class="hero-copy">
-            <div class="hero-badge">ОПТ И РОЗНИЦА</div>
-            <h2>СКЛАД САДОВОД П42-44</h2>
-            <p>Бронестёкла, чехлы MagSafe, блоки GaN 100W оптом и в розницу</p>
+            <div class="hero-badge">ОПТОВЫЙ СКЛАД</div>
+            <h2>ОПТОВЫЙ СКЛАД П42/44</h2>
+            <p>Бронестёкла, чехлы MagSafe, блоки GaN 100W оптом</p>
             <div class="hero-nav">
               <div class="dots" aria-hidden="true"><i class="active"></i><i></i><i></i></div>
             </div>
@@ -5202,7 +5214,7 @@
           <div class="hero-copy">
             <div class="hero-badge">ПРЯМЫЕ ПОСТАВКИ</div>
             <h2>ACEFAST • JOYROOM • MOMAX</h2>
-            <p>Прямые поставки с фабрик • Более 2 110 позиций в наличии</p>
+            <p>Прямые поставки с фабрик • <span data-pos-count>…</span> позиций в наличии</p>
             <div class="hero-nav">
               <div class="dots" aria-hidden="true"><i></i><i class="active"></i><i></i></div>
             </div>
@@ -5239,8 +5251,8 @@
         <article class="hero-slide">
           <div class="hero-copy">
             <div class="hero-badge">ДО 18:00</div>
-            <h2>ОТПРАВКА ДЕНЬ В ДЕНЬ</h2>
-            <p>Автобусы Садовод / ТЯК Люблино и СДЭК до 18:00</p>
+            <h2>ОТПРАВКА ЛЮБЫМИ ТК</h2>
+            <p>Автобусы ТЯК Люблино и любые ТК до 18:00</p>
             <div class="hero-nav">
               <div class="dots" aria-hidden="true"><i></i><i></i><i class="active"></i></div>
             </div>
@@ -5283,7 +5295,7 @@
     <section class="metrics" aria-label="Метрики">
       <article class="metric">
         <div class="metric-ico"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1.2 11H5.2L4 8z"/><path d="M8 8V6.5A4 4 0 0 1 12 3a4 4 0 0 1 4 3.5V8"/></svg></div>
-        <b>2 110+</b><span>позиций</span>
+        <b data-pos-count>…</b><span>позиций</span>
       </article>
       <article class="metric">
         <div class="metric-ico"><svg viewBox="0 0 24 24"><path d="M12 3 14.2 8l5.3.5-4 3.6 1.2 5.2L12 14.8 7.3 17.3 8.5 12 4.5 8.5 9.8 8z"/></svg></div>
@@ -5305,10 +5317,7 @@
     </section>
 
     <section class="section"><div class="section-head"><h3>Чехлы по моделям iPhone</h3></div><div class="ip-chips"><button class="ip-chip" type="button" onclick="openModelSearch('18 Pro Max')">iPhone 18 Pro Max</button><button class="ip-chip" type="button" onclick="openModelSearch('18 Pro')">iPhone 18 Pro</button><button class="ip-chip" type="button" onclick="openModelSearch('17 Pro Max')">iPhone 17 Pro Max</button><button class="ip-chip" type="button" onclick="openModelSearch('17 Pro')">iPhone 17 Pro</button><button class="ip-chip" type="button" onclick="openModelSearch('16 Pro Max')">iPhone 16 Pro Max</button><button class="ip-chip" type="button" onclick="openModelSearch('15')">iPhone 15 / 14</button></div></section>
-    <section class="section brand-shelf-section" aria-label="Бренды склада">
-      <div class="section-head"><h3>Бренды склада</h3><a href="#" onclick="openCatalog('all');return false;">Весь каталог →</a></div>
-      <div class="brand-shelf" id="home-brands"></div>
-    </section>
+    <section class="section"><div class="section-head"><h3>Бренды склада</h3></div><div class="brand-rail" id="brand-rail"></div></section>
     <!-- ==============================
          ЖИВАЯ ЛЕНТА ОТГРУЗОК
          ============================== -->
@@ -5332,26 +5341,26 @@
           <!-- Группа 1 -->
           <div class="home-live-group">
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>65928 шт.</strong> Защитное стекло GL-27 Remax Medicine Glas…</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>65928 шт.</strong> Защитное стекло GL-27 Remax Medicine Glas…</div></article>
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>10555 шт.</strong> HOCO Light series TPU case for iP 17 Pro …</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>10555 шт.</strong> HOCO Light series TPU case for iP 17 Pro …</div></article>
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>459 шт.</strong> JR-TCF15 30W Dual-Port (A+C) Charger-White</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>459 шт.</strong> JR-TCF15 30W Dual-Port (A+C) Charger-White</div></article>
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>488 шт.</strong> S-A28 Flash Series 3A Fast Charging Data …</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>488 шт.</strong> S-A28 Flash Series 3A Fast Charging Data …</div></article>
 
           </div>
 
           <!-- Группа 2 — дубликат для бесшовной анимации -->
           <div class="home-live-group" aria-hidden="true">
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>65928 шт.</strong> Защитное стекло GL-27 Remax Medicine Glas…</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>65928 шт.</strong> Защитное стекло GL-27 Remax Medicine Glas…</div></article>
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>10555 шт.</strong> HOCO Light series TPU case for iP 17 Pro …</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>10555 шт.</strong> HOCO Light series TPU case for iP 17 Pro …</div></article>
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>459 шт.</strong> JR-TCF15 30W Dual-Port (A+C) Charger-White</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>459 шт.</strong> JR-TCF15 30W Dual-Port (A+C) Charger-White</div></article>
 
-            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТК Садовод</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>488 шт.</strong> S-A28 Flash Series 3A Fast Charging Data …</div></article>
+            <article class="home-order-card"><div class="home-order-top"><span class="home-order-city">ТЯК «Москва»</span><span class="home-order-time">в наличии</span></div><div class="home-order-product"><strong>488 шт.</strong> S-A28 Flash Series 3A Fast Charging Data …</div></article>
 
           </div>
 
@@ -5401,7 +5410,7 @@
           </div>
           <h4>Отгрузка день в день</h4>
           <p>
-            Автобусы <b>Садовод / ТЯК</b> и <b>СДЭК</b> до <b>18:00</b>
+            Автобусы <b>ТЯК Люблино</b> и любые <b>ТК</b> до <b>18:00</b>
           </p>
         </article>
 
@@ -5431,7 +5440,7 @@
           <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0a1d36" stroke="#2ea4ff" stroke-width="1.6"/><text x="18" y="23" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="900" fill="#fff">SG</text></svg>
         </div>
           <div class="brand-text">
-            <h1>П42-44 SUPGLASS</h1>
+            <h1>П42/44 SUPGLASS</h1>
             <p>Acefast • Mosbros • Joyroom • Momax • Hoco • K-DOO</p>
           </div>
         </div>
@@ -5445,7 +5454,7 @@
       <div class="catalog-vip-bar">
         <div class="catalog-vip-status">
           <span class="catalog-vip-dot"></span>
-          <span>ТК Садовод, линия П, пав. 42-44 • 2 110+ позиций</span>
+          <span>ТЯК «Москва» (Люблино), пав. П42/44 • <span data-pos-count>…</span> позиций</span>
         </div>
         
       </div>
@@ -5464,13 +5473,7 @@
         <span>⚠️</span>
         <span>Связь с облаком недоступна — показаны данные из локального кэша</span>
       </div>
-      <div class="catalog-sort" id="catalog-sort" aria-label="Сортировка товаров" style="display:none">
-        <span class="catalog-sort-label">Сортировка</span>
-        <button type="button" class="catalog-sort-btn active" data-sort="popular" onclick="setCatalogSort('popular')">Популярные</button>
-        <button type="button" class="catalog-sort-btn" data-sort="cheap" onclick="setCatalogSort('cheap')">Дешевле ₽</button>
-        <button type="button" class="catalog-sort-btn" data-sort="expensive" onclick="setCatalogSort('expensive')">Дороже ₽</button>
-        <button type="button" class="catalog-sort-btn" data-sort="stock" onclick="setCatalogSort('stock')">Только в наличии</button>
-      </div>
+      <div class="cat-sort" id="cat-sort" style="display:none"></div>
       <div class="grid" id="catalog-grid"></div>
       <div id="cat-more"></div>
     </section>
@@ -5506,8 +5509,8 @@
             <div class="profile-vip-tier-badge">B2B ПОКУПАТЕЛЬ</div>
           </div>
           <div class="profile-card-mid">
-            <div class="profile-partner-id" id="pf-partner-id">П42-44-B2B</div>
-            <div class="profile-partner-sub">Оптовый покупатель • Садовод, пав. 42-44</div>
+            <div class="profile-partner-id" id="pf-partner-id">П42/44-B2B</div>
+            <div class="profile-partner-sub">Оптовый покупатель • ТЯК «Москва» (Люблино), пав. П42/44</div>
           </div>
           <div class="profile-card-bottom">
             <div class="profile-card-stat">
@@ -5631,7 +5634,7 @@
             <div class="manager-head">
               <div class="manager-avatar">E</div>
               <div class="manager-copy">
-                <strong>Команда П42-44 SUPGLASS</strong>
+                <strong>Команда П42/44 SUPGLASS</strong>
                 <span>Заказы · отгрузка · trade-in</span>
               </div>
             </div>
@@ -5642,7 +5645,7 @@
               Написать в Telegram
             </a>
           </div>
-          <div class="warehouse-note">ТК Садовод, пав. 42-44 · Отгрузка день в день</div>
+          <div class="warehouse-note">ТЯК «Москва» (Люблино), пав. П42/44 · Отгрузка день в день</div>
         </section>
       </div>
     </section>
@@ -5689,7 +5692,7 @@
     <div class="pm-drag-handle" onclick="closeProduct()" title="Потяните вниз, чтобы закрыть"></div>
     <div class="pm-top">
       <button class="pm-close" type="button" onclick="closeProduct()" aria-label="Закрыть">✕ Закрыть</button>
-      <div class="pm-brand"><b>П42-44 SUPGLASS</b><span>ТК САДОВОД • П42-44</span></div>
+      <div class="pm-brand"><b>П42/44 SUPGLASS</b><span>ТЯК «МОСКВА» • П42/44</span></div>
       <button class="menu-btn" type="button" aria-label="Меню" aria-expanded="false" onclick="toggleQuick()"><span></span></button>
     </div>
     <div class="pm-badges">
@@ -5719,9 +5722,6 @@
 
     <!-- MAIN ACTION BUTTONS -->
     <button class="take" type="button" onclick="confirmBox()">КУПИТЬ / БРОНЬ</button>
-    <button class="reseller-copy-btn" type="button" onclick="copyResellerPost()">📋 Пост для Авито / канала (с наценкой)</button>
-    
-    <button class="mg-btn" type="button" onclick="openMargin()">МАРЖИНАЛЬНОСТЬ WB / OZON</button>
     
 
     <!-- ПОНИЖЕ: УДОБНАЯ КНОПКА ЗАКРЫТИЯ КАРТОЧКИ ПОД ОСНОВНЫМИ ДЕЙСТВИЯМИ -->
@@ -5735,7 +5735,7 @@
       <div class="pm-gsx-header">
         <div class="pm-gsx-badge">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-          <span>Проверено складом П42-44</span>
+          <span>Проверено складом П42/44</span>
         </div>
         <span class="pm-gsx-status">✓ 100% Оригинал</span>
       </div>
@@ -5750,11 +5750,11 @@
         </div>
         <div class="pm-gsx-item">
           <b>Проверка</b>
-          <span>при приёмке на складе</span>
+          <span>на брак перед отправкой</span>
         </div>
         <div class="pm-gsx-item">
           <b>Пункт выдачи</b>
-          <span>Садовод, пав. 42-44</span>
+          <span>ТЯК «Москва» (Люблино), пав. П42/44</span>
         </div>
       </div>
     </div>
@@ -5765,32 +5765,16 @@
       <div class="pm-stock-loc">
         <span class="pm-loc-dot green"></span>
         <div class="pm-loc-info">
-          <b>ТК Садовод, линия П, пав. 42-44</b>
-          <span>Самовывоз со склада</span>
+          <b>Автобус / ТЯК Люблино <i id="pm-stock-gorb" style="font-style:normal">(есть)</i></b>
+          <span>Отправка автобусом</span>
         </div>
-        <span class="pm-loc-count" id="pm-stock-sav">14 шт</span>
-      </div>
-      <div class="pm-stock-loc">
-        <span class="pm-loc-dot green"></span>
-        <div class="pm-loc-info">
-          <b>Автобус Садовод / ТЯК Люблино</b>
-          <span>Отгрузка день в день до 18:00</span>
-        </div>
-        <span class="pm-loc-count" id="pm-stock-gorb">8 шт</span>
-      </div>
-      <div class="pm-stock-loc">
-        <span class="pm-loc-dot blue"></span>
-        <div class="pm-loc-info">
-          <b>Доставка СДЭК</b>
-          <span>Отправка день в день</span>
-        </div>
-        <span class="pm-loc-count">по тарифу</span>
+        <span class="pm-loc-count">✓</span>
       </div>
       <div class="pm-stock-loc">
         <span class="pm-loc-dot purple"></span>
         <div class="pm-loc-info">
           <b>Доставка по всей России</b>
-          <span>Отгрузка до 18:00</span>
+          <span>Отправка любыми ТК</span>
         </div>
         <span class="pm-loc-count">1-3 дня</span>
       </div>
@@ -5813,7 +5797,7 @@
         </div>
         <div class="stepper">
           <button type="button" onclick="chgQty(-1)">−</button>
-          <b id="pm-qty">1</b>
+          <input class="qty-input" id="pm-qty" type="number" inputmode="numeric" min="1" step="1" value="1" aria-label="Количество" onfocus="this.select()" oninput="chgQty(0,this.value,true)" onchange="chgQty(0,this.value)">
           <button type="button" onclick="chgQty(1)">+</button>
         </div>
       </div>
@@ -5824,6 +5808,7 @@
       </div>
       <div class="timer">⏳ Бронь фиксируется до оплаты: <span id="pm-timer">01:59:54</span></div>
       <button class="take" type="button" onclick="confirmBox()" style="margin-top:10px;height:42px;font-size:13px">🛒 КУПИТЬ / БРОНЬ</button>
+      <button class="pm-post-btn" type="button" onclick="copyResalePost()">📋 Пост для Авито</button>
     </div>
 
     <!-- КНОПКА ЗАКРЫТЬ В САМОМ НИЗУ СТРАНИЦЫ -->
@@ -5836,50 +5821,13 @@
   </div>
 
   
-  <div id="margin-sheet" onclick="if(event.target===this)closeMargin()">
-    <div class="sheet-panel">
-      <div class="sheet-grab"></div>
-      <div class="sheet-title"><b>Маржинальность WB / Ozon</b><button class="pm-close" type="button" onclick="closeMargin()">Закрыть</button></div>
-      <div id="mg-head" style="font-size:14px;font-weight:800"></div>
-      <div id="mg-sub" style="margin-top:4px;color:#6b7c93;font-size:12px;font-weight:600"></div>
-      <div class="mg-tabs">
-        <button class="mg-tab on" id="tab-wb" type="button" onclick="setMarket('wb')">Wildberries</button>
-        <button class="mg-tab" id="tab-oz" type="button" onclick="setMarket('ozon')">Ozon</button>
-      </div>
-      <div class="mg-box">
-        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:800"><span>График прибыли</span><span id="mg-box-net" style="color:#3aa0ff"></span></div>
-        <svg id="mg-chart" viewBox="0 0 280 86"></svg>
-        <div class="sell-row"><span>дешево</span><span>Цена на витрине</span><span id="mg-sell-label">0 ₽</span></div>
-        <input class="pm-range" id="mg-range" type="range" min="1000" max="200000" value="120000" oninput="drawMargin()">
-        <div class="mg-stats">
-          <div><b id="mg-opt">0</b><span>ОПТ / шт</span></div>
-          <div><b id="mg-after">0</b><span id="mg-fee">WB −30%</span></div>
-          <div><b id="mg-clean" style="color:#3dff9a">0</b><span>ЧИСТЫМИ</span></div>
-        </div>
-      </div>
-      <div class="calc" style="margin-top:10px">
-        <div class="step">
-          <div><b>Партия штов</b><div style="color:#6b7c93;font-size:11px;margin-top:2px">В 1 ште = выбранная модель</div></div>
-          <div class="stepper">
-            <button type="button" onclick="chgQty(-1);drawMargin()">−</button>
-            <b id="mg-qty">1</b>
-            <button type="button" onclick="chgQty(1);drawMargin()">+</button>
-          </div>
-        </div>
-        <input class="pm-range" id="mg-qty-range" type="range" min="1" max="8" value="1" oninput="chgQty(0,this.value);drawMargin()">
-        <div class="disc" id="mg-disc"></div>
-      </div>
-    </div>
-  </div>
-
-  
   <div id="checkout-sheet" onclick="if(event.target===this)hideCheckout()">
     <div class="sheet-panel">
       <div class="sheet-grab"></div>
       <div class="co-head">
         <div>
           <h2>Корзина</h2>
-          <p>П42-44 SUPGLASS • доставка</p>
+          <p>П42/44 SUPGLASS • доставка</p>
         </div>
         <div class="co-head-btns">
           <button class="co-cancel" type="button" onclick="hideCheckout(false)">Свернуть</button>
@@ -5892,38 +5840,16 @@
       <input class="co-input" id="buyer-name" placeholder="Как подписать заказ (имя) *">
       <input class="co-input" id="buyer-phone" placeholder="Телефон менеджеру *">
       <div class="co-note">Оплату не проводим в приложении. Менеджер пришлёт карту в Telegram.</div>
-      <div class="co-lab">ДОСТАВКА</div>
-      <button class="ship" id="ship-bus" type="button" onclick="setShip('bus')">1. Рейсовый автобус (Садовод / ТЯК Люблино)</button>
-      <button class="ship" id="ship-cdek" type="button" onclick="setShip('cdek')">2. СДЭК</button>
-      <button class="ship" id="ship-tk" type="button" onclick="setShip('tk')">3. ТК (ПЭК / Деловые Линии / КИТ)</button>
-      <button class="ship" id="ship-pickup" type="button" onclick="setShip('pickup')">4. Самовывоз со склада</button>
-      <input class="co-input co-extra" id="buyer-city" placeholder="Город назначения *">
-      <input class="co-input co-extra" id="cdek-pvz" placeholder="Адрес ПВЗ СДЭК *">
-      <input class="co-input co-extra" id="tk-fio" placeholder="ФИО получателя *">
-      <input class="co-input co-extra" id="tk-doc" placeholder="Паспорт / ИНН *">
-      <input class="co-input co-extra" id="bus-stand" placeholder="Стоянка автобуса *">
-      <input class="co-input co-extra" id="bus-plate" placeholder="Госномер / телефон водителя *">
-      <div class="co-delivery-progress" id="co-delivery-progress" aria-live="polite">
-        <div class="co-progress-top"><span id="co-progress-label">До бесплатной доставки автобусом Садовод</span><b id="co-progress-value">0%</b></div>
-        <div class="co-progress-track"><span id="co-progress-fill"></span></div>
-        <div class="co-progress-note" id="co-progress-note">Добавьте товаров ещё на 5 000 ₽</div>
-      </div>
+      <div class="co-lab">Способ доставки</div>
+      <textarea class="co-input" id="ship-method" rows="2" placeholder="Укажите транспортную компанию, номер автобуса или самовывоз"></textarea>
       <div class="co-total"><span>Итого</span><b id="co-total">0 ₽</b></div>
       <button class="co-send" type="button" onclick="sendOrder()">Отправить заявку менеджеру</button>
     </div>
   </div>
 
-  <div class="story-modal" id="story-modal" aria-hidden="true" onclick="if(event.target===this)closeStory()">
-    <div class="story-dialog" role="dialog" aria-modal="true" aria-label="История П42-44 SUPGLASS">
-      <div class="story-progress" id="story-progress"></div>
-      <div class="story-dialog-top"><span class="story-brand-mark">П42-44 <b>SUPGLASS</b></span><button type="button" class="story-close" onclick="closeStory()" aria-label="Закрыть истории">✕</button></div>
-      <div class="story-visual" id="story-visual"><img id="story-image" alt="" hidden><div class="story-visual-glow"></div><div class="story-visual-icon" id="story-icon">🔥</div></div>
-      <div class="story-copy"><span class="story-kicker" id="story-kicker">НОВОСТИ СКЛАДА</span><h2 id="story-title">Новинки недели</h2><p id="story-description"></p><button type="button" class="story-cta" id="story-cta" onclick="goToStorySection()">Перейти в раздел <span>→</span></button></div>
-      <button type="button" class="story-hit story-hit-prev" onclick="prevStory()" aria-label="Предыдущая история"></button><button type="button" class="story-hit story-hit-next" onclick="nextStory()" aria-label="Следующая история"></button>
-    </div>
-  </div>
-
+  <div id="story-modal" aria-hidden="true" onclick="if(event.target===this)closeStory()"><div class="st-card" id="st-card"></div></div>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="sg-sharp" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feConvolveMatrix order="3" kernelMatrix="0 -0.45 0 -0.45 2.8 -0.45 0 -0.45 0" divisor="1" bias="0" edgeMode="duplicate" preserveAlpha="true"/></filter></svg>
+  <button class="cart-bar" id="cart-bar" type="button" onclick="showCheckout()"><span id="cb-text"></span><b>Оформить ›</b></button>
   <div class="toast" id="toast">Готово</div>
   <script src="catalog-data.js"></script>
   <script>
@@ -5933,18 +5859,19 @@
       { id: "glasses", name: "Защитные стёкла" },
       { id: "cases", name: "Чехлы iPhone" },
       { id: "gan", name: "Блоки GaN" },
+      { id: "stations", name: "Станции 3-в-1" },
       { id: "cables", name: "Кабели и АЗУ" },
       { id: "earbuds", name: "Наушники TWS" },
       { id: "auto", name: "Автодержатели" },
       { id: "powerbank", name: "Powerbank" },
       { id: "accessories", name: "Аксессуары" },
       { id: "ACEFAST", name: "ACEFAST", brand: "ACEFAST" },
-      { id: "MOSBROS", name: "MOSBROS", brand: "MOSBROS" },
-      { id: "JOYROOM", name: "JOYROOM", brand: "JOYROOM" },
-      { id: "HOCO", name: "HOCO", brand: "HOCO" },
       { id: "JOYHOCO", name: "JOYROOM & HOCO", brands: ["JOYROOM", "HOCO"] },
+      { id: "MOSBROS", name: "MOSBROS", brand: "MOSBROS" },
       { id: "MOMAX", name: "MOMAX", brand: "MOMAX" },
-      { id: "K-DOO", name: "K-DOO", brand: "K-DOO" }
+      { id: "K-DOO", name: "K-DOO", brand: "K-DOO" },
+      { id: "JOYROOM", name: "JOYROOM", brand: "JOYROOM", hidden: true },
+      { id: "HOCO", name: "HOCO", brand: "HOCO", hidden: true }
     ];
     /* =========================================================
     /* =========================================================
@@ -6006,7 +5933,7 @@
     "single": true,
     "unit": "Арт. Remax Medicine Glass iPhone GL-27 Privacy • REMAX",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   },
   {
@@ -6022,7 +5949,7 @@
     "single": true,
     "unit": "Арт. TPU17PMMT • HOCO",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   },
   {
@@ -6038,7 +5965,7 @@
     "single": true,
     "unit": "K-DOO",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   },
   {
@@ -6054,7 +5981,7 @@
     "single": true,
     "unit": "Арт. TCF15W • JOYROOM",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   },
   {
@@ -6070,7 +5997,7 @@
     "single": true,
     "unit": "Арт. CQ3B • HOCO",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   },
   {
@@ -6086,7 +6013,7 @@
     "single": true,
     "unit": "Арт. A28UIB • JOYROOM",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   },
   {
@@ -6102,7 +6029,7 @@
     "single": true,
     "unit": "Арт. EW93W • HOCO",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   },
   {
@@ -6118,15 +6045,25 @@
     "single": true,
     "unit": "Арт. ZS406B • JOYROOM",
     "warranty": "по запросу",
-    "delivery": "ТК Садовод, пав. 42-44 • отгрузка день в день",
+    "delivery": "ТЯК «Москва» (Люблино), пав. П42/44 • отгрузка день в день",
     "condition": "Новый"
   }
 ];
 
+    function fixAddr(s) {
+      return String(s == null ? "" : s)
+        .replace(/ТК\s*Садовод,?\s*(линия П,\s*)?пав\.?\s*42[-\/]44/gi, "ТЯК «Москва» (Люблино), пав. П42/44")
+        .replace(/ТК\s*Садовод/gi, "ТЯК «Москва»")
+        .replace(/Садовод\w*/g, "ТЯК Люблино")
+        .replace(/П?42-44/g, "П42/44");
+    }
     function normalizeProductFromDB(raw) {
       if (!raw) return null;
       var cat = sanitizeField(raw.cat || "phones") || "phones";
-      if (cat === "audio") cat = "earbuds";
+      if (cat === "audio" || cat === "tws" || cat === "headphones") cat = "earbuds";
+      if (cat === "holders" || cat === "holder") cat = "auto";
+      if (cat === "glass" || cat === "screen" || cat === "protectors") cat = "glasses";
+      if (cat === "gan" && /\d\s?[-]?\s?(in|в)\s?[-]?\s?1|станц|station/i.test(String(raw.name || raw.base || raw.title || ""))) cat = "stations";
       if (cat === "watch") cat = "watches";
       var id = sanitizeField(raw.id) || ("p-" + Date.now().toString(36));
       var price = raw.vars && raw.vars[0] && raw.vars[0].price
@@ -6134,7 +6071,7 @@
         : (Number(raw.price) || 45000);
       var stock = raw.stock != null ? Number(raw.stock) : (typeof stockMap !== "undefined" && stockMap[id] != null ? stockMap[id] : 10);
       var base = sanitizeField(raw.base || raw.name || raw.title || "Товар");
-      var unit = sanitizeField(raw.unit || "Новый • Пломба • ТК Садовод");
+      var unit = fixAddr(sanitizeField(raw.unit || "Новый • Пломба • ТЯК «Москва»"));
       var img = sanitizeField(raw.img || "");
       if (!img || img.length > 250) img = defaultCatImage(cat);
       var images = Array.isArray(raw.images) && raw.images.length ? raw.images : [img];
@@ -6154,11 +6091,11 @@
         reviews: Number(raw.reviews) || 16,
         unit: unit,
         warranty: raw.warranty || "1 год (заводская)",
-        delivery: raw.delivery || "ТК Садовод • отгрузка день в день",
+        delivery: fixAddr(raw.delivery || "ТЯК «Москва» (Люблино), пав. П42/44"),
         condition: raw.condition || (raw.single ? "Отличное" : "Новый, запечатан"),
         single: raw.single != null ? !!raw.single : false,
         wholesale: raw.wholesale != null ? !!raw.wholesale : true,
-        shop: raw.shop || "П42-44 SUPGLASS",
+        shop: fixAddr(raw.shop || "П42/44 SUPGLASS"),
         vars: vars,
         chosen: 0,
         custom: !!raw.custom,
@@ -6254,6 +6191,16 @@
     // Инициализация каталога: временный кеш из localStorage для моментального открытия без белого экрана
     let PRODUCTS = (window.EMBEDDED_PRODUCTS || []).map(normalizeProductFromDB).filter(Boolean);
 
+    /* Общее число позиций: всё, что показывает «N позиций», берётся из PRODUCTS.length */
+    function fmtPosCount() {
+      return String(PRODUCTS.length).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00A0");
+    }
+    function updateCatalogCounts() {
+      if (!PRODUCTS.length) return;
+      var t = fmtPosCount();
+      document.querySelectorAll("[data-pos-count]").forEach(function (el) { el.textContent = t; });
+    }
+
     function showCatalogSkeleton() {
       const grid = document.getElementById("catalog-grid");
       if (!grid) return;
@@ -6306,6 +6253,7 @@
             localStorage.setItem(CATALOG_CACHE_KEY, JSON.stringify(PRODUCTS));
           } catch (e) {}
         }
+        try { updateCatalogCounts(); } catch (e) {}
         showOfflineBanner(false);
         if (typeof setAdminCatalogStatus === "function") {
           setAdminCatalogStatus("✓ Облако: " + PRODUCTS.length + " товар(ов) онлайн", "ok");
@@ -6317,6 +6265,7 @@
         showOfflineBanner(true);
         const fallback = getLocalFallbackData();
         PRODUCTS = fallback;
+        try { updateCatalogCounts(); } catch (e) {}
         if (typeof setAdminCatalogStatus === "function") {
           setAdminCatalogStatus("Офлайн-режим: данные из локального кэша (" + PRODUCTS.length + " шт.)", "err");
         }
@@ -6325,8 +6274,6 @@
         isFetchingCatalog = false;
         // Гарантированно убираем скелетон и рендерим витрину
         if (typeof renderCatalogGrid === "function") renderCatalogGrid();
-        if (typeof renderHomeBrands === "function") renderHomeBrands();
-        if (typeof renderHomeStories === "function") renderHomeStories();
         if (typeof renderAdminCustomList === "function") renderAdminCustomList();
         if (typeof renderAdminStockList === "function") renderAdminStockList();
       }
@@ -6433,8 +6380,6 @@
       const vars = (p.single || p.vars.length <= 1) ? "" : p.vars.map((v, i) => `<button class="var ${i === idx ? "on" : ""}" type="button" onclick="event.stopPropagation();pickVar(this,'${p.id}',${i})">${v.name}</button>`).join("");
       const priceNow = displayPrice(v0.price);
       const unitText = p.unit || (p.condition || "Оригинал");
-      const resellerMargin = Math.round(priceNow * 0.14);
-      const marginHtml = `✓ Гарантия ${p.warranty || "1 год"} · 📍 ${p.delivery || "Москва"} · <span style="color:#0a9f55;font-weight:800">Маржа: +${money(resellerMargin)}</span>`;
       const title = (p.single ? p.base : (p.base + " " + v0.label)) + (p.article ? " " + p.article : "");
       const showOld = String(p.id).length % 3 === 0;
       const oldPrice = showOld ? Math.round(priceNow * 1.08) : 0;
@@ -6443,7 +6388,6 @@
       const st = getStockInfo(p.id);
       const stockHtml = `<span class="stock-pill ${st.cls} js-stock">${st.label}</span>`;
       const outCls = st.qty <= 0 ? " is-out" : "";
-      const buyLabel = st.qty <= 0 ? "НЕТ В НАЛИЧИИ" : "КУПИТЬ / БРОНЬ";
       return `<article class="product-card card-enter${outCls}" id="card-${p.id}" style="animation-delay:${delay}ms" onclick="openProductSheet('${p.id}')">
         <div class="product-photo">
           <button class="fav-btn ${liked ? "on" : ""}" type="button" aria-label="В избранное" onclick="event.stopPropagation();toggleFav('${p.id}', this)">${liked ? "♥" : "♡"}</button>
@@ -6456,10 +6400,13 @@
         <div class="unit js-unit">${unitText}</div>
         ${stockHtml}
         ${vars ? `<div class="vars">${vars}</div>` : ""}
-        <div class="margin-box js-margin">${marginHtml}</div>
-        <div class="card-actions">
-          <button class="take" type="button" onclick="event.stopPropagation();openProductSheet('${p.id}')">${buyLabel}</button>
-          <button class="quick" type="button" onclick="event.stopPropagation();openProductSheet('${p.id}')">Подробнее</button>
+        <div class="card-actions" onclick="event.stopPropagation()">
+          <div class="qa">
+            <button class="qa-b" type="button" aria-label="Меньше" onclick="qaStep('${p.id}',-1)">−</button>
+            <input class="qty-input" id="qa-${p.id}" type="number" inputmode="numeric" min="1" step="1" value="1" aria-label="Количество" onfocus="this.select()">
+            <button class="qa-b" type="button" aria-label="Больше" onclick="qaStep('${p.id}',1)">+</button>
+          </div>
+          <button class="take" type="button" ${st.qty <= 0 ? "disabled" : ""} onclick="quickAdd('${p.id}')">${st.qty <= 0 ? "НЕТ В НАЛИЧИИ" : "В корзину"}</button>
         </div>
       </article>`;
     }
@@ -6479,26 +6426,6 @@
 
     let catalogQuery = "";
     let currentCatalogFilter = "all";
-    let catalogSort = "popular";
-
-    function catalogUnitPrice(p) {
-      const v = p && p.vars && p.vars[p.chosen || 0];
-      return Number(v && v.price != null ? v.price : (p && p.price) || 0);
-    }
-    function setCatalogSort(sort) {
-      if (catalogSort === "stock" && sort !== "stock" && currentSub === null) currentSub = "*";
-      catalogSort = sort || "popular";
-      document.querySelectorAll(".catalog-sort-btn").forEach(function(b) { b.classList.toggle("active", b.dataset.sort === catalogSort); });
-      shownCount = PAGE_SIZE;
-      renderCatalogGrid();
-    }
-    function sortCatalogItems(items) {
-      const out = items.slice();
-      if (catalogSort === "cheap") out.sort((a,b) => catalogUnitPrice(a) - catalogUnitPrice(b));
-      else if (catalogSort === "expensive") out.sort((a,b) => catalogUnitPrice(b) - catalogUnitPrice(a));
-      else if (catalogSort === "popular") out.sort((a,b) => Number(!!b.hot) - Number(!!a.hot) || Number(!!b.isNew) - Number(!!a.isNew) || (Number(b.stock) || 0) - (Number(a.stock) || 0));
-      return out;
-    }
 
     function applyCatalogFilter(filterType, btn) {
       currentCatalogFilter = filterType;
@@ -6526,7 +6453,7 @@
 
     function filterBySearch(list) {
       var res = list;
-      if (currentCatalogFilter === "in-stock" || catalogSort === "stock") {
+      if (currentCatalogFilter === "in-stock") {
         res = res.filter(p => getStockInfo(p.id).qty > 0);
       } else if (currentCatalogFilter === "pro-max") {
         res = res.filter(p => (p.base + " " + (p.unit || "")).toLowerCase().includes("pro") || (p.base).toLowerCase().includes("max"));
@@ -6539,7 +6466,7 @@
       if (!catalogQuery) return res;
       return res.filter(p => {
         const hay = [
-          p.base, p.article, p.unit, p.condition, p.shop, p.brand, p.code,
+          p.base, p.article, p.unit, p.condition, p.shop,
           ...(p.vars || []).map(v => v.label + " " + v.name)
         ].join(" ").toLowerCase();
         return hay.includes(catalogQuery);
@@ -6550,6 +6477,7 @@
       { id: "glasses", name: "Защитные стёкла", tag: "9H" },
       { id: "cases", name: "Чехлы iPhone", tag: "MagSafe" },
       { id: "gan", name: "Блоки GaN", tag: "PD" },
+      { id: "stations", name: "Зарядные станции", tag: "3-в-1" },
       { id: "cables", name: "Кабели и АЗУ", tag: "Type-C" },
       { id: "earbuds", name: "Наушники TWS", tag: "TWS" },
       { id: "auto", name: "Автодержатели", tag: "АВТО" },
@@ -6635,105 +6563,13 @@
       const el = document.getElementById("home-tiles"), used = {};
       if (el) el.innerHTML = TILE_CATS.slice(0, 6).map(c => tileHTML(c, used)).join("");
     }
-    const HOME_BRANDS = ["ACEFAST", "MOSBROS", "JOYROOM", "MOMAX", "HOCO", "K-DOO"];
-    function renderHomeBrands() {
-      const el = document.getElementById("home-brands");
-      if (!el) return;
-      el.innerHTML = HOME_BRANDS.map(function(brand) {
-        const count = PRODUCTS.filter(p => String(p.brand || "").toUpperCase() === brand).length;
-        const route = brand;
-        return `<button class="brand-shelf-card" type="button" onclick="openBrandCatalog('${route}')"><span class="brand-shelf-mark"></span><b class="brand-shelf-name">${brand}</b><span class="brand-shelf-count">${count} позиций · открыть →</span></button>`;
-      }).join("");
-    }
-
-    const HOME_STORIES = [
-      { label:"Привоз", kicker:"НОВИНКИ НЕДЕЛИ", title:"Свежие позиции уже в каталоге", text:"Посмотрите новые поступления и актуальные позиции для вашей витрины. Ассортимент и остатки отображаются в каталоге.", icon:"🔥", target:"all", targetLabel:"Открыть каталог" },
-      { label:"П42-44", kicker:"МЫ НА САДОВОДЕ", title:"Павильон П42–44", text:"ТК «Садовод», линия П, павильон 42–44. Можно оформить заказ онлайн и выбрать удобный способ получения.", icon:"📍", target:"profile", targetLabel:"Информация о складе" },
-      { label:"Acefast", kicker:"БРЕНД ACEFAST", title:"Зарядки и аксессуары ACEFAST", text:"Подборка аксессуаров бренда: блоки питания, кабели и решения для быстрой зарядки. Откройте позиции и проверьте наличие.", icon:"⚡", target:"ACEFAST", targetLabel:"Смотреть ACEFAST" },
-      { label:"Чехлы 18/17", kicker:"АКТУАЛЬНЫЕ МОДЕЛИ", title:"Чехлы для iPhone 18 и 17", text:"Подборка чехлов по моделям iPhone. Выберите нужную модель и сравните варианты в каталоге.", icon:"📱", target:"cases", search:"17", targetLabel:"Выбрать чехол" },
-      { label:"Доставка", kicker:"ПОЛУЧЕНИЕ ЗАКАЗА", title:"Автобусы, СДЭК и транспортные компании", text:"В заказе можно выбрать рейсовый автобус, СДЭК, ТК или самовывоз. Менеджер уточнит детали отправки.", icon:"🚚", target:"orders", targetLabel:"Перейти к заказам" }
-    ];
-    let activeStoryIndex = 0, storyInterval = null, storyElapsed = 0;
-    const STORY_DURATION = 5600;
-    function storyImageFor(index) {
-      if (index === 2) { const p = PRODUCTS.find(p => String(p.brand || "").toUpperCase() === "ACEFAST" && p.img); return p ? p.img : ""; }
-      if (index === 3) { const p = PRODUCTS.find(p => p.cat === "cases" && /18|17/.test(p.base || "") && p.img) || PRODUCTS.find(p => p.cat === "cases" && p.img); return p ? p.img : ""; }
-      if (index === 0) { const p = PRODUCTS.find(p => p.isNew && p.img); return p ? p.img : ""; }
-      return "";
-    }
-    function renderHomeStories() {
-      const el = document.getElementById("home-stories");
-      if (!el) return;
-      el.innerHTML = HOME_STORIES.map((st, i) => {
-        const img = storyImageFor(i);
-        const inside = img ? `<img src="${coEsc(img)}" alt="" loading="lazy">` : `<span class="story-emoji">${st.icon}</span>`;
-        return `<button class="story-bubble" type="button" onclick="openStory(${i})"><span class="story-ring"><span class="story-thumb">${inside}</span></span><span>${st.label}</span></button>`;
-      }).join("");
-    }
-    function drawStoryProgress() {
-      const el = document.getElementById("story-progress");
-      if (!el) return;
-      el.innerHTML = HOME_STORIES.map((_, i) => `<span class="story-progress-segment"><i style="width:${i < activeStoryIndex ? 100 : i === activeStoryIndex ? Math.min(100, storyElapsed / STORY_DURATION * 100) : 0}%"></i></span>`).join("");
-    }
-    function paintStory() {
-      const st = HOME_STORIES[activeStoryIndex];
-      if (!st) return;
-      document.getElementById("story-kicker").textContent = st.kicker;
-      document.getElementById("story-title").textContent = st.title;
-      document.getElementById("story-description").textContent = st.text;
-      document.getElementById("story-cta").innerHTML = `${st.targetLabel} <span>→</span>`;
-      const img = document.getElementById("story-image");
-      const src = storyImageFor(activeStoryIndex);
-      if (src) { img.src = src; img.hidden = false; document.getElementById("story-icon").style.display = "none"; }
-      else { img.removeAttribute("src"); img.hidden = true; document.getElementById("story-icon").style.display = "block"; document.getElementById("story-icon").textContent = st.icon; }
-      const visual = document.getElementById("story-visual");
-      if (visual) visual.dataset.story = String(activeStoryIndex);
-      storyElapsed = 0; drawStoryProgress();
-    }
-    function stopStoryTimer() { if (storyInterval) { clearInterval(storyInterval); storyInterval = null; } }
-    function startStoryTimer() {
-      stopStoryTimer();
-      storyInterval = setInterval(function() {
-        storyElapsed += 100; drawStoryProgress();
-        if (storyElapsed >= STORY_DURATION) nextStory();
-      }, 100);
-    }
-    function openStory(index) {
-      activeStoryIndex = Math.max(0, Math.min(HOME_STORIES.length - 1, Number(index) || 0));
-      paintStory();
-      const modal = document.getElementById("story-modal");
-      modal.classList.add("open"); modal.setAttribute("aria-hidden", "false");
-      startStoryTimer();
-      try { haptic("light"); } catch(e) {}
-    }
-    function closeStory() {
-      stopStoryTimer();
-      const modal = document.getElementById("story-modal");
-      if (modal) { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); }
-    }
-    function nextStory() {
-      if (activeStoryIndex >= HOME_STORIES.length - 1) { closeStory(); return; }
-      activeStoryIndex++; paintStory(); startStoryTimer();
-    }
-    function prevStory() {
-      activeStoryIndex = Math.max(0, activeStoryIndex - 1); paintStory(); startStoryTimer();
-    }
-    function goToStorySection() {
-      const st = HOME_STORIES[activeStoryIndex]; closeStory();
-      if (st.target === "profile") { showScreen("profile"); return; }
-      if (st.target === "orders") { showScreen("orders"); return; }
-      if (st.search) { openModelSearch(st.search); return; }
-      if (HOME_BRANDS.includes(st.target)) { openBrandCatalog(st.target); return; }
-      openCatalog(st.target || "all");
-    }
-    document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeStory(); });
     function renderCatTiles() {}
 
     function renderCatalogGrid() {
-      const tiles = document.getElementById("cat-tiles"), grid = document.getElementById("catalog-grid"), crumb = document.getElementById("cat-crumb"), sortPanel = document.getElementById("catalog-sort");
+      const tiles = document.getElementById("cat-tiles"), grid = document.getElementById("catalog-grid"), crumb = document.getElementById("cat-crumb");
       if (!grid || !tiles || !crumb) return;
-      const flat = !!catalogQuery || currentCatalogFilter !== "all" || catalogSort === "stock";
-      const showTiles = (html, sub) => { if (sortPanel) sortPanel.style.display = "none"; tiles.className = "ptiles" + (sub ? " sub" : ""); tiles.style.display = "grid"; tiles.innerHTML = html; grid.innerHTML = ""; lastList = []; updateMoreBtn(); };
+      const flat = !!catalogQuery || currentCatalogFilter !== "all";
+      const showTiles = (html, sub) => { renderSortBar(false); tiles.className = "ptiles" + (sub ? " sub" : ""); tiles.style.display = "grid"; tiles.innerHTML = html; grid.innerHTML = ""; lastList = []; updateMoreBtn(); };
 
       if (!flat && currentCat === "all") {                 /* уровень 1: категории */
         crumb.innerHTML = '<span class="cc-title">Выберите категорию <small>· товары откроются списком по ' + PAGE_SIZE + ' шт.</small></span>';
@@ -6757,19 +6593,14 @@
       }
       /* уровень 3: товары (по 24 с кнопкой «Показать ещё») */
       tiles.style.display = "none";
-      if (sortPanel) { sortPanel.style.display = "flex"; document.querySelectorAll(".catalog-sort-btn").forEach(b => b.classList.toggle("active", b.dataset.sort === catalogSort)); }
+      renderSortBar(true);
       if (flat) {
-        let sourceList = listByCat(currentCat);
-        if (!catalogQuery && currentSub && currentSub !== "*") {
-          const selectedGroup = lastSubs.find(x => x.id === currentSub);
-          if (selectedGroup) sourceList = selectedGroup.items;
-        }
-        lastList = sortCatalogItems(filterBySearch(sourceList));
+        lastList = sortList(filterBySearch(listByCat(currentCat)));
         crumb.innerHTML = '<span class="cc-title">Найдено: ' + lastList.length + '</span>';
       } else {
         const all = listByCat(currentCat);
         const g = subs.find(x => x.id === currentSub);
-        lastList = sortCatalogItems(currentSub === "*" ? all : (g ? g.items : []));
+        lastList = sortList(currentSub === "*" ? all : (g ? g.items : []));
         crumb.innerHTML = (subs.length > 1 ? '<button class="cc-back" type="button" onclick="backToSubs()">‹ ' + catLabel(currentCat) + '</button>' : '') +
           '<span class="cc-title">' + (currentSub === "*" ? "Все товары" : coEsc(g ? g.label : "")) + ' <small>· ' + lastList.length + ' поз.</small></span>';
       }
@@ -6795,28 +6626,226 @@
     function backToSubs() { currentSub = null; shownCount = PAGE_SIZE; renderCatalogGrid(); catalogTop(); }
 
     function openModelSearch(q) { openCatalog("cases"); var i = document.getElementById("catalog-search-input"); if (i) { i.value = q; onCatalogSearch(q); } }
-    function openBrandCatalog(brand) {
-      currentCat = "all"; currentSub = "*"; catalogQuery = String(brand || "").trim().toLowerCase();
-      currentCatalogFilter = "all"; catalogSort = "popular"; shownCount = PAGE_SIZE;
-      showScreen("catalog");
-      const input = document.getElementById("catalog-search-input");
-      if (input) input.value = brand;
-      const wrap = document.getElementById("catalog-search");
-      if (wrap) wrap.classList.add("has-value");
-      document.getElementById("cat-chips").innerHTML = CATS.map(c =>
-        `<button class="chip ${c.id === currentCat ? "on" : ""}" type="button" onclick="openCatalog('${c.id}')">${c.name}</button>`
-      ).join("");
-      renderCatalogGrid();
-    }
     function openCatalog(cat, keepSub) {
       const next = cat || "all";
       if (!keepSub || next !== currentCat) { currentSub = null; shownCount = PAGE_SIZE; }
       currentCat = next;
       showScreen("catalog");
-      document.getElementById("cat-chips").innerHTML = CATS.map(c =>
+      document.getElementById("cat-chips").innerHTML = CATS.filter(c => !c.hidden || c.id === currentCat).map(c =>
         `<button class="chip ${c.id === currentCat ? "on" : ""}" type="button" onclick="openCatalog('${c.id}')">${c.name}</button>`
       ).join("");
       renderCatalogGrid();
+    }
+
+    /* ===== v5: быстрое добавление из каталога ===== */
+    function qaQty(id) {
+      const el = document.getElementById("qa-" + id), n = Math.floor(Number(el && el.value));
+      return isFinite(n) && n >= 1 ? Math.min(n, 99999) : 1;
+    }
+    function qaStep(id, d) {
+      const el = document.getElementById("qa-" + id);
+      if (el) el.value = Math.max(1, qaQty(id) + d);
+    }
+    function quickAdd(id) {
+      const p = PRODUCTS.find(x => x.id === id);
+      if (!p) return;
+      const v = p.vars[p.chosen || 0], q = qaQty(id), unit = displayPrice(v.price);
+      const key = p.id + "-" + v.name + "-" + COLORS[0];
+      if (!cart[key]) cart[key] = { title: p.base + " " + v.label, meta: COLORS[0] + " • " + v.label, qty: 0, unit: unit, total: 0 };
+      cart[key].qty += q; cart[key].unit = unit; cart[key].total = cart[key].qty * unit;
+      saveCart();
+      const el = document.getElementById("qa-" + id);
+      if (el) el.value = 1;
+      toast("В корзине: " + cart[key].qty + " шт.");
+      if (typeof playAppleSound === "function") playAppleSound("success");
+    }
+    function renderCartBar() {
+      const bar = document.getElementById("cart-bar"), scr = document.getElementById("screen-catalog");
+      if (!bar) return;
+      const n = cartCount(), show = n > 0 && scr && scr.classList.contains("on");
+      bar.classList.toggle("show", !!show);
+      if (show) document.getElementById("cb-text").innerHTML = "🛒 <b>" + n + " шт.</b> · " + money(cartSum());
+    }
+    (function () {
+      const orig = showScreen;
+      showScreen = function () { const r = orig.apply(this, arguments); try { renderCartBar(); } catch (e) {} return r; };
+    })();
+
+    /* ===== v4: сортировка каталога ===== */
+    const SORTS = [["pop", "Популярные"], ["asc", "Дешевле ₽"], ["desc", "Дороже ₽"], ["stock", "В наличии"]];
+    let currentSort = "pop";
+    function pPrice(p) { return displayPrice(p.vars[p.chosen || 0].price); }
+    function pQty(p) { return getStockInfo(p.id).qty || 0; }
+    function sortList(list) {
+      let a = list.slice();
+      if (currentSort === "asc") a.sort((x, y) => pPrice(x) - pPrice(y));
+      else if (currentSort === "desc") a.sort((x, y) => pPrice(y) - pPrice(x));
+      else if (currentSort === "stock") a = a.filter(p => pQty(p) > 0).sort((x, y) => pQty(y) - pQty(x));
+      else a.sort((x, y) => pQty(y) - pQty(x));
+      return a;
+    }
+    function renderSortBar(show) {
+      const el = document.getElementById("cat-sort");
+      if (!el) return;
+      el.style.display = show ? "flex" : "none";
+      if (show) el.innerHTML = SORTS.map(s => '<button class="sort-chip' + (s[0] === currentSort ? " on" : "") + '" type="button" onclick="setSort(\'' + s[0] + '\')">' + s[1] + '</button>').join("");
+    }
+    function setSort(id) { currentSort = id; shownCount = PAGE_SIZE; renderCatalogGrid(); }
+
+    /* ===== v4: бренды склада ===== */
+    const BRANDS = [["ACEFAST", "#0a6bd6", "#0a1d36"], ["MOSBROS", "#7a3cff", "#2a0f6b"], ["JOYROOM", "#ff8a1f", "#a8300a"], ["MOMAX", "#12b886", "#06513f"], ["HOCO", "#e8478f", "#6e1245"], ["K-DOO", "#3b4a63", "#0b1220"]];
+    function renderBrandRail() {
+      const el = document.getElementById("brand-rail"), used = {};
+      if (!el) return;
+      el.innerHTML = BRANDS.map(b => {
+        const list = PRODUCTS.filter(p => p.brand === b[0]);
+        if (!list.length) return "";
+        return '<button class="brand-card" type="button" style="--b1:' + b[1] + ';--b2:' + b[2] + '" onclick="openCatalog(\'' + b[0] + '\')"><b>' + b[0] + '</b><i>' + list.length + ' поз.</i>' + imgTag(coverImg(list, used)) + '<span class="bc-go">В каталог ›</span></button>';
+      }).join("");
+    }
+
+    /* ===== v4: Stories ===== */
+    function topBy(fn, n) {
+      return PRODUCTS.filter(p => p.img && fn(p)).sort((a, b) => pQty(b) - pQty(a)).slice(0, n || 3);
+    }
+    const STORIES = [
+      { id: "drop", label: "Привоз", icon: "📦", go: () => openCatalog("all"), cover: () => topBy(p => p.cat === "cases" && /\b18\b/.test(p.base), 1),
+        slides: [
+          { emoji: "📦", title: "Привоз недели", text: "Свежие поступления: чехлы на iPhone 18 / 17, GaN-зарядки, кабели. Остатки обновляем каждый день.", items: () => topBy(p => p.cat === "cases" && /\b18\b/.test(p.base)) },
+          { emoji: "🔥", title: "Ходовые позиции", text: "То, что чаще всего берут в партии на перепродажу.", items: () => topBy(() => true) } ] },
+      { id: "pav", label: "П42/44", icon: "🏬", go: () => openCatalog("all"),
+        slides: [
+          { emoji: "🏬", title: "Оптовый склад П42/44", get text() { return "ТЯК «Москва» (Люблино), пав. П42/44. В каталоге " + fmtPosCount() + " позиций: ACEFAST, MOSBROS, JOYROOM, MOMAX, HOCO, K-DOO."; } },
+          { emoji: "🛡", title: "Проверка перед отправкой", text: "Каждый заказ проверяем на брак перед отправкой. Автобус ТЯК Люблино или любые ТК; брак меняем со следующим заказом." } ] },
+      { id: "ace", label: "Acefast", icon: "⚡", go: () => openCatalog("gan"), cover: () => topBy(p => p.brand === "ACEFAST" && p.cat === "gan", 1),
+        slides: [
+          { emoji: "⚡", title: "Топ GaN-зарядок ACEFAST", text: "Компактные быстрые зарядки с PD для iPhone, iPad и ноутбуков.", items: () => topBy(p => p.brand === "ACEFAST" && p.cat === "gan") },
+          { emoji: "🔌", title: "Кабели и АЗУ ACEFAST", text: "Type-C и Lightning кабели, автомобильные зарядки.", items: () => topBy(p => p.brand === "ACEFAST" && p.cat === "cables") } ] },
+      { id: "cases", label: "Чехлы 18/17", icon: "📱", go: () => openCatalog("cases"), cover: () => topBy(p => p.cat === "cases" && /\b17\b/.test(p.base), 1),
+        slides: [
+          { emoji: "📱", title: "Новинки MagSafe: iPhone 18", text: "Чехлы на новые 18 Pro Max и 18 Pro — уже на складе.", items: () => topBy(p => p.cat === "cases" && /\b18\b/.test(p.base)) },
+          { emoji: "✨", title: "iPhone 17 Pro / Pro Max", text: "Самые ходовые модели: силикон, прозрачные, кожа, MagSafe.", items: () => topBy(p => p.cat === "cases" && /\b17\b/.test(p.base)) } ] },
+      { id: "ship", label: "Доставка", icon: "🚌", go: () => showCheckout(),
+        slides: [
+          { emoji: "🚌", title: "Автобус / ТЯК Люблино", text: "Отправляем автобусом ТЯК Люблино. Способ доставки вы указываете в корзине." },
+          { emoji: "📮", title: "Доставка по всей России", text: "Отправка любыми транспортными компаниями. Оплату в приложении не берём: менеджер пришлёт реквизиты в Telegram." } ] }
+    ];
+    function storiesSeen() { try { return JSON.parse(localStorage.getItem("sg_story_seen") || "[]"); } catch (e) { return []; } }
+    function renderStories() {
+      const el = document.getElementById("stories"), seen = storiesSeen();
+      if (!el) return;
+      el.innerHTML = STORIES.map((s, i) => {
+        const c = s.cover ? s.cover()[0] : null;
+        return '<button class="story' + (seen.indexOf(s.id) >= 0 ? " seen" : "") + '" type="button" onclick="openStory(' + i + ')"><span class="story-ring"><span class="story-in">' +
+          (c ? '<img src="' + c.img + '" alt="" onerror="this.remove()">' : "") + (c ? "" : s.icon) + '</span></span><span class="story-lab">' + s.label + '</span></button>';
+      }).join("");
+    }
+    const ST_MS = 5200;
+    let stIdx = -1, stSlide = 0, stTimer = null, stStart = 0, stLeft = ST_MS, stPaused = false;
+    function openStory(i) {
+      stIdx = i; stSlide = 0;
+      const seen = storiesSeen(), id = STORIES[i].id;
+      if (seen.indexOf(id) < 0) { seen.push(id); try { localStorage.setItem("sg_story_seen", JSON.stringify(seen)); } catch (e) {} renderStories(); }
+      const m = document.getElementById("story-modal");
+      m.classList.add("open"); m.setAttribute("aria-hidden", "false");
+      renderStorySlide();
+    }
+    function renderStorySlide() {
+      const s = STORIES[stIdx], sl = s.slides[stSlide], items = sl.items ? sl.items() : [], card = document.getElementById("st-card");
+      clearTimeout(stTimer); stPaused = false; stLeft = ST_MS; stStart = Date.now(); card.classList.remove("paused");
+      card.style.setProperty("--st-dur", ST_MS + "ms");
+      card.innerHTML =
+        '<div class="st-bars">' + s.slides.map((_, j) => '<div class="st-bar ' + (j < stSlide ? "done" : j === stSlide ? "run" : "") + '"><i></i></div>').join("") + '</div>' +
+        '<div class="st-top"><span class="st-who"><span class="st-dot">' + s.icon + '</span><b>' + s.label + '</b></span><button class="st-x" type="button" onclick="closeStory()" aria-label="Закрыть">✕</button></div>' +
+        '<button class="st-tap l" type="button" onclick="prevSlide()" aria-label="Назад"></button><button class="st-tap r" type="button" onclick="nextSlide()" aria-label="Далее"></button>' +
+        '<div class="st-body"><div class="st-emoji">' + sl.emoji + '</div><h3>' + sl.title + '</h3><p>' + sl.text + '</p>' +
+        (items.length ? '<div class="st-items">' + items.map(p => '<button class="st-item" type="button" onclick="storyProduct(\'' + p.id + '\')"><img src="' + p.img + '" alt="" loading="lazy"><span>' + p.base + '</span><b>' + money(pPrice(p)) + '</b></button>').join("") + '</div>' : "") +
+        '</div><button class="st-go" type="button" onclick="storyGo()">Перейти в раздел →</button>';
+      stTimer = setTimeout(nextSlide, ST_MS);
+    }
+    function nextSlide() {
+      if (stSlide < STORIES[stIdx].slides.length - 1) { stSlide++; renderStorySlide(); }
+      else if (stIdx < STORIES.length - 1) openStory(stIdx + 1);
+      else closeStory();
+    }
+    function prevSlide() {
+      if (stSlide > 0) { stSlide--; renderStorySlide(); }
+      else if (stIdx > 0) openStory(stIdx - 1);
+      else renderStorySlide();
+    }
+    function closeStory() {
+      clearTimeout(stTimer);
+      const m = document.getElementById("story-modal");
+      m.classList.remove("open"); m.setAttribute("aria-hidden", "true");
+    }
+    function storyGo() { const s = STORIES[stIdx]; closeStory(); s.go(); }
+    function storyProduct(id) { closeStory(); openProductSheet(id); }
+    (function () {
+      const card = document.getElementById("st-card");
+      card.addEventListener("pointerdown", () => { if (stPaused) return; stPaused = true; stLeft -= Date.now() - stStart; clearTimeout(stTimer); card.classList.add("paused"); });
+      const resume = () => { if (!stPaused) return; stPaused = false; stStart = Date.now(); card.classList.remove("paused"); stTimer = setTimeout(nextSlide, Math.max(300, stLeft)); };
+      ["pointerup", "pointercancel", "pointerleave"].forEach(ev => card.addEventListener(ev, resume));
+      document.addEventListener("keydown", e => { if (e.key === "Escape") closeStory(); });
+    })();
+
+    /* ===== v4: параллакс hero ===== */
+    (function () {
+      const hero = document.getElementById("homeHero"), app = document.querySelector(".app-container");
+      if (!hero) return;
+      let raf = 0;
+      const set = (px, py) => { hero.style.setProperty("--px", px.toFixed(3)); hero.style.setProperty("--py", py.toFixed(3)); };
+      hero.addEventListener("pointermove", e => {
+        const r = hero.getBoundingClientRect();
+        const px = ((e.clientX - r.left) / r.width - .5) * 2, py = ((e.clientY - r.top) / r.height - .5) * 2;
+        cancelAnimationFrame(raf); raf = requestAnimationFrame(() => set(px, py));
+      }, { passive: true });
+      hero.addEventListener("pointerleave", () => set(0, 0));
+      if (app) app.addEventListener("scroll", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => hero.style.setProperty("--sy", Math.min(app.scrollTop, 300))); }, { passive: true });
+    })();
+
+    /* ===== v5: пост для Авито (оптовая цена из карточки, без склада) ===== */
+    function resaleSpecs(name) {
+      const n = normName(name), s = [], m = phoneModel(n);
+      let x;
+      if (m) s.push("Модель: " + m.label);
+      if ((x = /(\d{2,3})\s?W\b/i.exec(n))) s.push("Мощность: " + x[1] + " Вт");
+      if ((x = /(\d{4,6})\s?mAh/i.exec(n))) s.push("Ёмкость: " + x[1] + " мАч");
+      if (/magsafe|mag\s?safe|\bmag\b/i.test(n)) s.push("Поддержка MagSafe");
+      if (/\bgan\b/i.test(n)) s.push("Технология GaN");
+      if (/type-?\s?c|usb-c/i.test(n)) s.push("Разъём Type-C");
+      if (/lightning/i.test(n)) s.push("Разъём Lightning");
+      if (/privacy|антишпион/i.test(n)) s.push("Антишпион");
+      return s;
+    }
+    function buildResalePost(p, v) {
+      const name = ((p.single ? p.base : p.base + " " + v.label) + (p.article ? " " + p.article : "")).replace(/\s+/g, " ").trim();
+      const specs = resaleSpecs(name);
+      if (p.brand && !/без бренда/i.test(p.brand)) specs.unshift("Бренд: " + p.brand);
+      if (p.code) specs.push("Артикул: " + p.code);
+      if (p.condition && !/запрос/i.test(p.condition)) specs.push("Состояние: " + p.condition);
+      if (p.warranty && !/запрос/i.test(p.warranty)) specs.push("Гарантия: " + p.warranty);
+      const lines = ["🔥 " + name, ""].concat(specs.map(s => "✅ " + s));
+      lines.push("", "💰 Цена: " + money(displayPrice(v.price)));
+      if (pQty(p) > 0) lines.push("📦 В наличии, отправлю сразу");
+      lines.push("🚚 Доставка по России", "", "Пишите в личные сообщения — отвечу и помогу с выбором 👇");
+      return lines.join("\n").replace(/садовод\w*|п\s?42[-/]44|supglass/gi, "").replace(/ {2,}/g, " ");
+    }
+    function copyText(t) {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t);
+      return new Promise((ok, fail) => {
+        const ta = document.createElement("textarea");
+        ta.value = t; ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        try { document.execCommand("copy") ? ok() : fail(); } catch (e) { fail(e); }
+        ta.remove();
+      });
+    }
+    function copyResalePost() {
+      const p = PRODUCTS.find(x => x.id === modalId);
+      if (!p) return;
+      copyText(buildResalePost(p, p.vars[modalVar || 0]))
+        .then(() => toast("Текст поста скопирован!"))
+        .catch(() => toast("Не удалось скопировать текст"));
     }
 
     function openProduct(id) {
@@ -6952,7 +6981,7 @@
       const list = PRODUCTS.filter(p => fav.includes(p.id));
       if (!list.length) { toast("Избранное пусто"); return; }
       const totalCost = list.reduce((sum, p) => sum + displayPrice(p.vars[p.chosen || 0].price), 0);
-      let text = " П42-44 SUPGLASS B2B — Коммерческое предложение\n";
+      let text = " П42/44 SUPGLASS B2B — Коммерческое предложение\n";
       text += "Дата: " + new Date().toLocaleDateString("ru-RU") + "\n";
       text += "Статус: Наличие подтверждено на складе\n";
       text += "──────────────────────────\n";
@@ -7018,7 +7047,7 @@
               </div>
               <span class="orders-status-pill">${isRecent ? "В пути (СДЭК)" : "Доставлен"}</span>
             </div>
-            <div class="orders-pass-date">Оформлен: ${o.date || "Сегодня"} · ТК Садовод</div>
+            <div class="orders-pass-date">Оформлен: ${o.date || "Сегодня"} · ТЯК «Москва»</div>
 
             <!-- Apple Tracking Timeline -->
             <div class="orders-tracker">
@@ -7092,7 +7121,7 @@
           win.document.write(`
             <html>
             <head>
-              <title>Накладная Торг-12 — П42-44 SUPGLASS</title>
+              <title>Накладная Торг-12 — П42/44 SUPGLASS</title>
               <style>
                 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 24px; color: #111; line-height: 1.4; }
                 h2 { border-bottom: 2px solid #000; padding-bottom: 8px; margin-top: 0; }
@@ -7103,8 +7132,8 @@
               </style>
             </head>
             <body>
-              <h2>П42-44 SUPGLASS B2B — Товарная накладная № EL-${Date.now().toString().slice(-6)}</h2>
-              <p><b>Поставщик:</b> П42-44 SUPGLASS (ТК Садовод, пав. 42-44)</p>
+              <h2>П42/44 SUPGLASS B2B — Товарная накладная № EL-${Date.now().toString().slice(-6)}</h2>
+              <p><b>Поставщик:</b> П42/44 SUPGLASS (ТЯК «Москва» (Люблино), пав. П42/44)</p>
               <p><b>Покупатель:</b> Укажите ФИО (Партнер TIER 1)</p>
               <p><b>Дата:</b> ${new Date().toLocaleDateString("ru-RU")}</p>
               <table>
@@ -7207,7 +7236,7 @@
         ).join("");
       }
       
-      document.getElementById("pm-qty").textContent = modalQty;
+      document.getElementById("pm-qty").value = modalQty;
       document.getElementById("pm-range").value = modalQty;
       document.getElementById("pm-disc").innerHTML =
         `<div class="on">Гарантия: ${p.warranty || "30 дней"}</div>` +
@@ -7233,37 +7262,10 @@
       const gorbEl = document.getElementById("pm-stock-gorb");
       const currentStock = getStockQty(p.id);
       if (savEl) savEl.textContent = (currentStock > 0 ? "есть" : "нет");
-      if (gorbEl) gorbEl.textContent = (currentStock > 0 ? "есть" : "нет");
+      if (gorbEl) gorbEl.textContent = (currentStock > 0 ? "(есть)" : "(нет)");
 
       updateLivePrice();
     }
-    async function copyResellerPost() {
-      const p = PRODUCTS.find(x => x.id === modalId);
-      if (!p) return;
-      const v = (p.vars && p.vars[modalVar || 0]) || { label:"", price:0 };
-      const title = (p.single ? p.base : (p.base + " " + (v.label || ""))).trim();
-      const rawPrice = displayPrice(Number(v.price || p.price || 0));
-      const retailPrice = Math.round((rawPrice * 1.35) / 50) * 50;
-      const clean = function(value) { return String(value || "").replace(/садовод|п42[-– ]?44|supglass|склад/ig, "").replace(/[•|]+/g, " ").replace(/\s+/g, " ").trim(); };
-      const details = [p.code ? "Артикул: " + clean(p.code) : "", p.brand ? "Бренд: " + clean(p.brand) : "", clean(p.unit), p.condition ? "Состояние: " + clean(p.condition) : "", p.warranty ? "Гарантия: " + clean(p.warranty) : ""].filter(Boolean);
-      const uniqueDetails = [...new Set(details)].filter(line => line.length > 0);
-      const post = `💎 ${title}\n\n${uniqueDetails.join("\n")}\n\n💰 Цена: ${money(retailPrice)}\n\nПо наличию и заказу — пишите в личные сообщения.`;
-      let copied = false;
-      try {
-        if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(post); copied = true; }
-      } catch (e) {}
-      if (!copied) {
-        const field = document.createElement("textarea");
-        field.value = post; field.setAttribute("readonly", "");
-        field.style.position = "fixed"; field.style.opacity = "0"; field.style.pointerEvents = "none";
-        document.body.appendChild(field); field.select();
-        try { copied = document.execCommand("copy"); } catch (e) { copied = false; }
-        field.remove();
-      }
-      toast(copied ? "Текст для перепродажи скопирован!" : "Не удалось скопировать текст");
-      if (copied) { try { haptic("success"); } catch(e) {} }
-    }
-
     function setMem(i) { modalVar = i; PRODUCTS.find(x=>x.id===modalId).chosen = i; renderModal(); }
     function setColor(i) { modalColor = i; renderModal(); }
     function unitByQty(price, qty) {
@@ -7283,17 +7285,16 @@
       document.querySelectorAll("#pm-disc div").forEach(n => {
         n.classList.add("on");
       });
-      const mq = document.getElementById("mg-qty");
-      const mr = document.getElementById("mg-qty-range");
-      if (mq) mq.textContent = modalQty;
-      if (mr) mr.value = modalQty;
     }
-    function chgQty(d, abs) {
-      modalQty = Math.max(1, Math.min(50, abs ? Number(abs) : modalQty + d));
+    function chgQty(d, abs, typing) {
+      if (typing && (abs === "" || abs == null)) return;
+      let n = abs ? Number(abs) : modalQty + d;
+      if (!isFinite(n)) n = 1;
+      modalQty = Math.max(1, Math.min(99999, Math.floor(n)));
       const q = document.getElementById("pm-qty");
       const r = document.getElementById("pm-range");
-      if (q) q.textContent = modalQty;
-      if (r) r.value = modalQty;
+      if (q && !typing) q.value = modalQty;
+      if (r) r.value = Math.min(modalQty, 50);
       updateLivePrice();
     }
     function confirmBox() {
@@ -7354,81 +7355,7 @@
       if (sheet) sheet.classList.remove("open");
     }
 
-    let market = "wb";
-    function openMargin() {
-      if (!modalId) return;
-      document.getElementById("margin-sheet").classList.add("open");
-      setupMargin();
-    }
-    function closeMargin() { document.getElementById("margin-sheet").classList.remove("open"); }
-    function setMarket(m) {
-      market = m;
-      document.getElementById("tab-wb").classList.toggle("on", m === "wb");
-      document.getElementById("tab-oz").classList.toggle("on", m === "ozon");
-      drawMargin();
-    }
-    function currentVar() {
-      const p = PRODUCTS.find(x => x.id === modalId);
-      if (!p) return null;
-      return { p, v: p.vars[modalVar || p.chosen || 0] };
-    }
-    function setupMargin() {
-      const cur = currentVar();
-      if (!cur) return;
-      const sell0 = Math.round(cur.v.price * 1.35);
-      const sl = document.getElementById("mg-range");
-      sl.min = Math.max(1000, cur.v.price);
-      sl.max = Math.max(sell0 * 2.2, cur.v.price + 40000);
-      sl.value = sell0;
-      document.getElementById("mg-qty").textContent = modalQty;
-      document.getElementById("mg-qty-range").value = modalQty;
-      drawMargin();
-    }
-    function drawMargin() {
-      const cur = currentVar();
-      if (!cur) return;
-      const fee = market === "ozon" ? 0.20 : 0.30;
-      const opt = cur.v.price;
-      const sell = Number(document.getElementById("mg-range").value);
-      const after = Math.round(sell * (1 - fee));
-      const clean = after - opt;
-      const boxClean = clean * cur.p.box * modalQty;
-      document.getElementById("mg-head").textContent = cur.p.base + " " + cur.v.label + " / " + COLORS[modalColor];
-      document.getElementById("mg-sub").textContent = money(opt) + "/шт • " + cur.p.box + " шт • " + modalQty + " шт.";
-      document.getElementById("mg-sell-label").textContent = money(sell);
-      document.getElementById("mg-opt").textContent = money(opt);
-      document.getElementById("mg-after").textContent = money(after);
-      document.getElementById("mg-fee").textContent = market === "ozon" ? "OZON −20%" : "WB −30%";
-      document.getElementById("mg-clean").textContent = (clean>=0?"+":"") + money(clean);
-      document.getElementById("mg-box-net").textContent = "с штов " + (boxClean>=0?"+":"") + money(boxClean);
-      document.getElementById("mg-qty").textContent = modalQty;
-      const t1 = opt, t3 = Math.round(opt*0.978), t5 = Math.round(opt*0.955);
-      document.getElementById("mg-disc").innerHTML = `<div>1 шт — ${money(t1)}</div>`;
-      const sl = document.getElementById("mg-range");
-      const min = Number(sl.min), max = Number(sl.max);
-      const pts = [];
-      for (let i=0;i<=12;i++){
-        const price = min + (max-min)*i/12;
-        pts.push(price*(1-fee)-opt);
-      }
-      const lo = Math.min.apply(null, pts.concat([0]));
-      const hi = Math.max.apply(null, pts.concat([1]));
-      const coords = pts.map(function(y,i){
-        const x = 8 + i*(264/12);
-        const yy = 70 - ((y-lo)/(hi-lo||1))*54;
-        return x.toFixed(1)+","+yy.toFixed(1);
-      }).join(" ");
-      const zeroY = 70 - ((0-lo)/(hi-lo||1))*54;
-      const curX = 8 + ((sell-min)/(max-min||1))*264;
-      const curY = 70 - ((clean-lo)/(hi-lo||1))*54;
-      document.getElementById("mg-chart").innerHTML =
-        '<line x1="8" y1="'+zeroY.toFixed(1)+'" x2="272" y2="'+zeroY.toFixed(1)+'" stroke="#c5d0e0" stroke-width="1"></line>'+
-        '<polyline fill="none" stroke="#0077ff" stroke-width="2.4" stroke-linecap="round" points="'+coords+'"></polyline>'+
-        '<circle cx="'+curX.toFixed(1)+'" cy="'+curY.toFixed(1)+'" r="4.2" fill="#00a6ff"></circle>';
-    }
-
     let cart = JSON.parse(localStorage.getItem("sg_cart") || "{}");
-    let shipMode = "cdek";
     function cartCount() {
       return Object.values(cart).reduce((s,i)=>s+i.qty,0);
     }
@@ -7436,6 +7363,7 @@
       return Object.values(cart).reduce((s,i)=>s+i.total,0);
     }
     function updateCartBadge() {
+      try { renderCartBar(); } catch (e) {}
       const b = document.getElementById("cart-badge");
       if (!b) return;
       const n = cartCount();
@@ -7531,7 +7459,7 @@
             <div class="co-line"><b>${money(i.total)}</b><button class="co-x" type="button" data-act="del" aria-label="Удалить">✕</button></div>
             <div class="co-qty">
               <button type="button" data-act="dec" aria-label="Меньше" ${i.qty <= 1 ? "disabled" : ""}>−</button>
-              <span>${i.qty}</span>
+              <input class="qty-input" type="number" inputmode="numeric" min="1" step="1" value="${i.qty}" data-act="set" aria-label="Количество" onfocus="this.select()">
               <button type="button" data-act="inc" aria-label="Больше">+</button>
             </div>
           </div>
@@ -7539,27 +7467,7 @@
       }).join("");
       document.getElementById("co-party").textContent = cartCount() + " шт. в партии";
       document.getElementById("co-total").textContent = money(cartSum());
-      updateCheckoutProgress();
     }
-    function updateCheckoutProgress() {
-      const threshold = 5000;
-      const total = cartSum();
-      const percent = Math.max(0, Math.min(100, total / threshold * 100));
-      const fill = document.getElementById("co-progress-fill");
-      const value = document.getElementById("co-progress-value");
-      const note = document.getElementById("co-progress-note");
-      const label = document.getElementById("co-progress-label");
-      if (fill) fill.style.width = percent + "%";
-      if (value) value.textContent = Math.round(percent) + "%";
-      if (total >= threshold) {
-        if (label) label.textContent = "Порог бесплатной доставки автобусом достигнут";
-        if (note) note.textContent = "Сумма заказа от 5 000 ₽ — можно выбрать автобус Садовод";
-      } else {
-        if (label) label.textContent = "До бесплатной доставки автобусом Садовод";
-        if (note) note.textContent = "Добавьте товаров ещё на " + money(threshold - total) + " (от 5 000 ₽)";
-      }
-    }
-
     function coChange(key, act) {
       const it = cart[key];
       if (!it) return;
@@ -7584,10 +7492,29 @@
       const row = btn && btn.closest(".co-item");
       if (row) coChange(row.dataset.key, btn.dataset.act);
     });
+    function coSetQty(inp, final) {
+      const row = inp.closest(".co-item"), it = row && cart[row.dataset.key];
+      if (!it) return;
+      let n = Math.floor(Number(inp.value));
+      if (!isFinite(n) || n < 1) { if (!final) return; n = 1; }
+      n = Math.min(99999, n);
+      it.qty = n; it.total = coUnit(it) * n;
+      saveCart();
+      row.querySelector(".co-line b").textContent = money(it.total);
+      document.getElementById("co-total").textContent = money(cartSum());
+      document.getElementById("co-party").textContent = cartCount() + " шт. в партии";
+      const dec = row.querySelector('[data-act="dec"]');
+      if (dec) dec.disabled = n <= 1;
+      if (final) inp.value = n;
+    }
+    (function () {
+      const box = document.getElementById("co-items");
+      box.addEventListener("input", e => { const i = e.target.closest('input[data-act="set"]'); if (i) coSetQty(i, false); });
+      box.addEventListener("change", e => { const i = e.target.closest('input[data-act="set"]'); if (i) coSetQty(i, true); });
+    })();
     function showCheckout() {
       if (!Object.keys(cart).length) { showScreen("orders"); renderOrders(); toast("Корзина пустая"); return; }
       renderCheckoutItems();
-      setShip(shipMode);
       document.getElementById("checkout-sheet").classList.add("open");
     }
     function hideCheckout(clearCart = false) {
@@ -7606,24 +7533,6 @@
       openCatalog(typeof currentCat === "string" ? currentCat : "all", true);
       toast("Товары сохранены в заказе — выбирайте дальше");
     }
-    function setShip(mode) {
-      shipMode = mode;
-      ["bus","cdek","tk","pickup"].forEach(m => {
-        const el = document.getElementById("ship-"+m);
-        if (el) el.classList.toggle("on", m===mode);
-      });
-      const city = document.getElementById("buyer-city");
-      const pvz = document.getElementById("cdek-pvz");
-      const fio = document.getElementById("tk-fio");
-      const doc = document.getElementById("tk-doc");
-      const stand = document.getElementById("bus-stand");
-      const plate = document.getElementById("bus-plate");
-      [city,pvz,fio,doc,stand,plate].forEach(el => el.classList.remove("on"));
-      if (mode==="cdek") { city.classList.add("on"); pvz.classList.add("on"); }
-      if (mode==="tk") { city.classList.add("on"); fio.classList.add("on"); doc.classList.add("on"); }
-      if (mode==="bus") { city.classList.add("on"); stand.classList.add("on"); plate.classList.add("on"); }
-      if (mode==="pickup") { /* no extra */ }
-    }
     function sendOrder() {
       const name = document.getElementById("buyer-name").value.trim();
       const phone = document.getElementById("buyer-phone").value.trim();
@@ -7638,37 +7547,9 @@
         return;
       }
 
-      const city = document.getElementById("buyer-city").value.trim();
-
-      if (shipMode !== "pickup" && !city) {
-        toast("Укажите город");
-        return;
-      }
-
-      if (shipMode === "cdek" && !document.getElementById("cdek-pvz").value.trim()) {
-        toast("Укажите ПВЗ СДЭК");
-        return;
-      }
-
-      if (
-        shipMode === "tk" &&
-        (
-          !document.getElementById("tk-fio").value.trim() ||
-          !document.getElementById("tk-doc").value.trim()
-        )
-      ) {
-        toast("Заполните данные ТК");
-        return;
-      }
-
-      if (
-        shipMode === "bus" &&
-        (
-          !document.getElementById("bus-stand").value.trim() ||
-          !document.getElementById("bus-plate").value.trim()
-        )
-      ) {
-        toast("Заполните данные автобуса");
+      const shipText = document.getElementById("ship-method").value.trim();
+      if (!shipText) {
+        toast("Укажите способ доставки");
         return;
       }
 
@@ -7679,19 +7560,8 @@
         return;
       }
 
-      const shipLabel = {
-        bus: "Рейсовый автобус",
-        cdek: "СДЭК",
-        tk: "ТК",
-        pickup: "Самовывоз"
-      }[shipMode] || "Не указан";
-
-      const pvz = document.getElementById("cdek-pvz").value.trim();
-      const tkFio = document.getElementById("tk-fio").value.trim();
-      const tkDoc = document.getElementById("tk-doc").value.trim();
-      const busStand = document.getElementById("bus-stand").value.trim();
-      const busPlate = document.getElementById("bus-plate").value.trim();
-      const deliveryAddress = pvz || tkDoc || busStand || (shipMode === "pickup" ? "Самовывоз" : (city || "Москва"));
+      const shipLabel = shipText;
+      const deliveryAddress = shipText;
 
       const orderSum = Number(cartSum()) || 0;
       const orderId = "EL-" + Date.now().toString(36).toUpperCase() + "-" + Math.floor(100 + Math.random() * 900);
@@ -7768,25 +7638,17 @@
         telephone: phone,
         buyer_phone: phone,
         phone_clean: phone.replace(/[^\d+]/g, ""),
-        city: city,
-
         ship: shipLabel,
+        ship_method: shipText,
         shipping: shipLabel,
         delivery_method: shipLabel,
         delivery_type: shipLabel,
-        pvz: pvz,
         address: deliveryAddress,
 
         delivery: {
           method: shipLabel,
           type: shipLabel,
-          city: city,
-          pvz: pvz,
-          address: deliveryAddress,
-          tk_fio: tkFio,
-          tk_doc: tkDoc,
-          bus_stand: busStand,
-          bus_plate: busPlate
+          address: deliveryAddress
         },
 
         items: items,
@@ -7829,7 +7691,7 @@
         tg.ready();
         tg.sendData(serialized);
       } catch (e) {
-        console.error("П42-44 SUPGLASS sendData error:", e);
+        console.error("П42/44 SUPGLASS sendData error:", e);
         toast("Не удалось отправить заказ в Telegram");
         return;
       }
@@ -7857,7 +7719,7 @@
     }
     updateCartBadge();
 
-    /* ===== П42-44 SUPGLASS PROFILE ===== */
+    /* ===== П42/44 SUPGLASS PROFILE ===== */
 
     /* =========================================================
        FEATURES: RATE / TRADE-IN / WHOLESALE TIERS
@@ -8264,6 +8126,7 @@
     function normalizeCustomProduct(raw) {
       var cat = sanitizeField(raw.cat || "phones") || "phones";
       if (cat === "audio") cat = "earbuds";
+      if (cat === "gan" && /\d\s?[-]?\s?(in|в)\s?[-]?\s?1|станц|station/i.test(String(raw.name || raw.base || raw.title || ""))) cat = "stations";
       if (cat === "watch") cat = "watches";
       var id = sanitizeField(raw.id) || ("c" + Date.now().toString(36));
       id = id.replace(/\s+/g, "-").toLowerCase();
@@ -8285,11 +8148,11 @@
         reviews: 1,
         unit: unit,
         warranty: "30 дней",
-        delivery: "ТК Садовод",
+        delivery: "ТЯК «Москва»",
         condition: unit,
         single: true,
         wholesale: false,
-        shop: "П42-44 SUPGLASS",
+        shop: "П42/44 SUPGLASS",
         vars: [{ name: "std", label: "STD", price: price }],
         chosen: 0,
         custom: true,
@@ -8777,7 +8640,7 @@
 
     /* ----- Wholesale tiers ----- */
     function tierDiscount(qty) { return 0; }
-    function tierLabel(qty) { return "Розница"; }
+    function tierLabel(qty) { return "Опт"; }
 
     /* ----- Trade-in ----- */
     const TI_MODELS = [
@@ -9157,7 +9020,7 @@
       if (name && name.toLowerCase().indexOf("реквизит") >= 0) {
         toast("Откройте реквизиты в боте — файл на русском");
       } else {
-        toast(name + " — файл будет доступен у менеджера П42-44 SUPGLASS");
+        toast(name + " — файл будет доступен у менеджера П42/44 SUPGLASS");
       }
     }
 
@@ -9296,7 +9159,7 @@
       }
     }, { passive: true });
 
-    /* ===== П42-44 SUPGLASS SPLASH BOOT (~3s) ===== */
+    /* ===== П42/44 SUPGLASS SPLASH BOOT (~3s) ===== */
     (function runElectroSplash() {
       var splash = document.getElementById("electro-splash");
       var bar = document.getElementById("splash-bar");
@@ -9326,7 +9189,7 @@
       } catch (e) {}
 
       var steps = [
-        { pct: 8,  text: "Запуск П42-44 SUPGLASS" },
+        { pct: 8,  text: "Запуск П42/44 SUPGLASS" },
         { pct: 18, text: "Подключение к Telegram" },
         { pct: 32, text: "Синхронизация каталога" },
         { pct: 48, text: "Загрузка каталога" },
@@ -10082,7 +9945,7 @@ Apple Watch Ultra 2 Black Titanium 72000
     }
 
     // Sync sound UI, DI rate, stock, exchange rate and fetch fresh catalog from cloud on initialization
-    function initApp() { renderHomeTiles(); renderHomeBrands(); renderHomeStories();
+    function initApp() { updateCatalogCounts(); renderHomeTiles(); renderStories(); renderBrandRail(); renderCartBar();
       try { syncSoundUI(); } catch (e) {}
       try { updateDiRate(); } catch (e) {}
       try { initStockMap(); } catch (e) {}
