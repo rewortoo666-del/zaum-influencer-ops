@@ -544,7 +544,7 @@
     "name": "C28-03TTG C28-03 USB-C to USB-C charging data cable with phone holder（1.2m） (metal grey)",
     "stock": 72,
     "price": 210,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_c971dc39d8db.png",
     "image": "images/ACEFAST_c971dc39d8db.png",
     "id": "50"
@@ -555,7 +555,7 @@
     "name": "C28-01TIG C28-01 USB-C to L charging data cable with phone holder（1.2m） (metal grey)",
     "stock": 110,
     "price": 220,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_44b860c6872c.png",
     "image": "images/ACEFAST_44b860c6872c.png",
     "id": "51"
@@ -1512,7 +1512,7 @@
     "name": "M36G M36-10000 магнитный портативный аккумулятор с быстрой зарядкой 22,5 Вт (CCC) (металлик)",
     "stock": 233,
     "price": 1360,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_406445652e8e.png",
     "image": "images/ACEFAST_406445652e8e.png",
     "id": "138"
@@ -1523,7 +1523,7 @@
     "name": "M35G M35-5000 PD18W магнитный портативный аккумулятор с быстрой зарядкой (CCC) (Неопасные грузы) (металлик)",
     "stock": 659,
     "price": 1250,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_9af61ac182e3.png",
     "image": "images/ACEFAST_9af61ac182e3.png",
     "id": "139"
@@ -1534,7 +1534,7 @@
     "name": "M34G M34-20000 PD45W портативный аккумулятор с выдвижным кабелем (CCC) (Неопасные грузы) (металлик)",
     "stock": 340,
     "price": 2270,
-    "cat": "gan",
+    "cat": "powerbank",
     "img": "images/ACEFAST_d800fa6169cb.png",
     "image": "images/ACEFAST_d800fa6169cb.png",
     "id": "140"
@@ -1545,7 +1545,7 @@
     "name": "M33G M33-20000 100W портативный аккумулятор со встроенным кабелем и TFT дисплеем (CCC) (Неопасные грузы) (металлик)",
     "stock": 351,
     "price": 2800,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_89d96e47c7a2.png",
     "image": "images/ACEFAST_89d96e47c7a2.png",
     "id": "141"
@@ -1556,7 +1556,7 @@
     "name": "M32G M32-10000 PD35W портативный аккумулятор с выдвижным кабелем (CCC) (Неопасные грузы) (металлик)",
     "stock": 262,
     "price": 1750,
-    "cat": "gan",
+    "cat": "powerbank",
     "img": "images/ACEFAST_73f19028333f.png",
     "image": "images/ACEFAST_73f19028333f.png",
     "id": "142"
@@ -1567,7 +1567,7 @@
     "name": "M32S M32-10000 PD35W портативный аккумулятор с выдвижным кабелем (CCC) (Неопасные грузы) (серебро)",
     "stock": 264,
     "price": 1750,
-    "cat": "gan",
+    "cat": "powerbank",
     "img": "images/ACEFAST_73f19028333f.png",
     "image": "images/ACEFAST_73f19028333f.png",
     "id": "143"
@@ -1578,7 +1578,7 @@
     "name": "M31B M31-10000 22.5W магнитный портативный аккумулятор с кабелем (CCC) (черный)",
     "stock": 686,
     "price": 1200,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_074c741a0a53.png",
     "image": "images/ACEFAST_074c741a0a53.png",
     "id": "144"
@@ -1589,7 +1589,7 @@
     "name": "M30B M30-5000 PD20W магнитный портативный аккумулятор (CCC) (Неопасные грузы) (черный)",
     "stock": 228,
     "price": 995,
-    "cat": "gan",
+    "cat": "powerbank",
     "img": "images/ACEFAST_1f40edc52929.png",
     "image": "images/ACEFAST_1f40edc52929.png",
     "id": "145"
@@ -1600,7 +1600,7 @@
     "name": "M29B M29-20000 22.5W портативный аккумулятор с кабелем (CCC) (Неопасные грузы) (черный)",
     "stock": 311,
     "price": 1300,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_4c08ba6e87b9.png",
     "image": "images/ACEFAST_4c08ba6e87b9.png",
     "id": "146"
@@ -1611,7 +1611,7 @@
     "name": "M28B M28-10000 22.5W портативный аккумулятор с кабелем (CCC) (Неопасные грузы) (черный)",
     "stock": 163,
     "price": 1100,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_96a1ba58e9c7.png",
     "image": "images/ACEFAST_96a1ba58e9c7.png",
     "id": "147"
@@ -1622,7 +1622,7 @@
     "name": "M24G M24-10000 22.5W магнитный портативный аккумулятор с кабелем и держателем (CCC) (Опасные грузы (с Сертификатом соответствия на тару для опасных грузов) (металлик)",
     "stock": 185,
     "price": 1470,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_410efabf8d05.png",
     "image": "images/ACEFAST_410efabf8d05.png",
     "id": "148"
@@ -1644,7 +1644,7 @@
     "name": "M23G M23-10000 22.5W портативный аккумулятор с 2 кабелями (CCC) (Неопасные грузы) (металлик)",
     "stock": 36,
     "price": 1360,
-    "cat": "other",
+    "cat": "powerbank",
     "img": "images/ACEFAST_24bd45490b26.png",
     "image": "images/ACEFAST_24bd45490b26.png",
     "id": "150"
@@ -1688,7 +1688,7 @@
     "name": "M21B M21-20000 PD65W портативный аккумулятор с кабелем (CCC) (Неопасные грузы) (черный)",
     "stock": 61,
     "price": 2550,
-    "cat": "gan",
+    "cat": "powerbank",
     "img": "images/ACEFAST_06acf68fc7ae.png",
     "image": "images/ACEFAST_06acf68fc7ae.png",
     "id": "154"
@@ -2634,7 +2634,7 @@
     "name": "E54G E54 Автомобильный магнитный держатель на присоске для центральной консоли с электроприводом (металлик)",
     "stock": 22,
     "price": 880,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_93fa50d65e59.png",
     "image": "images/ACEFAST_93fa50d65e59.png",
     "id": "240"
@@ -2645,7 +2645,7 @@
     "name": "E53G E53 Автомобильный магнитный держатель с беспроводной зарядкой на присоске для центральной консоли с электроприводом (металлик)",
     "stock": 54,
     "price": 1100,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_c1f5a3a40caf.png",
     "image": "images/ACEFAST_c1f5a3a40caf.png",
     "id": "241"
@@ -2733,7 +2733,7 @@
     "name": "E39W E39 4-в-1 держатель с беспроводной зарядкой (Белый)",
     "stock": 238,
     "price": 1985,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_1341da8099eb.png",
     "image": "images/ACEFAST_1341da8099eb.png",
     "id": "249"
@@ -2744,7 +2744,7 @@
     "name": "E38BG E38 телескопическая селфи-палка из углеродного волокна (Серый черный)",
     "stock": 28,
     "price": 1630,
-    "cat": "other",
+    "cat": "holders",
     "img": "images/ACEFAST_7c50d3afc27b.png",
     "image": "images/ACEFAST_7c50d3afc27b.png",
     "id": "250"
@@ -2810,7 +2810,7 @@
     "name": "E29G E29 магнитный автомобильный держатель с беспроводной зарядкой и электрической присоской (металлик)",
     "stock": 370,
     "price": 830,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_ac02cdd5a260.png",
     "image": "images/ACEFAST_ac02cdd5a260.png",
     "id": "256"
@@ -2876,7 +2876,7 @@
     "name": "D75B D75 Магнитный автомобильный держатель для центральной консоли (Черный)",
     "stock": 4,
     "price": 340,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_8ceeb0554802.png",
     "image": "images/ACEFAST_8ceeb0554802.png",
     "id": "262"
@@ -2931,7 +2931,7 @@
     "name": "D55B D55 магнитный автомобильный держатель для панели приборов (Черный)",
     "stock": 120,
     "price": 530,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_1a65d07336ef.png",
     "image": "images/ACEFAST_1a65d07336ef.png",
     "id": "267"
@@ -2953,7 +2953,7 @@
     "name": "D66B D66 QI2 25W автомобильный держатель с беспроводной зарядкой и охлаждением для воздуховода (Черный)",
     "stock": 588,
     "price": 1260,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_4acce4f44776.png",
     "image": "images/ACEFAST_4acce4f44776.png",
     "id": "269"
@@ -2964,7 +2964,7 @@
     "name": "D70B D70 магнитный автомобильный держатель (Черный)",
     "stock": 326,
     "price": 550,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_e297215feef0.png",
     "image": "images/ACEFAST_e297215feef0.png",
     "id": "270"
@@ -2975,7 +2975,7 @@
     "name": "D68B D68 магнитный автомобильный держатель для воздуховода (Черный)",
     "stock": 147,
     "price": 500,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_5b7f7d4cac73.png",
     "image": "images/ACEFAST_5b7f7d4cac73.png",
     "id": "271"
@@ -2986,7 +2986,7 @@
     "name": "D65B D65 Магнитный складной автомобильный держатель с беспроводной зарядкой (Черный)",
     "stock": 155,
     "price": 830,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_e1b2ea249ac2.png",
     "image": "images/ACEFAST_e1b2ea249ac2.png",
     "id": "272"
@@ -2997,7 +2997,7 @@
     "name": "D64B D64 магнитный складной автомобильный держатель (Черный)",
     "stock": 112,
     "price": 520,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_9efa78a2874b.png",
     "image": "images/ACEFAST_9efa78a2874b.png",
     "id": "273"
@@ -3019,7 +3019,7 @@
     "name": "D33b D33 Qi2 magnetic wireless charging car holder for air vent (black)",
     "stock": 781,
     "price": 1070,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_e9ba71ac38fa.png",
     "image": "images/ACEFAST_e9ba71ac38fa.png",
     "id": "275"
@@ -3030,7 +3030,7 @@
     "name": "D61G D61 Qi2 25W magnetic wireless charging car holder (metal gray)",
     "stock": 936,
     "price": 1160,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_b27412444ba8.png",
     "image": "images/ACEFAST_b27412444ba8.png",
     "id": "276"
@@ -3085,7 +3085,7 @@
     "name": "D47B D47 magnetic wireless charging car holder for dashboard (black)",
     "stock": 96,
     "price": 540,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_999e43840cc6.png",
     "image": "images/ACEFAST_999e43840cc6.png",
     "id": "281"
@@ -3096,7 +3096,7 @@
     "name": "D46B D46 magnetic wireless charging car holder for air vent (black)",
     "stock": 477,
     "price": 460,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/ACEFAST_32e4da51b578.png",
     "image": "images/ACEFAST_32e4da51b578.png",
     "id": "282"
@@ -3184,7 +3184,7 @@
     "name": "E24G E24 Qi2 настольный магнитный держатель с беспроводной зарядкой (металлик)",
     "stock": 218,
     "price": 920,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/ACEFAST_320fb5404c5c.png",
     "image": "images/ACEFAST_320fb5404c5c.png",
     "id": "290"
@@ -3283,7 +3283,7 @@
     "name": "J12B J12 USB-C на 3.5мм аудио конвертер（15cm） (Черный)",
     "stock": 200,
     "price": 120,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/ACEFAST_3319e243c126.png",
     "image": "images/ACEFAST_3319e243c126.png",
     "id": "299"
@@ -3327,7 +3327,7 @@
     "name": "J9G J9 USB-C to USB-C digital display adapter (metal gray)",
     "stock": 117,
     "price": 140,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/ACEFAST_503cdb6e9198.png",
     "image": "images/ACEFAST_503cdb6e9198.png",
     "id": "303"
@@ -3371,7 +3371,7 @@
     "name": "QC8B QC8 USB-A wireless 6.0 adapter (black)",
     "stock": 168,
     "price": 300,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/ACEFAST_08148e533346.jpg",
     "image": "images/ACEFAST_08148e533346.jpg",
     "id": "307"
@@ -3393,7 +3393,7 @@
     "name": "QC6B QC6 USB-A wireless 6.0 audio receiver (black)",
     "stock": 120,
     "price": 180,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/ACEFAST_f6929236e58a.jpg",
     "image": "images/ACEFAST_f6929236e58a.jpg",
     "id": "309"
@@ -3415,7 +3415,7 @@
     "name": "QC4B QC4 USB-A wireless 6.0 audio receiver (black)",
     "stock": 124,
     "price": 230,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/ACEFAST_27ce20d09456.jpg",
     "image": "images/ACEFAST_27ce20d09456.jpg",
     "id": "311"
@@ -3426,7 +3426,7 @@
     "name": "QC2G QC2 AI Box CarPlay wireless adapter for car (metal gray)",
     "stock": 39,
     "price": 2600,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/ACEFAST_8c3a7ae96304.png",
     "image": "images/ACEFAST_8c3a7ae96304.png",
     "id": "312"
@@ -3437,7 +3437,7 @@
     "name": "QC1G QC1 CarPlay wireless adapter for car (metal gray)",
     "stock": 237,
     "price": 1350,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/ACEFAST_b5ae97ab2472.png",
     "image": "images/ACEFAST_b5ae97ab2472.png",
     "id": "313"
@@ -3448,7 +3448,7 @@
     "name": "B25B B25 36W Автомобильный аудиоплеер (черный)",
     "stock": 100,
     "price": 535,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_38ed5057cfdb.png",
     "image": "images/ACEFAST_38ed5057cfdb.png",
     "id": "314"
@@ -3459,7 +3459,7 @@
     "name": "B22G B22 Автомобильное зарядное устройство мощностью 152 Вт (2USB-C + 3USB-A + двойной прикуриватель) (металлик)",
     "stock": 60,
     "price": 790,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_ef687bd0fc52.png",
     "image": "images/ACEFAST_ef687bd0fc52.png",
     "id": "315"
@@ -3470,7 +3470,7 @@
     "name": "B16P5G B16 95W (USB-A+USB-C) dual port metal car charger set (P5) (metal gray)",
     "stock": 399,
     "price": 470,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_70be9fe2ddc7.png",
     "image": "images/ACEFAST_70be9fe2ddc7.png",
     "id": "316"
@@ -3481,7 +3481,7 @@
     "name": "B16g B16 95W (USB-A+USB-C) dual port metal car charger (metal gray)",
     "stock": 75,
     "price": 410,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_4220fb969a82.png",
     "image": "images/ACEFAST_4220fb969a82.png",
     "id": "317"
@@ -3492,7 +3492,7 @@
     "name": "B15G B15 65W(USB-A+USB-C) автомобильное зарядное устройство с двумя портами (metal gray)",
     "stock": 76,
     "price": 370,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_a5d708e0eb22.png",
     "image": "images/ACEFAST_a5d708e0eb22.png",
     "id": "318"
@@ -3503,7 +3503,7 @@
     "name": "B12B B12 60W (USB-A+USB-C) dual-port car charger (black)",
     "stock": 105,
     "price": 370,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_ee99b8b75b7b.png",
     "image": "images/ACEFAST_ee99b8b75b7b.png",
     "id": "319"
@@ -3525,7 +3525,7 @@
     "name": "B9B B9 66W(2USB-A+USB-C) three port metal car charger (black)",
     "stock": 100,
     "price": 850,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_1e5582104b15.png",
     "image": "images/ACEFAST_1e5582104b15.png",
     "id": "321"
@@ -3536,7 +3536,7 @@
     "name": "B6B B6 metal car charger 63W (USB-A+USB-C) with digital display (transparent black)",
     "stock": 100,
     "price": 620,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_4267380930a5.png",
     "image": "images/ACEFAST_4267380930a5.png",
     "id": "322"
@@ -3547,7 +3547,7 @@
     "name": "B5B B5 101W (2C+A) metal car charger with OLED smart display (black)",
     "stock": 100,
     "price": 1470,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_e23b117beaef.png",
     "image": "images/ACEFAST_e23b117beaef.png",
     "id": "323"
@@ -3558,7 +3558,7 @@
     "name": "B4B B4 digital display 66W(USB-C+USB-A) dual port car charger (black)",
     "stock": 105,
     "price": 580,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_5abe6f9e82e2.png",
     "image": "images/ACEFAST_5abe6f9e82e2.png",
     "id": "324"
@@ -3569,7 +3569,7 @@
     "name": "B3B B3 66W(USB-C+USB-C+USB-A) three-port metal car charger (black)",
     "stock": 100,
     "price": 830,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_e6186ea89f9d.png",
     "image": "images/ACEFAST_e6186ea89f9d.png",
     "id": "325"
@@ -3580,7 +3580,7 @@
     "name": "B2B B2 72W dual USB-C metal car charger (black)",
     "stock": 100,
     "price": 630,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_dbb80ca8200e.png",
     "image": "images/ACEFAST_dbb80ca8200e.png",
     "id": "326"
@@ -3602,7 +3602,7 @@
     "name": "B20G B20 PD45W (USB-C+USB-A) автомобильное зарядное устройство (металлик)",
     "stock": 374,
     "price": 465,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_570246540a6b.png",
     "image": "images/ACEFAST_570246540a6b.png",
     "id": "328"
@@ -3613,7 +3613,7 @@
     "name": "B19G B19 PD30W (USB-C+USB-A) автомобильное зарядное устройство (металлик)",
     "stock": 455,
     "price": 260,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_1d142bf7b481.png",
     "image": "images/ACEFAST_1d142bf7b481.png",
     "id": "329"
@@ -3624,7 +3624,7 @@
     "name": "B21G B21 75W(USB-C+USB-A) автомобильное зарядное устройство (металлик)",
     "stock": 100,
     "price": 650,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/ACEFAST_712deefbee25.png",
     "image": "images/ACEFAST_712deefbee25.png",
     "id": "330"
@@ -4273,7 +4273,7 @@
     "name": "20W28 Apple Original usb-c to usb adapter 20w (28)",
     "stock": 3729,
     "price": 650,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/APPLE_0bb29ef79908.png",
     "image": "images/APPLE_0bb29ef79908.png",
     "id": "389"
@@ -4284,7 +4284,7 @@
     "name": "20W30 Apple Original usb-c to usb adapter 20w (30)",
     "stock": 3970,
     "price": 800,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/APPLE_0bb29ef79908.png",
     "image": "images/APPLE_0bb29ef79908.png",
     "id": "390"
@@ -4295,7 +4295,7 @@
     "name": "20W90 Apple Original usb-c to usb adapter 20w (90)",
     "stock": 2547,
     "price": 1300,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/APPLE_0bb29ef79908.png",
     "image": "images/APPLE_0bb29ef79908.png",
     "id": "391"
@@ -4427,7 +4427,7 @@
     "name": "Apple Original USB-C to Lightning Adapter A2868",
     "stock": 760,
     "price": 500,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/APPLE_d54b9565253d.jpg",
     "image": "images/APPLE_d54b9565253d.jpg",
     "id": "403"
@@ -4438,7 +4438,7 @@
     "name": "Apple Original USB-C to Headphone Jack adapter A2155",
     "stock": 780,
     "price": 650,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/APPLE_7e3a7c436ff7.png",
     "image": "images/APPLE_7e3a7c436ff7.png",
     "id": "404"
@@ -4449,7 +4449,7 @@
     "name": "Apple Original Lightning to Headphone Jack Adapter A1749",
     "stock": 490,
     "price": 650,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/APPLE_7735cd4e115c.png",
     "image": "images/APPLE_7735cd4e115c.png",
     "id": "405"
@@ -6990,7 +6990,7 @@
     "name": "Cable — BG4 Business wired mouse (black)",
     "stock": 220,
     "price": 215,
-    "cat": "cables",
+    "cat": "other",
     "img": "images/BOROFONE___CELEBRATE_ecc13237239b.png",
     "image": "images/BOROFONE___CELEBRATE_ecc13237239b.png",
     "id": "636"
@@ -7001,7 +7001,7 @@
     "name": "BH53 Windy center console car holder (black grey)",
     "stock": 301,
     "price": 240,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/BOROFONE___CELEBRATE_5e575139ab52.png",
     "image": "images/BOROFONE___CELEBRATE_5e575139ab52.png",
     "id": "637"
@@ -12369,7 +12369,7 @@
     "name": "HB52G HB52 Wow 8-in-1 multi-function converter(HDTV+RJ45+SD/TF+PD+Type-C3.0+USB3.0*2) (deep space gray)",
     "stock": 144,
     "price": 1210,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_90dd672c723c.png",
     "image": "images/HOCO_90dd672c723c.png",
     "id": "1125"
@@ -12380,7 +12380,7 @@
     "name": "HB41B HB41 Easy safety 4-1in-1 Adapter(USB to USB3.0*4)(1=1.2M) (Black)",
     "stock": 100,
     "price": 375,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_bb850c26ea78.jpg",
     "image": "images/HOCO_bb850c26ea78.jpg",
     "id": "1126"
@@ -12391,7 +12391,7 @@
     "name": "HB28G HB28 Type-C multi-function converter(HDTV+USB3.0+USB2.0+SD+TF+PD) (metal gray)",
     "stock": 2500,
     "price": 830,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_580e1a7f985a.png",
     "image": "images/HOCO_580e1a7f985a.png",
     "id": "1127"
@@ -12402,7 +12402,7 @@
     "name": "HB27G HB27 Type-C multi-function converter(HDTV+USB3.0+USB2.0*2+PD)",
     "stock": 1969,
     "price": 830,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_933fa20be893.png",
     "image": "images/HOCO_933fa20be893.png",
     "id": "1128"
@@ -12413,7 +12413,7 @@
     "name": "HB26G HB26 4 in 1 adapter(USB to USB3.0+USB2.0*3) (metal gray)",
     "stock": 100,
     "price": 305,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_5b6d42e29fca.png",
     "image": "images/HOCO_5b6d42e29fca.png",
     "id": "1129"
@@ -12424,7 +12424,7 @@
     "name": "HB26TG HB26 4 in 1 adapter(Type-C to USB3.0+USB2.0*3) (metal gray)",
     "stock": 3967,
     "price": 290,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_db83e2468521.png",
     "image": "images/HOCO_db83e2468521.png",
     "id": "1130"
@@ -12435,7 +12435,7 @@
     "name": "HB1BG HB1B 4-in-1 converter(USB to USB3.0*4) (metal gray)",
     "stock": 100,
     "price": 440,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_e56011daeef0.png",
     "image": "images/HOCO_e56011daeef0.png",
     "id": "1131"
@@ -12446,7 +12446,7 @@
     "name": "HB1CG HB1C 4-in-1 converter(Type-C to USB3.0*4) (metal gray)",
     "stock": 232,
     "price": 440,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_7f1a5639f887.png",
     "image": "images/HOCO_7f1a5639f887.png",
     "id": "1132"
@@ -12468,7 +12468,7 @@
     "name": "LS36AIG LS36A Fresh digital audio converter iP to 3.5 (metal gray)",
     "stock": 356,
     "price": 250,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_eea9e8cca0bd.jpg",
     "image": "images/HOCO_eea9e8cca0bd.jpg",
     "id": "1134"
@@ -12490,7 +12490,7 @@
     "name": "LS36TB LS36 Fresh Digital Type-C to 3.5 audio converter (black)",
     "stock": 13785,
     "price": 115,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_060669c9117b.png",
     "image": "images/HOCO_060669c9117b.png",
     "id": "1136"
@@ -12501,7 +12501,7 @@
     "name": "LS33TG LS33 Type-C Digital 3.5 Audio converter (metal gray)",
     "stock": 505,
     "price": 170,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_945f47596771.png",
     "image": "images/HOCO_945f47596771.png",
     "id": "1137"
@@ -12534,7 +12534,7 @@
     "name": "UA37G UA37 USB ethernet adapter(1000 Mbps) (metal gray)",
     "stock": 100,
     "price": 515,
-    "cat": "gan",
+    "cat": "cables",
     "img": "images/HOCO_43bd92c46b62.png",
     "image": "images/HOCO_43bd92c46b62.png",
     "id": "1140"
@@ -12545,7 +12545,7 @@
     "name": "UA37TG UA37 Type-C ethernet adapter(1000 Mbps) (metal gray)",
     "stock": 448,
     "price": 515,
-    "cat": "gan",
+    "cat": "cables",
     "img": "images/HOCO_d33947605863.png",
     "image": "images/HOCO_d33947605863.png",
     "id": "1141"
@@ -12578,7 +12578,7 @@
     "name": "UA24TG UA24 Type-C male to USB female 3.0 converter (metal gray)",
     "stock": 1187,
     "price": 150,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_05812c740907.png",
     "image": "images/HOCO_05812c740907.png",
     "id": "1144"
@@ -12589,7 +12589,7 @@
     "name": "UA24IG UA24 iP male to USB female 2.0 converter (metal gray)",
     "stock": 1764,
     "price": 250,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_2de798629a5a.png",
     "image": "images/HOCO_2de798629a5a.png",
     "id": "1145"
@@ -12600,7 +12600,7 @@
     "name": "UA17IT21B UA17 iP male/Type-C male to USB female two-in-one adapter (black)",
     "stock": 1035,
     "price": 160,
-    "cat": "gan",
+    "cat": "cables",
     "img": "images/HOCO_29d8ed9c44e3.png",
     "image": "images/HOCO_29d8ed9c44e3.png",
     "id": "1146"
@@ -12611,7 +12611,7 @@
     "name": "UA17ITB UA17 iP Male to Type-C female USB2.0 adapter (black)",
     "stock": 100,
     "price": 80,
-    "cat": "gan",
+    "cat": "cables",
     "img": "images/HOCO_5cb1c7029823.png",
     "image": "images/HOCO_5cb1c7029823.png",
     "id": "1147"
@@ -12622,7 +12622,7 @@
     "name": "UA17IUB UA17 iP Male to USB female USB2.0 adapter (black)",
     "stock": 174,
     "price": 170,
-    "cat": "gan",
+    "cat": "cables",
     "img": "images/HOCO_7d4e403b0696.png",
     "image": "images/HOCO_7d4e403b0696.png",
     "id": "1148"
@@ -12633,7 +12633,7 @@
     "name": "UA17UTB UA17 USB Male to Type-C female USB2.0 adapter (black)",
     "stock": 896,
     "price": 80,
-    "cat": "gan",
+    "cat": "cables",
     "img": "images/HOCO_8f44719ce3ba.png",
     "image": "images/HOCO_8f44719ce3ba.png",
     "id": "1149"
@@ -12644,7 +12644,7 @@
     "name": "UA17TB UA17 Type-C male to USB female USB3.0 adapter (black)",
     "stock": 355,
     "price": 80,
-    "cat": "gan",
+    "cat": "cables",
     "img": "images/HOCO_3f0ba7aed2a6.png",
     "image": "images/HOCO_3f0ba7aed2a6.png",
     "id": "1150"
@@ -12655,7 +12655,7 @@
     "name": "UPA34TTG UPA34 digital audio converter Type-C to Type-C+3.5 (metal gray)",
     "stock": 92,
     "price": 190,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_49ccdfb0ba8f.jpg",
     "image": "images/HOCO_49ccdfb0ba8f.jpg",
     "id": "1151"
@@ -12666,7 +12666,7 @@
     "name": "UPA34ATTG UPA34A digital audio converter Type-C to dual Type-C (metal gray)",
     "stock": 46,
     "price": 180,
-    "cat": "other",
+    "cat": "cables",
     "img": "images/HOCO_d9d4ba666ce0.jpg",
     "image": "images/HOCO_d9d4ba666ce0.jpg",
     "id": "1152"
@@ -14316,7 +14316,7 @@
     "name": "CA202PG CA202 Plus Enlightener infrared induction wireless charging car holder(air outlet) (black metal gray)",
     "stock": 491,
     "price": 750,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_72ebee3d7445.png",
     "image": "images/HOCO_72ebee3d7445.png",
     "id": "1302"
@@ -14338,7 +14338,7 @@
     "name": "CA85B CA85 Ultra-fast magnetic wireless charging car holder (black)",
     "stock": 777,
     "price": 750,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c8b6060f5358.png",
     "image": "images/HOCO_c8b6060f5358.png",
     "id": "1304"
@@ -14558,7 +14558,7 @@
     "name": "NZ16G NZ16 Rigorous single port PD30W car charger (metal grey)",
     "stock": 100,
     "price": 220,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9a62625ccf8a.png",
     "image": "images/HOCO_9a62625ccf8a.png",
     "id": "1324"
@@ -14569,7 +14569,7 @@
     "name": "NZ16TIG NZ16 Rigorous single port PD30W car charger set(C to iP) (metal grey)",
     "stock": 217,
     "price": 285,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a891ea792c75.png",
     "image": "images/HOCO_a891ea792c75.png",
     "id": "1325"
@@ -14580,7 +14580,7 @@
     "name": "NZ16TTG NZ16 Rigorous single port PD30W car charger set(C to C) (metal grey)",
     "stock": 420,
     "price": 265,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_1359ef5dc18a.png",
     "image": "images/HOCO_1359ef5dc18a.png",
     "id": "1326"
@@ -14591,7 +14591,7 @@
     "name": "NZ16AG NZ16A Rigorous 43W dual port PD25W+QC3.0 car charger (metal grey)",
     "stock": 490,
     "price": 285,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4d2c356bcaa6.png",
     "image": "images/HOCO_4d2c356bcaa6.png",
     "id": "1327"
@@ -14602,7 +14602,7 @@
     "name": "NZ16BG NZ16B Rigorous PD45W(2C) car charger (metal grey)",
     "stock": 295,
     "price": 305,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_87b64998989a.png",
     "image": "images/HOCO_87b64998989a.png",
     "id": "1328"
@@ -14613,7 +14613,7 @@
     "name": "NZ14B NZ14 Guerrero 36W dual-port car charger (black)",
     "stock": 100,
     "price": 275,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_8fd4375b424a.png",
     "image": "images/HOCO_8fd4375b424a.png",
     "id": "1329"
@@ -14624,7 +14624,7 @@
     "name": "NZ14AB NZ14A Guerrero PD20W+QC3.0 car charger (black)",
     "stock": 1116,
     "price": 300,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4b44d0473ce3.png",
     "image": "images/HOCO_4b44d0473ce3.png",
     "id": "1330"
@@ -14635,7 +14635,7 @@
     "name": "NZ14BB NZ14B Guerrero PD50W(2C) car charger (black)",
     "stock": 105,
     "price": 360,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_0c6a2b4915d8.png",
     "image": "images/HOCO_0c6a2b4915d8.png",
     "id": "1331"
@@ -14646,7 +14646,7 @@
     "name": "NZ10S NZ10 Handy PD45W+QC3.0 car charger (silver)",
     "stock": 547,
     "price": 420,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_10305455d650.png",
     "image": "images/HOCO_10305455d650.png",
     "id": "1332"
@@ -14657,7 +14657,7 @@
     "name": "NZ9B NZ9 Galloper 95W three-port(2C1A) car charger (black)",
     "stock": 127,
     "price": 965,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_83d1b561bd71.png",
     "image": "images/HOCO_83d1b561bd71.png",
     "id": "1333"
@@ -14668,7 +14668,7 @@
     "name": "NZ8BR NZ8 Sprinter 43W dual port PD25W+QC3.0 car charger (brown)",
     "stock": 86,
     "price": 340,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9e8ad6c872ba.png",
     "image": "images/HOCO_9e8ad6c872ba.png",
     "id": "1334"
@@ -14679,7 +14679,7 @@
     "name": "NZ6B NZ6 PD45W 3-port(2C1A) car charger (black)",
     "stock": 357,
     "price": 540,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2dc2dcd87bbf.png",
     "image": "images/HOCO_2dc2dcd87bbf.png",
     "id": "1335"
@@ -14690,7 +14690,7 @@
     "name": "NZ5B NZ5 Smooth road PD30W+QC3.0 car charger (black)",
     "stock": 40,
     "price": 475,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9a68742fa6a0.png",
     "image": "images/HOCO_9a68742fa6a0.png",
     "id": "1336"
@@ -14701,7 +14701,7 @@
     "name": "NZ1MB HOCO NZ1 Developar 36W dual port QC3.0 car charger set (Micro) (black)",
     "stock": 10,
     "price": 230,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_abfe488cf602.jpg",
     "image": "images/HOCO_abfe488cf602.jpg",
     "id": "1337"
@@ -14712,7 +14712,7 @@
     "name": "NZ1MG HOCO NZ1 Developar 36W dual port QC3.0 car charger set (Micro) (metal gray)",
     "stock": 13,
     "price": 230,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_abfe488cf602.jpg",
     "image": "images/HOCO_abfe488cf602.jpg",
     "id": "1338"
@@ -14723,7 +14723,7 @@
     "name": "Z36MB HOCO Z36 Leader dual port car charger set(Micro) (black)",
     "stock": 35,
     "price": 150,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_714836d66c52.png",
     "image": "images/HOCO_714836d66c52.png",
     "id": "1339"
@@ -14734,7 +14734,7 @@
     "name": "Z36MW HOCO Z36 Leader dual port car charger set(Micro) (white)",
     "stock": 261,
     "price": 150,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_714836d66c52.png",
     "image": "images/HOCO_714836d66c52.png",
     "id": "1340"
@@ -14745,7 +14745,7 @@
     "name": "Z39IB HOCO Z39 Farsighted dual port QC3.0 Car charger set(Lightning) black",
     "stock": 100,
     "price": 200,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ee56c27780f0.png",
     "image": "images/HOCO_ee56c27780f0.png",
     "id": "1341"
@@ -14756,7 +14756,7 @@
     "name": "Z39MB HOCO Z39 Farsighted dual port QC3.0 Car charger set(Micro) black",
     "stock": 42,
     "price": 200,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ee56c27780f0.png",
     "image": "images/HOCO_ee56c27780f0.png",
     "id": "1342"
@@ -14767,7 +14767,7 @@
     "name": "Z40IW HOCO Z40 Superior dual port car charger set(Lightning) white",
     "stock": 100,
     "price": 175,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_0f7677652d7d.jpg",
     "image": "images/HOCO_0f7677652d7d.jpg",
     "id": "1343"
@@ -14778,7 +14778,7 @@
     "name": "Z70B Z70 Speed PD93W(2C1A)car charger with TFT display (black)",
     "stock": 100,
     "price": 640,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_cd9cf784865a.png",
     "image": "images/HOCO_cd9cf784865a.png",
     "id": "1344"
@@ -14789,7 +14789,7 @@
     "name": "Z69B Z69 Vivido 24W(2C2A) car charger (black)",
     "stock": 100,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_0ee3714074ba.png",
     "image": "images/HOCO_0ee3714074ba.png",
     "id": "1345"
@@ -14800,7 +14800,7 @@
     "name": "Z69AB Z69A Vivido PD37W(2C1A) car charger with digital display (black)",
     "stock": 100,
     "price": 275,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_7cbd6d3d0263.png",
     "image": "images/HOCO_7cbd6d3d0263.png",
     "id": "1346"
@@ -14811,7 +14811,7 @@
     "name": "Z69BB Z69B Vivido PD57W(2C1A) car charger with digital display (black)",
     "stock": 100,
     "price": 395,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_03ea6b73732b.png",
     "image": "images/HOCO_03ea6b73732b.png",
     "id": "1347"
@@ -14822,7 +14822,7 @@
     "name": "Z65B Z65 Smart dual cigarette lighter car charger (black)",
     "stock": 41,
     "price": 295,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a8a0471a1b75.png",
     "image": "images/HOCO_a8a0471a1b75.png",
     "id": "1348"
@@ -14833,7 +14833,7 @@
     "name": "Z65AB Z65A Smart cigarette lighter(PD45W/2C1A) car charger (black)",
     "stock": 197,
     "price": 445,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_17dc72b3d698.png",
     "image": "images/HOCO_17dc72b3d698.png",
     "id": "1349"
@@ -14844,7 +14844,7 @@
     "name": "Z65BB Z65B Smart dual cigarette lighter(PD48W/1A1C) car charger (black)",
     "stock": 100,
     "price": 470,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_49b987b18ce7.png",
     "image": "images/HOCO_49b987b18ce7.png",
     "id": "1350"
@@ -14866,7 +14866,7 @@
     "name": "Z62G Z62 Energy single-port QC3.0 car charger (metal gray)",
     "stock": 140,
     "price": 130,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ab07531b08bb.png",
     "image": "images/HOCO_ab07531b08bb.png",
     "id": "1352"
@@ -14877,7 +14877,7 @@
     "name": "Z62TG Z62 Energy single-port QC3.0 car charger set(Type-C) (metal gray)",
     "stock": 100,
     "price": 160,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_dbab30c5865a.png",
     "image": "images/HOCO_dbab30c5865a.png",
     "id": "1353"
@@ -14888,7 +14888,7 @@
     "name": "Z62AG Z62A Energy single port PD30W car charger (metal gray)",
     "stock": 322,
     "price": 135,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4aabf984c39b.png",
     "image": "images/HOCO_4aabf984c39b.png",
     "id": "1354"
@@ -14899,7 +14899,7 @@
     "name": "Z61AB Z61A Correct PD60W(2C1A) cigarette lighter car charger (black)",
     "stock": 100,
     "price": 390,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_b5255f6d88a5.png",
     "image": "images/HOCO_b5255f6d88a5.png",
     "id": "1355"
@@ -14910,7 +14910,7 @@
     "name": "Z60G Z60 Bloom 48W dual-port PD30W+QC3.0 multi-protocol car charger (metal gray)",
     "stock": 145,
     "price": 265,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_cea4627b3bfc.png",
     "image": "images/HOCO_cea4627b3bfc.png",
     "id": "1356"
@@ -14921,7 +14921,7 @@
     "name": "Z58B Z58 Rank single port PD30W car charger (black)",
     "stock": 116,
     "price": 175,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_e7a1bb4c34e7.png",
     "image": "images/HOCO_e7a1bb4c34e7.png",
     "id": "1357"
@@ -14932,7 +14932,7 @@
     "name": "Z58AB Z58A Rank 48W dual port PD30W+QC3.0 car charger (black)",
     "stock": 100,
     "price": 230,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_95d638b08c12.png",
     "image": "images/HOCO_95d638b08c12.png",
     "id": "1358"
@@ -14943,7 +14943,7 @@
     "name": "Z57BG Z57B Glorious 63W dual-port digital display PD45W+QC3.0 car charger (metal gray)",
     "stock": 100,
     "price": 550,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ee549e8a18cf.png",
     "image": "images/HOCO_ee549e8a18cf.png",
     "id": "1359"
@@ -14954,7 +14954,7 @@
     "name": "Z57AG Z57A Glorious PD30W+QC3.0 car charger (metal gray)",
     "stock": 12,
     "price": 210,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_92c9c862b36c.png",
     "image": "images/HOCO_92c9c862b36c.png",
     "id": "1360"
@@ -14965,7 +14965,7 @@
     "name": "Z57ATIG Z57A Glorious PD30W+QC3.0 car charger set(C to iP) (metal gray)",
     "stock": 35,
     "price": 275,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_68a3f6e27eb2.png",
     "image": "images/HOCO_68a3f6e27eb2.png",
     "id": "1361"
@@ -14976,7 +14976,7 @@
     "name": "Z57ATTG Z57A Glorious PD30W+QC3.0 car charger set(C to C) (metal gray)",
     "stock": 100,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_dc104cd0cf0d.png",
     "image": "images/HOCO_dc104cd0cf0d.png",
     "id": "1362"
@@ -14987,7 +14987,7 @@
     "name": "Z57MG Z57 Glorious single-port PD30W car charger (metal gray)",
     "stock": 100,
     "price": 160,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2afe039e3f6d.png",
     "image": "images/HOCO_2afe039e3f6d.png",
     "id": "1363"
@@ -14998,7 +14998,7 @@
     "name": "Z56B Z56 Friend PD35W+QC3.0 cigarette lighter car charger (black)",
     "stock": 80,
     "price": 405,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_dfef1a36e015.png",
     "image": "images/HOCO_dfef1a36e015.png",
     "id": "1364"
@@ -15009,7 +15009,7 @@
     "name": "Z54MG Z54 Prosperous dual-port car charger (metal grey)",
     "stock": 736,
     "price": 160,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_37fde6835622.png",
     "image": "images/HOCO_37fde6835622.png",
     "id": "1365"
@@ -15020,7 +15020,7 @@
     "name": "Z54IG Z54 Prosperous dual-port car charger set(iP) (metal grey)",
     "stock": 313,
     "price": 180,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c4843a3841d7.png",
     "image": "images/HOCO_c4843a3841d7.png",
     "id": "1366"
@@ -15031,7 +15031,7 @@
     "name": "Z54TG Z54 Prosperous dual-port car charger set(Type-C) (metal grey)",
     "stock": 100,
     "price": 175,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_fd31919810e9.png",
     "image": "images/HOCO_fd31919810e9.png",
     "id": "1367"
@@ -15042,7 +15042,7 @@
     "name": "Z54AG Z54A Prosperous 48W dual port PD30W+QC3.0 car charger (metal grey)",
     "stock": 876,
     "price": 245,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9ba4fd0a9081.png",
     "image": "images/HOCO_9ba4fd0a9081.png",
     "id": "1368"
@@ -15053,7 +15053,7 @@
     "name": "Z54ATIG Z54A Prosperous 48W dual port PD30W+QC3.0 car charger set(C to iP) (metal grey)",
     "stock": 352,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_08e0c52181f1.png",
     "image": "images/HOCO_08e0c52181f1.png",
     "id": "1369"
@@ -15064,7 +15064,7 @@
     "name": "Z54ATTG Z54A Prosperous 48W dual port PD30W+QC3.0 car charger set(C to C) (metal grey)",
     "stock": 100,
     "price": 270,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_e391a42bc719.png",
     "image": "images/HOCO_e391a42bc719.png",
     "id": "1370"
@@ -15075,7 +15075,7 @@
     "name": "Z54BG Z54B Prosperous PD60W(2C) car charger (metal grey)",
     "stock": 328,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_639d3d961e63.png",
     "image": "images/HOCO_639d3d961e63.png",
     "id": "1371"
@@ -15086,7 +15086,7 @@
     "name": "Z53AB Z53A Vision PD30W+QC3.0 car charger (transparent black)",
     "stock": 100,
     "price": 305,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2ffeb7b843e3.png",
     "image": "images/HOCO_2ffeb7b843e3.png",
     "id": "1372"
@@ -15097,7 +15097,7 @@
     "name": "Z52B Z52 Spacious PD38W(1C1A) car charger (transparent black)",
     "stock": 84,
     "price": 210,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_be6837529d04.png",
     "image": "images/HOCO_be6837529d04.png",
     "id": "1373"
@@ -15108,7 +15108,7 @@
     "name": "Z50G Z50 Leader 48W dual-port PD30W+QC3.0 car charger with digital display (metal gray)",
     "stock": 80,
     "price": 320,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_79a1225867d6.png",
     "image": "images/HOCO_79a1225867d6.png",
     "id": "1374"
@@ -15119,7 +15119,7 @@
     "name": "Z49B Z49 Level dual port car charger (black)",
     "stock": 377,
     "price": 140,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_de0770051234.png",
     "image": "images/HOCO_de0770051234.png",
     "id": "1375"
@@ -15130,7 +15130,7 @@
     "name": "Z49AB Z49A Level single port QC3.0 car charger (black)",
     "stock": 183,
     "price": 150,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d407d9e52c22.png",
     "image": "images/HOCO_d407d9e52c22.png",
     "id": "1376"
@@ -15141,7 +15141,7 @@
     "name": "Z49BB Z49B Level PD38W(1C1A) car charger (black)",
     "stock": 780,
     "price": 190,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_85a0c0e1bbe7.png",
     "image": "images/HOCO_85a0c0e1bbe7.png",
     "id": "1377"
@@ -15152,7 +15152,7 @@
     "name": "Z47ATB Z47A Transparent Discovery Edition dual port PD30W+QC3.0 car charger (transparent black)",
     "stock": 100,
     "price": 280,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_fc386bd04041.png",
     "image": "images/HOCO_fc386bd04041.png",
     "id": "1378"
@@ -15163,7 +15163,7 @@
     "name": "Z46G Z46 Blue shield single port QC3.0 car charger (metal gray)",
     "stock": 100,
     "price": 165,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_7d13d142240f.png",
     "image": "images/HOCO_7d13d142240f.png",
     "id": "1379"
@@ -15174,7 +15174,7 @@
     "name": "Z46AG Z46A Blue whale PD20W+QC3.0 car charger (metal gray)",
     "stock": 546,
     "price": 230,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_f26861d24a5c.png",
     "image": "images/HOCO_f26861d24a5c.png",
     "id": "1380"
@@ -15185,7 +15185,7 @@
     "name": "Z28W Z28 Power ocean cigarette lighter in-car charger with digital display (white)",
     "stock": 60,
     "price": 430,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2658683098a0.png",
     "image": "images/HOCO_2658683098a0.png",
     "id": "1381"
@@ -15196,7 +15196,7 @@
     "name": "Z2MW Z2 Car charger set with micro cable (white)",
     "stock": 179,
     "price": 100,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_084b15279ae5.png",
     "image": "images/HOCO_084b15279ae5.png",
     "id": "1382"
@@ -15240,7 +15240,7 @@
     "name": "E151 B E151 Graceful AUX BT audio receiver/transmitter (black)",
     "stock": 594,
     "price": 250,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_d5f095744a6f.png",
     "image": "images/HOCO_d5f095744a6f.png",
     "id": "1386"
@@ -15251,7 +15251,7 @@
     "name": "E150G E150 Path car AUX BT receiver with cable (metal gray)",
     "stock": 140,
     "price": 320,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_3b137506e1c4.png",
     "image": "images/HOCO_3b137506e1c4.png",
     "id": "1387"
@@ -15262,7 +15262,7 @@
     "name": "E78G E78 Benefit car AUX BT receiver with cable (black metal gray)",
     "stock": 100,
     "price": 330,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_b32a26434b85.png",
     "image": "images/HOCO_b32a26434b85.png",
     "id": "1388"
@@ -15328,7 +15328,7 @@
     "name": "E86B E86 Alegria 48W dual port PD30W+QC3.0 car BT FM transmitter (black)",
     "stock": 100,
     "price": 400,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_06be96ac77c8.png",
     "image": "images/HOCO_06be96ac77c8.png",
     "id": "1394"
@@ -15339,7 +15339,7 @@
     "name": "E85B E85 Tiger PD20W+QC3.0 car BT FM transmitter (black)",
     "stock": 100,
     "price": 380,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_97a23e2dcc65.png",
     "image": "images/HOCO_97a23e2dcc65.png",
     "id": "1395"
@@ -15350,7 +15350,7 @@
     "name": "E81B E81 Fantasy PD30W+QC3.0 car BT FM transmitter (black)",
     "stock": 100,
     "price": 540,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_b98be70c0bd4.png",
     "image": "images/HOCO_b98be70c0bd4.png",
     "id": "1396"
@@ -15361,7 +15361,7 @@
     "name": "E80B E80 Travel car AUX BT receiver (black)",
     "stock": 160,
     "price": 520,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_87523bf517a8.png",
     "image": "images/HOCO_87523bf517a8.png",
     "id": "1397"
@@ -15372,7 +15372,7 @@
     "name": "E73PBS E73 Pro Journey AUX BT audio receiver/transmitter (black star)",
     "stock": 100,
     "price": 510,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_f16837b7172e.png",
     "image": "images/HOCO_f16837b7172e.png",
     "id": "1398"
@@ -15383,7 +15383,7 @@
     "name": "E70B E70 PD30W+QC3.0 car BT FM transmitter (magic night)",
     "stock": 100,
     "price": 700,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d71bc6541edb.png",
     "image": "images/HOCO_d71bc6541edb.png",
     "id": "1399"
@@ -15394,7 +15394,7 @@
     "name": "E53B E53 Dawn sound in-car AUX wireless receiver (black)",
     "stock": 100,
     "price": 390,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_12939b40fbe3.png",
     "image": "images/HOCO_12939b40fbe3.png",
     "id": "1400"
@@ -15405,7 +15405,7 @@
     "name": "N85B N85 Vigoroso PD100W(3C1A) charger(EU) (black)",
     "stock": 15,
     "price": 1460,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c261f1648cd9.png",
     "image": "images/HOCO_c261f1648cd9.png",
     "id": "1401"
@@ -15416,7 +15416,7 @@
     "name": "N85TTB N85 Vigoroso PD100W(3C1A) charger set(C to C)(EU) (black)",
     "stock": 100,
     "price": 1610,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2f6fe2f43839.png",
     "image": "images/HOCO_2f6fe2f43839.png",
     "id": "1402"
@@ -15427,7 +15427,7 @@
     "name": "N84B N84 Mini single port PD45W charger(EU) (black)",
     "stock": 1196,
     "price": 540,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_06c2eaced74c.png",
     "image": "images/HOCO_06c2eaced74c.png",
     "id": "1403"
@@ -15438,7 +15438,7 @@
     "name": "N84TTB N84 Mini single port PD45W charger set(C to C)(EU) (black)",
     "stock": 463,
     "price": 590,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_df9be6c16c59.png",
     "image": "images/HOCO_df9be6c16c59.png",
     "id": "1404"
@@ -15449,7 +15449,7 @@
     "name": "N83B N83 Profit single port PD40W charger(EU) (black)",
     "stock": 650,
     "price": 450,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_7ec3d5e5a3d5.png",
     "image": "images/HOCO_7ec3d5e5a3d5.png",
     "id": "1405"
@@ -15460,7 +15460,7 @@
     "name": "N83W N83 Profit single port PD40W charger(EU) (white)",
     "stock": 649,
     "price": 450,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_7ec3d5e5a3d5.png",
     "image": "images/HOCO_7ec3d5e5a3d5.png",
     "id": "1406"
@@ -15471,7 +15471,7 @@
     "name": "N83TTB N83 Profit single port PD40W charger set(C to C)(EU) (black)",
     "stock": 364,
     "price": 495,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c25b3ef5c1bb.png",
     "image": "images/HOCO_c25b3ef5c1bb.png",
     "id": "1407"
@@ -15482,7 +15482,7 @@
     "name": "N83TTW N83 Profit single port PD40W charger set(C to C)(EU) (white)",
     "stock": 364,
     "price": 495,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c25b3ef5c1bb.png",
     "image": "images/HOCO_c25b3ef5c1bb.png",
     "id": "1408"
@@ -15493,7 +15493,7 @@
     "name": "N79B N79 Sapiencia PD65W(2C1A) charger with TFT display(EU) (black)",
     "stock": 33,
     "price": 1150,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_369f65d60a44.jpg",
     "image": "images/HOCO_369f65d60a44.jpg",
     "id": "1409"
@@ -15504,7 +15504,7 @@
     "name": "N79TTB N79 Sapiencia PD65W(2C1A) charger with TFT display set(C to C)(EU) (black)",
     "stock": 45,
     "price": 1250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9eca15ab5b47.png",
     "image": "images/HOCO_9eca15ab5b47.png",
     "id": "1410"
@@ -15515,7 +15515,7 @@
     "name": "N77B N77 Star single port PD45W charger(EU) (black)",
     "stock": 14,
     "price": 480,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_0b04c250acdb.png",
     "image": "images/HOCO_0b04c250acdb.png",
     "id": "1411"
@@ -15526,7 +15526,7 @@
     "name": "N77TTB N77 Star single port PD45W charger set(C to C)(EU) (black)",
     "stock": 100,
     "price": 520,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_0ec0889b51ff.png",
     "image": "images/HOCO_0ec0889b51ff.png",
     "id": "1412"
@@ -15537,7 +15537,7 @@
     "name": "N76B N76 Star single port PD25W charger(EU) (black)",
     "stock": 563,
     "price": 310,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_e90dd5a418c9.png",
     "image": "images/HOCO_e90dd5a418c9.png",
     "id": "1413"
@@ -15548,7 +15548,7 @@
     "name": "N76TTB N76 Star single port PD25W charger set(C to C)(EU) (black)",
     "stock": 100,
     "price": 350,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_13a9344053d9.png",
     "image": "images/HOCO_13a9344053d9.png",
     "id": "1414"
@@ -15559,7 +15559,7 @@
     "name": "N75B N75 Grande 65W(2C1A) charger(EU) (black)",
     "stock": 158,
     "price": 600,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_483e3082b1e2.png",
     "image": "images/HOCO_483e3082b1e2.png",
     "id": "1415"
@@ -15570,7 +15570,7 @@
     "name": "N75TTB N75 Grande 65W(2C1A) charger set(C to C)(EU) (black)",
     "stock": 100,
     "price": 650,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_72d0010be69e.jpg",
     "image": "images/HOCO_72d0010be69e.jpg",
     "id": "1416"
@@ -15581,7 +15581,7 @@
     "name": "N74B N74 Speed single-port PD25W ultra-thin charger(EU) (black)",
     "stock": 60,
     "price": 335,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d568f6fa3a2b.png",
     "image": "images/HOCO_d568f6fa3a2b.png",
     "id": "1417"
@@ -15592,7 +15592,7 @@
     "name": "N74W N74 Speed single-port PD25W ultra-thin charger(EU) (white)",
     "stock": 155,
     "price": 335,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d568f6fa3a2b.png",
     "image": "images/HOCO_d568f6fa3a2b.png",
     "id": "1418"
@@ -15603,7 +15603,7 @@
     "name": "N72 Speed single-port PD20W ultra-thin charger(EU) (white)",
     "stock": 101,
     "price": 300,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_41635f70b6a3.png",
     "image": "images/HOCO_41635f70b6a3.png",
     "id": "1419"
@@ -15614,7 +15614,7 @@
     "name": "N71W N71 Nuevo PD30W+QC3.0 charger(EU) (white)",
     "stock": 886,
     "price": 355,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_7f40c232a87b.png",
     "image": "images/HOCO_7f40c232a87b.png",
     "id": "1420"
@@ -15625,7 +15625,7 @@
     "name": "N71TIW N71 Nuevo PD30W+QC3.0 charger set(C to iP)(EU) (white)",
     "stock": 100,
     "price": 415,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_29a65391d4a0.png",
     "image": "images/HOCO_29a65391d4a0.png",
     "id": "1421"
@@ -15636,7 +15636,7 @@
     "name": "N71TTW N71 Nuevo PD30W+QC3.0 charger set(C to C)(EU) (white)",
     "stock": 429,
     "price": 400,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9fb2e21b5279.png",
     "image": "images/HOCO_9fb2e21b5279.png",
     "id": "1422"
@@ -15647,7 +15647,7 @@
     "name": "N70W N70 Nuevo single port PD30W charger(EU) (white)",
     "stock": 179,
     "price": 340,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_b780dd807112.png",
     "image": "images/HOCO_b780dd807112.png",
     "id": "1423"
@@ -15658,7 +15658,7 @@
     "name": "N69W N69 Nuevo PD20W+QC3.0 charger(EU) (white)",
     "stock": 100,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9c276b4b4197.png",
     "image": "images/HOCO_9c276b4b4197.png",
     "id": "1424"
@@ -15669,7 +15669,7 @@
     "name": "N66B N66 Ingenious single port PD35W charger(EU) (black)",
     "stock": 417,
     "price": 350,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_23265194e2f8.png",
     "image": "images/HOCO_23265194e2f8.png",
     "id": "1425"
@@ -15680,7 +15680,7 @@
     "name": "N66W N66 Ingenious single port PD35W charger(EU) (white)",
     "stock": 527,
     "price": 350,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_23265194e2f8.png",
     "image": "images/HOCO_23265194e2f8.png",
     "id": "1426"
@@ -15691,7 +15691,7 @@
     "name": "N66TIW N66 Ingenious single port PD35W charger set(C to iP)(EU) (white)",
     "stock": 100,
     "price": 410,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_667b1f4424ec.png",
     "image": "images/HOCO_667b1f4424ec.png",
     "id": "1427"
@@ -15702,7 +15702,7 @@
     "name": "N66TTW N66 Ingenious single port PD35W charger set(C to C)(EU) (white)",
     "stock": 100,
     "price": 390,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d0bfd382dcc0.png",
     "image": "images/HOCO_d0bfd382dcc0.png",
     "id": "1428"
@@ -15713,7 +15713,7 @@
     "name": "N64B N64 Ingenious single port PD20W charger(EU) (black)",
     "stock": 100,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_10fed2b5921d.png",
     "image": "images/HOCO_10fed2b5921d.png",
     "id": "1429"
@@ -15724,7 +15724,7 @@
     "name": "N64W N64 Ingenious single port PD20W charger(EU) (white)",
     "stock": 100,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_10fed2b5921d.png",
     "image": "images/HOCO_10fed2b5921d.png",
     "id": "1430"
@@ -15735,7 +15735,7 @@
     "name": "N63W N63 Gentle PD30W+QC3.0 charger(EU) (white)",
     "stock": 1209,
     "price": 310,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a4c7c5d02270.png",
     "image": "images/HOCO_a4c7c5d02270.png",
     "id": "1431"
@@ -15746,7 +15746,7 @@
     "name": "N63TIW N63 Gentle PD30W+QC3.0 charger set(C to iP)(EU) (white)",
     "stock": 205,
     "price": 380,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_8f01c55b189d.png",
     "image": "images/HOCO_8f01c55b189d.png",
     "id": "1432"
@@ -15757,7 +15757,7 @@
     "name": "N63TTW N63 Gentle PD30W+QC3.0 charger set(C to C)(EU) (white)",
     "stock": 339,
     "price": 355,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_385e3680b68a.png",
     "image": "images/HOCO_385e3680b68a.png",
     "id": "1433"
@@ -15768,7 +15768,7 @@
     "name": "N62W N62 Gentle single port PD30W charger(EU) (white)",
     "stock": 1257,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_56b8f0e27127.png",
     "image": "images/HOCO_56b8f0e27127.png",
     "id": "1434"
@@ -15779,7 +15779,7 @@
     "name": "N62TIW N62 Gentle single port PD30W charger set(C to iP)(EU) (white)",
     "stock": 370,
     "price": 360,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_eef2402add04.png",
     "image": "images/HOCO_eef2402add04.png",
     "id": "1435"
@@ -15790,7 +15790,7 @@
     "name": "N62TTW N62 Gentle single port PD30W charger set(C to C)(EU) (white)",
     "stock": 586,
     "price": 330,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9530fc0f3e1d.png",
     "image": "images/HOCO_9530fc0f3e1d.png",
     "id": "1436"
@@ -15801,7 +15801,7 @@
     "name": "N61W N61 Gentle PD20W+QC3.0 charger(EU) (white)",
     "stock": 216,
     "price": 280,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_3f7d9db384e3.png",
     "image": "images/HOCO_3f7d9db384e3.png",
     "id": "1437"
@@ -15812,7 +15812,7 @@
     "name": "N61TIW N61 Gentle PD20W+QC3.0 charger set(C to iP)(EU) (white)",
     "stock": 207,
     "price": 350,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_df89c230aa97.png",
     "image": "images/HOCO_df89c230aa97.png",
     "id": "1438"
@@ -15823,7 +15823,7 @@
     "name": "N61TTW N61 Gentle PD20W+QC3.0 charger set(C to C)(EU) (white)",
     "stock": 502,
     "price": 325,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_5376aea3ef25.png",
     "image": "images/HOCO_5376aea3ef25.png",
     "id": "1439"
@@ -15834,7 +15834,7 @@
     "name": "N60W N60 Gentle single port PD20W charger(EU) (white)",
     "stock": 1035,
     "price": 255,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_17e671817f8f.png",
     "image": "images/HOCO_17e671817f8f.png",
     "id": "1440"
@@ -15845,7 +15845,7 @@
     "name": "N60TIW N60 Gentle single port PD20W charger set(C to iP)(EU) (white)",
     "stock": 348,
     "price": 320,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_cc4bd86da972.png",
     "image": "images/HOCO_cc4bd86da972.png",
     "id": "1441"
@@ -15856,7 +15856,7 @@
     "name": "N60TTW N60 Gentle single port PD20W charger set(C to C)(EU) (white)",
     "stock": 972,
     "price": 300,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_eceaec5a84ad.png",
     "image": "images/HOCO_eceaec5a84ad.png",
     "id": "1442"
@@ -15867,7 +15867,7 @@
     "name": "N41TTW N41 Almighty PD20W+QC3.0 charger set(Type-C to Type-C)(EU) (white)",
     "stock": 100,
     "price": 420,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_74aef1e3dbfa.png",
     "image": "images/HOCO_74aef1e3dbfa.png",
     "id": "1443"
@@ -15878,7 +15878,7 @@
     "name": "Car Holder — N22W N22 Jetta PD25W charger(EU) (white)",
     "stock": 415,
     "price": 440,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_397d3990f60c.png",
     "image": "images/HOCO_397d3990f60c.png",
     "id": "1444"
@@ -15889,7 +15889,7 @@
     "name": "N4BL N4 Aspiring dual port charger(EU) (black)",
     "stock": 2041,
     "price": 200,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_72458bd32df3.png",
     "image": "images/HOCO_72458bd32df3.png",
     "id": "1445"
@@ -15900,7 +15900,7 @@
     "name": "N4W N4 Aspiring dual port charger(EU) (white)",
     "stock": 1901,
     "price": 200,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_72458bd32df3.png",
     "image": "images/HOCO_72458bd32df3.png",
     "id": "1446"
@@ -15911,7 +15911,7 @@
     "name": "N4MW N4 Aspiring dual port charger set(for Micro)(EU) (black)",
     "stock": 12,
     "price": 230,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a54861970a67.png",
     "image": "images/HOCO_a54861970a67.png",
     "id": "1447"
@@ -15922,7 +15922,7 @@
     "name": "CS113AB CS113A Lounge single port PD40W charger(EU) (black)",
     "stock": 800,
     "price": 370,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_666ab8ac1798.png",
     "image": "images/HOCO_666ab8ac1798.png",
     "id": "1448"
@@ -15933,7 +15933,7 @@
     "name": "CS113AW CS113A Lounge single port PD40W charger(EU) (white)",
     "stock": 800,
     "price": 370,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_666ab8ac1798.png",
     "image": "images/HOCO_666ab8ac1798.png",
     "id": "1449"
@@ -15944,7 +15944,7 @@
     "name": "CS113ATTB CS113A Lounge single port PD40W charger set(C to C)(EU) (black)",
     "stock": 700,
     "price": 415,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ada1cd5e8ca4.png",
     "image": "images/HOCO_ada1cd5e8ca4.png",
     "id": "1450"
@@ -15955,7 +15955,7 @@
     "name": "CS113ATTW CS113A Lounge single port PD40W charger set(C to C)(EU) (white)",
     "stock": 740,
     "price": 415,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ada1cd5e8ca4.png",
     "image": "images/HOCO_ada1cd5e8ca4.png",
     "id": "1451"
@@ -15966,7 +15966,7 @@
     "name": "CS112AB CS112A Lounge PD30W+QC3.0 charger(EU) (black)",
     "stock": 544,
     "price": 240,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a5164fbbff92.png",
     "image": "images/HOCO_a5164fbbff92.png",
     "id": "1452"
@@ -15977,7 +15977,7 @@
     "name": "CS112AW CS112A Lounge PD30W+QC3.0 charger(EU) (white)",
     "stock": 424,
     "price": 240,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a5164fbbff92.png",
     "image": "images/HOCO_a5164fbbff92.png",
     "id": "1453"
@@ -15988,7 +15988,7 @@
     "name": "CS112ATTB CS112A Lounge PD30W+QC3.0 charger set(C to C)(EU) (black)",
     "stock": 99,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ed6c9c60fd61.png",
     "image": "images/HOCO_ed6c9c60fd61.png",
     "id": "1454"
@@ -15999,7 +15999,7 @@
     "name": "CS112ATTW CS112A Lounge PD30W+QC3.0 charger set(C to C)(EU) (white)",
     "stock": 303,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ed6c9c60fd61.png",
     "image": "images/HOCO_ed6c9c60fd61.png",
     "id": "1455"
@@ -16010,7 +16010,7 @@
     "name": "CS111AB CS111A Lounge single-port 22.5W multi-protocol charger(EU) (black)",
     "stock": 1200,
     "price": 170,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4accf7000a29.png",
     "image": "images/HOCO_4accf7000a29.png",
     "id": "1456"
@@ -16021,7 +16021,7 @@
     "name": "CS111AW CS111A Lounge single-port 22.5W multi-protocol charger(EU) (white)",
     "stock": 1150,
     "price": 170,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4accf7000a29.png",
     "image": "images/HOCO_4accf7000a29.png",
     "id": "1457"
@@ -16032,7 +16032,7 @@
     "name": "CS111ATB CS111A Lounge single-port 22.5W multi-protocol charger set(Type-C)(EU) (black)",
     "stock": 340,
     "price": 210,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d396cd837d8a.png",
     "image": "images/HOCO_d396cd837d8a.png",
     "id": "1458"
@@ -16043,7 +16043,7 @@
     "name": "CS111ATW CS111A Lounge single-port 22.5W multi-protocol charger set(Type-C)(EU) (white)",
     "stock": 615,
     "price": 210,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d396cd837d8a.png",
     "image": "images/HOCO_d396cd837d8a.png",
     "id": "1459"
@@ -16054,7 +16054,7 @@
     "name": "CS75AB CS75A Star Speed PD70W(2C1A) charger(EU) (midnight black)",
     "stock": 5490,
     "price": 740,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_f28a3a57a9b5.png",
     "image": "images/HOCO_f28a3a57a9b5.png",
     "id": "1460"
@@ -16065,7 +16065,7 @@
     "name": "CS74AB CS74A Star Speed PD45W+QC3.0 charger(EU) (midnight black)",
     "stock": 100,
     "price": 565,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ecbf936f5c0c.png",
     "image": "images/HOCO_ecbf936f5c0c.png",
     "id": "1461"
@@ -16076,7 +16076,7 @@
     "name": "CS63AB CS63A Bright PD65W(1A1C) charger(EU) (black)",
     "stock": 100,
     "price": 580,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_8507cff0f914.png",
     "image": "images/HOCO_8507cff0f914.png",
     "id": "1462"
@@ -16087,7 +16087,7 @@
     "name": "CS61AB CS61A Bright PD30W+QC3.0 charger(EU) (black)",
     "stock": 100,
     "price": 260,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_f505c9207a41.png",
     "image": "images/HOCO_f505c9207a41.png",
     "id": "1463"
@@ -16098,7 +16098,7 @@
     "name": "CS27AB CS27A Supply PD67W(3C1A) charger(EU) (black)",
     "stock": 439,
     "price": 570,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c1667aca6323.png",
     "image": "images/HOCO_c1667aca6323.png",
     "id": "1464"
@@ -16109,7 +16109,7 @@
     "name": "CS26AB CS26A Article PD45W(2C1A) charger(EU) (black)",
     "stock": 347,
     "price": 530,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a7d9346148c9.png",
     "image": "images/HOCO_a7d9346148c9.png",
     "id": "1465"
@@ -16120,7 +16120,7 @@
     "name": "CS23AB CS23A Sunlight dual port PD30W+QC3.0 charger(EU) (black)",
     "stock": 1210,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_82f19389685c.png",
     "image": "images/HOCO_82f19389685c.png",
     "id": "1466"
@@ -16131,7 +16131,7 @@
     "name": "CS23ATIB CS23A Sunlight dual-port PD30W+QC3.0 charger set(C to iP)(EU) (black)",
     "stock": 1141,
     "price": 360,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_87547af1e59c.png",
     "image": "images/HOCO_87547af1e59c.png",
     "id": "1467"
@@ -16142,7 +16142,7 @@
     "name": "CS23ATTB CS23A Sunlight dual-port PD30W+QC3.0 charger set(Type-C to Type-C)(EU) (black)",
     "stock": 100,
     "price": 330,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2d5f5f386c84.png",
     "image": "images/HOCO_2d5f5f386c84.png",
     "id": "1468"
@@ -16153,7 +16153,7 @@
     "name": "CS22AB CS22A Value single port PD30W charger(EU) (black)",
     "stock": 265,
     "price": 260,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c57dea4f695f.png",
     "image": "images/HOCO_c57dea4f695f.png",
     "id": "1469"
@@ -16164,7 +16164,7 @@
     "name": "CS21AB CS21A Rich single port QC3.0 charger(EU) (black)",
     "stock": 1505,
     "price": 155,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_da564018362e.png",
     "image": "images/HOCO_da564018362e.png",
     "id": "1470"
@@ -16175,7 +16175,7 @@
     "name": "CS21AMB CS21A Rich single port QC3.0 charger set(Micro)(EU) (black)",
     "stock": 100,
     "price": 180,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c7bddcdeb2f3.png",
     "image": "images/HOCO_c7bddcdeb2f3.png",
     "id": "1471"
@@ -16186,7 +16186,7 @@
     "name": "CS21ATB CS21A Rich single port QC3.0 charger set(Type-C)(EU) (black)",
     "stock": 326,
     "price": 190,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_bd6144703a56.png",
     "image": "images/HOCO_bd6144703a56.png",
     "id": "1472"
@@ -16197,7 +16197,7 @@
     "name": "C168AW C168A Surpass single port PD40W charger (white)",
     "stock": 525,
     "price": 350,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_e2ac0d2c6d72.png",
     "image": "images/HOCO_e2ac0d2c6d72.png",
     "id": "1473"
@@ -16208,7 +16208,7 @@
     "name": "C168ATTW C168A Surpass single port PD40W charger set (C to C) (white)",
     "stock": 546,
     "price": 400,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_82437d959eea.png",
     "image": "images/HOCO_82437d959eea.png",
     "id": "1474"
@@ -16219,7 +16219,7 @@
     "name": "C167AW C167A Surpass PD30W+QC3.0 charger (white)",
     "stock": 540,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_35b44a983988.jpg",
     "image": "images/HOCO_35b44a983988.jpg",
     "id": "1475"
@@ -16230,7 +16230,7 @@
     "name": "C167ATTW C167A Surpass PD30W+QC3.0 charger set(C to C) (white)",
     "stock": 567,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_b12dc2c7092b.jpg",
     "image": "images/HOCO_b12dc2c7092b.jpg",
     "id": "1476"
@@ -16241,7 +16241,7 @@
     "name": "C162AW C162A Source single port PD40W charger(EU) (white)",
     "stock": 318,
     "price": 330,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4d3ee6c9965e.png",
     "image": "images/HOCO_4d3ee6c9965e.png",
     "id": "1477"
@@ -16252,7 +16252,7 @@
     "name": "C162ATTW C162A Source single port PD40W charger set(C to C)(EU) (white)",
     "stock": 529,
     "price": 375,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2b1024800c46.png",
     "image": "images/HOCO_2b1024800c46.png",
     "id": "1478"
@@ -16263,7 +16263,7 @@
     "name": "C161AW C161A Speed single port PD40W charger(EU) (white)",
     "stock": 3625,
     "price": 320,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_e150438fb7c5.png",
     "image": "images/HOCO_e150438fb7c5.png",
     "id": "1479"
@@ -16274,7 +16274,7 @@
     "name": "C161ATTW C161A Speed single port PD40W charger set(C to C)(EU) (white)",
     "stock": 2432,
     "price": 360,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_61c8d3684b59.png",
     "image": "images/HOCO_61c8d3684b59.png",
     "id": "1480"
@@ -16285,7 +16285,7 @@
     "name": "C160AB C160A Upgrade PD65W(2C1A) charger(EU) (black)",
     "stock": 414,
     "price": 590,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_8804213ed521.png",
     "image": "images/HOCO_8804213ed521.png",
     "id": "1481"
@@ -16296,7 +16296,7 @@
     "name": "C160ATTB C160A Upgrade PD65W(2C1A) charger set(C to C)(EU) (black)",
     "stock": 391,
     "price": 650,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_3f52c0beb787.jpg",
     "image": "images/HOCO_3f52c0beb787.jpg",
     "id": "1482"
@@ -16307,7 +16307,7 @@
     "name": "C159AB C159A Upgrade single-port PD65W charger(EU) (black)",
     "stock": 100,
     "price": 465,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_5d5633d1aeda.png",
     "image": "images/HOCO_5d5633d1aeda.png",
     "id": "1483"
@@ -16318,7 +16318,7 @@
     "name": "C158AB C158A Upgrade PD45W(1C1A) charger(EU) (black)",
     "stock": 642,
     "price": 470,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_a7de4615d4ee.jpg",
     "image": "images/HOCO_a7de4615d4ee.jpg",
     "id": "1484"
@@ -16329,7 +16329,7 @@
     "name": "C158ATTB C158A Upgrade PD45W(1C1A) charger set(C to C)(EU) (black)",
     "stock": 100,
     "price": 510,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_eddc7970ce85.jpg",
     "image": "images/HOCO_eddc7970ce85.jpg",
     "id": "1485"
@@ -16340,7 +16340,7 @@
     "name": "C157AB C157A Smart PD30W+QC3.0 multi-protocol charger(EU) (black)",
     "stock": 414,
     "price": 275,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_c6bfd768d1c2.jpg",
     "image": "images/HOCO_c6bfd768d1c2.jpg",
     "id": "1486"
@@ -16351,7 +16351,7 @@
     "name": "C157ATB C157A Smart PD30W+QC3.0 multi-protocol charger set(Type-C)(EU) (black)",
     "stock": 312,
     "price": 340,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_22bcfed94eb6.jpg",
     "image": "images/HOCO_22bcfed94eb6.jpg",
     "id": "1487"
@@ -16362,7 +16362,7 @@
     "name": "C149AW C149A Charm PD30W+QC3.0 charger(EU) (white)",
     "stock": 1584,
     "price": 310,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_529c71816902.png",
     "image": "images/HOCO_529c71816902.png",
     "id": "1488"
@@ -16373,7 +16373,7 @@
     "name": "C149ATIW C149A Charm PD30W+QC3.0 charger set(C to iP)(EU) (white)",
     "stock": 69,
     "price": 390,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_fe4440747dd0.png",
     "image": "images/HOCO_fe4440747dd0.png",
     "id": "1489"
@@ -16384,7 +16384,7 @@
     "name": "C149ATTW C149A Charm PD30W+QC3.0 charger set(C to C)(EU) (white)",
     "stock": 720,
     "price": 355,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_d9ef8f827e84.png",
     "image": "images/HOCO_d9ef8f827e84.png",
     "id": "1490"
@@ -16395,7 +16395,7 @@
     "name": "C147AW C147A Charm PD20W+QC3.0 charger(EU) (white)",
     "stock": 1111,
     "price": 210,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_1b217b6f52d1.png",
     "image": "images/HOCO_1b217b6f52d1.png",
     "id": "1491"
@@ -16406,7 +16406,7 @@
     "name": "C147ATIW C147A Charm PD20W+QC3.0 charger set(C to iP)(EU) (white)",
     "stock": 100,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_013142f5e3c2.png",
     "image": "images/HOCO_013142f5e3c2.png",
     "id": "1492"
@@ -16417,7 +16417,7 @@
     "name": "C147ATTW C147A Charm PD20W+QC3.0 charger set(C to C)(EU) (white)",
     "stock": 180,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_cd8d8220a077.png",
     "image": "images/HOCO_cd8d8220a077.png",
     "id": "1493"
@@ -16428,7 +16428,7 @@
     "name": "C145AW C145A Charm single port QC3.0 charger(EU) (white)",
     "stock": 985,
     "price": 170,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2f7dadc4e85b.png",
     "image": "images/HOCO_2f7dadc4e85b.png",
     "id": "1494"
@@ -16439,7 +16439,7 @@
     "name": "C145AMW C145A Charm single port QC3.0 charger set(Micro)(EU) (white)",
     "stock": 100,
     "price": 175,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ab1acea5c8f8.png",
     "image": "images/HOCO_ab1acea5c8f8.png",
     "id": "1495"
@@ -16450,7 +16450,7 @@
     "name": "C145ATW C145A Charm single port QC3.0 charger set(Type-C)(EU) (white)",
     "stock": 590,
     "price": 200,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_fc8941f88422.png",
     "image": "images/HOCO_fc8941f88422.png",
     "id": "1496"
@@ -16461,7 +16461,7 @@
     "name": "C141AB C141A Smart dual-port charger(EU) (black)",
     "stock": 1518,
     "price": 100,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_aea0c4455ea2.png",
     "image": "images/HOCO_aea0c4455ea2.png",
     "id": "1497"
@@ -16472,7 +16472,7 @@
     "name": "C126AW C126A Pure power three-port PD40W(2C1A) charger(EU) (white)",
     "stock": 100,
     "price": 360,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_45d33412ace7.png",
     "image": "images/HOCO_45d33412ace7.png",
     "id": "1498"
@@ -16483,7 +16483,7 @@
     "name": "C115AW C115A Header PD65W GaN three-port(2C1A) charger(EU) (white)",
     "stock": 890,
     "price": 730,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_2a9513a743df.png",
     "image": "images/HOCO_2a9513a743df.png",
     "id": "1499"
@@ -16494,7 +16494,7 @@
     "name": "C113AW C113A Awesome PD65W GaN dual port(1A1C) charger(EU) (white)",
     "stock": 30,
     "price": 650,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_33154c8e4854.png",
     "image": "images/HOCO_33154c8e4854.png",
     "id": "1500"
@@ -16505,7 +16505,7 @@
     "name": "C109A105W C109A(10.5W) Fighter single port charger(EU) (white)",
     "stock": 100,
     "price": 85,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_871c290aad67.png",
     "image": "images/HOCO_871c290aad67.png",
     "id": "1501"
@@ -16516,7 +16516,7 @@
     "name": "C109AI105W C109A(10.5W) Fighter single port charger set(iP)(EU) (white)",
     "stock": 206,
     "price": 130,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9325a5c61c88.png",
     "image": "images/HOCO_9325a5c61c88.png",
     "id": "1502"
@@ -16527,7 +16527,7 @@
     "name": "C109AM10.5W C109A(10.5W) Fighter single port charger set(Micro)(EU) (white)",
     "stock": 78,
     "price": 115,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_125340493b06.png",
     "image": "images/HOCO_125340493b06.png",
     "id": "1503"
@@ -16538,7 +16538,7 @@
     "name": "C109AT10.5TW C109A(10.5W) Fighter single port charger set(Type-C)(EU) (white)",
     "stock": 1878,
     "price": 120,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_0b6ce3c5906b.png",
     "image": "images/HOCO_0b6ce3c5906b.png",
     "id": "1504"
@@ -16549,7 +16549,7 @@
     "name": "C109APDW C109A(PD20W) Fighter single port PD20W charger(EU) (white)",
     "stock": 1440,
     "price": 125,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_15ad4f82fea3.png",
     "image": "images/HOCO_15ad4f82fea3.png",
     "id": "1505"
@@ -16560,7 +16560,7 @@
     "name": "C109ATIW C109A(PD20W) Fighter single port PD20W charger set(C to iP)(EU) (white)",
     "stock": 1114,
     "price": 200,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_9612a5483dd3.png",
     "image": "images/HOCO_9612a5483dd3.png",
     "id": "1506"
@@ -16571,7 +16571,7 @@
     "name": "C109ATTW C109A(PD20W) Fighter single port PD20W charger set(C to C)(EU) (white)",
     "stock": 864,
     "price": 175,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_464ea41f2876.png",
     "image": "images/HOCO_464ea41f2876.png",
     "id": "1507"
@@ -16582,7 +16582,7 @@
     "name": "C109AW C109A Fighter single port QC3.0 charger(EU) (white)",
     "stock": 4611,
     "price": 135,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_41bea14e863f.png",
     "image": "images/HOCO_41bea14e863f.png",
     "id": "1508"
@@ -16593,7 +16593,7 @@
     "name": "C109AMW C109A Fighter single port QC3.0 charger set(Micro)(EU) (white)",
     "stock": 100,
     "price": 160,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ea2bb426f57a.png",
     "image": "images/HOCO_ea2bb426f57a.png",
     "id": "1509"
@@ -16604,7 +16604,7 @@
     "name": "C109ATW C109A Fighter single port QC3.0 charger set(Type-C)(EU) (white)",
     "stock": 2051,
     "price": 170,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_8cad1815956e.png",
     "image": "images/HOCO_8cad1815956e.png",
     "id": "1510"
@@ -16615,7 +16615,7 @@
     "name": "C102AW C102A Fuerza QC3.0 four-port charger(EU) (white)",
     "stock": 468,
     "price": 250,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_bad1a1598a27.png",
     "image": "images/HOCO_bad1a1598a27.png",
     "id": "1511"
@@ -16626,7 +16626,7 @@
     "name": "Car Holder — C97AW C97A PD20W+QC3.0 charger(EU) (white)",
     "stock": 3647,
     "price": 225,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_1d3f659033a4.png",
     "image": "images/HOCO_1d3f659033a4.png",
     "id": "1512"
@@ -16637,7 +16637,7 @@
     "name": "C94AW C94A Metro single port PD20W charger(EU) (white)",
     "stock": 2012,
     "price": 240,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_aac1dc3dbd5b.png",
     "image": "images/HOCO_aac1dc3dbd5b.png",
     "id": "1513"
@@ -16648,7 +16648,7 @@
     "name": "C94ATIW C94A Metro single port PD20W charger set(Type-C to iP)(EU) (white)",
     "stock": 711,
     "price": 325,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_ce2c17aa884e.png",
     "image": "images/HOCO_ce2c17aa884e.png",
     "id": "1514"
@@ -16659,7 +16659,7 @@
     "name": "C94ATTW C94A Metro single port PD20W charger set(Type-C TO Type-C)(EU) (white)",
     "stock": 336,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_16f9640c4ff4.png",
     "image": "images/HOCO_16f9640c4ff4.png",
     "id": "1515"
@@ -16670,7 +16670,7 @@
     "name": "C88AB C88A Star round dual port charger(EU) (black)",
     "stock": 2652,
     "price": 140,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_6796328a098f.png",
     "image": "images/HOCO_6796328a098f.png",
     "id": "1516"
@@ -16681,7 +16681,7 @@
     "name": "C88AW C88A Star round dual port charger(EU) (white)",
     "stock": 1728,
     "price": 140,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_6796328a098f.png",
     "image": "images/HOCO_6796328a098f.png",
     "id": "1517"
@@ -16692,7 +16692,7 @@
     "name": "C80APW C80A Plus Rapido PD20W+QC3.0 charger(EU) (white)",
     "stock": 533,
     "price": 245,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_662c56e8611e.png",
     "image": "images/HOCO_662c56e8611e.png",
     "id": "1518"
@@ -16703,7 +16703,7 @@
     "name": "C80APTIW C80A Plus Rapido PD20W+QC3.0 charger set(C to iP)(EU) (white)",
     "stock": 1426,
     "price": 360,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_24476420ab52.png",
     "image": "images/HOCO_24476420ab52.png",
     "id": "1519"
@@ -16714,7 +16714,7 @@
     "name": "C80APTTW C80A Plus Rapido PD20W+QC3.0 charger set(Type-C to Type-C)(EU) (white)",
     "stock": 1006,
     "price": 330,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_fb9037b5520b.png",
     "image": "images/HOCO_fb9037b5520b.png",
     "id": "1520"
@@ -16725,7 +16725,7 @@
     "name": "C76APRO C76A Pro Majestic single port PD30W charger(EU) (white)",
     "stock": 12212,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_43a038a9e661.png",
     "image": "images/HOCO_43a038a9e661.png",
     "id": "1521"
@@ -16736,7 +16736,7 @@
     "name": "C76APTIw C76A Pro Majestic single port PD30W charger set(C to iP)(EU) (white)",
     "stock": 840,
     "price": 410,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_3d32ac9d7978.png",
     "image": "images/HOCO_3d32ac9d7978.png",
     "id": "1522"
@@ -16747,7 +16747,7 @@
     "name": "C76APTTW C76A Pro Majestic single port PD30W charger set(Type-C to Type-C)(EU) (white)",
     "stock": 1920,
     "price": 375,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_aed3187ace3a.png",
     "image": "images/HOCO_aed3187ace3a.png",
     "id": "1523"
@@ -16758,7 +16758,7 @@
     "name": "C76APW C76A Plus Speed source PD20W charger(EU) (white)",
     "stock": 5228,
     "price": 210,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_8b0455fa2237.png",
     "image": "images/HOCO_8b0455fa2237.png",
     "id": "1524"
@@ -16769,7 +16769,7 @@
     "name": "C76APTIW. C76A Plus Speed source PD20W charger set(Type-C TO iP)(EU) (white)",
     "stock": 960,
     "price": 310,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_bba81417bc7a.png",
     "image": "images/HOCO_bba81417bc7a.png",
     "id": "1525"
@@ -16780,7 +16780,7 @@
     "name": "N9MW HOCO N9 Especial singl port charger set (Micro)",
     "stock": 33,
     "price": 190,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_b01920ba0704.jpg",
     "image": "images/HOCO_b01920ba0704.jpg",
     "id": "1526"
@@ -16791,7 +16791,7 @@
     "name": "C99AMW Hoco C99A PD20W+QC3.0 Three -port (2c1a)charger set (micro)(EU) White",
     "stock": 203,
     "price": 290,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_3bf0a6b8d1f1.jpg",
     "image": "images/HOCO_3bf0a6b8d1f1.jpg",
     "id": "1527"
@@ -16802,7 +16802,7 @@
     "name": "C12MB HOCO C12 Smart dual USB (micro cable)charger set(EU)",
     "stock": 252,
     "price": 150,
-    "cat": "holders",
+    "cat": "cables",
     "img": "images/HOCO_40d94bf533a8.png",
     "image": "images/HOCO_40d94bf533a8.png",
     "id": "1528"
@@ -16813,7 +16813,7 @@
     "name": "Car Holder — C12QB C12Q Smart QC3.0 charger(EU) (black)",
     "stock": 2610,
     "price": 195,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4e0056ac9677.png",
     "image": "images/HOCO_4e0056ac9677.png",
     "id": "1529"
@@ -16824,7 +16824,7 @@
     "name": "Car Holder — C12QW C12Q Smart QC3.0 charger(EU) (white)",
     "stock": 2770,
     "price": 195,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_4e0056ac9677.png",
     "image": "images/HOCO_4e0056ac9677.png",
     "id": "1530"
@@ -16835,7 +16835,7 @@
     "name": "C12QMB C12Q Smart QC3.0 charger set(Micro)(EU) (black)",
     "stock": 519,
     "price": 225,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_cb47d0a2e3f1.png",
     "image": "images/HOCO_cb47d0a2e3f1.png",
     "id": "1531"
@@ -16846,7 +16846,7 @@
     "name": "C12QMW C12Q Smart QC3.0 charger set(Micro)(EU) (white)",
     "stock": 379,
     "price": 225,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_cb47d0a2e3f1.png",
     "image": "images/HOCO_cb47d0a2e3f1.png",
     "id": "1532"
@@ -16857,7 +16857,7 @@
     "name": "C12QTB C12Q Smart QC3.0 charger set(Type-C)(EU) (black)",
     "stock": 803,
     "price": 230,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_62cd33f828f2.png",
     "image": "images/HOCO_62cd33f828f2.png",
     "id": "1533"
@@ -16868,7 +16868,7 @@
     "name": "C12QTW C12Q Smart QC3.0 charger set(Type-C)(EU) (white)",
     "stock": 1010,
     "price": 230,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_62cd33f828f2.png",
     "image": "images/HOCO_62cd33f828f2.png",
     "id": "1534"
@@ -16879,7 +16879,7 @@
     "name": "AC5B AC5 Level dual port universal conversion charger (black)",
     "stock": 100,
     "price": 625,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/HOCO_0de220bd339c.png",
     "image": "images/HOCO_0de220bd339c.png",
     "id": "1535"
@@ -19101,7 +19101,7 @@
     "name": "CW52B CW52 Enjoy magnetic wireless fast charging (black)",
     "stock": 448,
     "price": 420,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_2f713b8f6af0.png",
     "image": "images/HOCO_2f713b8f6af0.png",
     "id": "1737"
@@ -19112,7 +19112,7 @@
     "name": "CW52W CW52 Enjoy magnetic wireless fast charging (white)",
     "stock": 497,
     "price": 420,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_2f713b8f6af0.png",
     "image": "images/HOCO_2f713b8f6af0.png",
     "id": "1738"
@@ -19530,7 +19530,7 @@
     "name": "GM71B GM71 Proficient mini folding wireless keyboard(russian version) (black)",
     "stock": 58,
     "price": 700,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_56666cedf363.jpg",
     "image": "images/HOCO_56666cedf363.jpg",
     "id": "1776"
@@ -19541,7 +19541,7 @@
     "name": "GA32B GA32 Dragon PS5 wireless gamepad (black)",
     "stock": 23,
     "price": 3300,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_3ae36d078991.png",
     "image": "images/HOCO_3ae36d078991.png",
     "id": "1777"
@@ -19552,7 +19552,7 @@
     "name": "GA31W GA31 Collection game box+two wireless gamepads set (white)",
     "stock": 100,
     "price": 1750,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_4138c0bc9985.jpg",
     "image": "images/HOCO_4138c0bc9985.jpg",
     "id": "1778"
@@ -19563,7 +19563,7 @@
     "name": "GA2B GA2 Unicorn multi-function wireless game controller (black)",
     "stock": 100,
     "price": 1100,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_aa257974a7de.png",
     "image": "images/HOCO_aa257974a7de.png",
     "id": "1779"
@@ -19596,7 +19596,7 @@
     "name": "GM70B GM70 Dragon 2.4G wireless mini keyboard(russian version) (black)",
     "stock": 57,
     "price": 600,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_153baf0afe23.png",
     "image": "images/HOCO_153baf0afe23.png",
     "id": "1782"
@@ -19750,7 +19750,7 @@
     "name": "GM29B GM29 Mysterious dual-mode silent wireless mouse (dark night black)",
     "stock": 100,
     "price": 420,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_ec6ad9a6abfe.png",
     "image": "images/HOCO_ec6ad9a6abfe.png",
     "id": "1796"
@@ -19761,7 +19761,7 @@
     "name": "GM29W GM29 Mysterious dual-mode silent wireless mouse (space white)",
     "stock": 100,
     "price": 420,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_ec6ad9a6abfe.png",
     "image": "images/HOCO_ec6ad9a6abfe.png",
     "id": "1797"
@@ -19772,7 +19772,7 @@
     "name": "GM29P GM29 Mysterious dual-mode silent wireless mouse (romantic purple)",
     "stock": 100,
     "price": 420,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_ec6ad9a6abfe.png",
     "image": "images/HOCO_ec6ad9a6abfe.png",
     "id": "1798"
@@ -19783,7 +19783,7 @@
     "name": "GM21BY GM21 Platinum 2.4G business wireless mouse (black yellow)",
     "stock": 100,
     "price": 280,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_5b49af85767e.png",
     "image": "images/HOCO_5b49af85767e.png",
     "id": "1799"
@@ -19794,7 +19794,7 @@
     "name": "GM21WG GM21 Platinum 2.4G business wireless mouse (white gray)",
     "stock": 100,
     "price": 280,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_5b49af85767e.png",
     "image": "images/HOCO_5b49af85767e.png",
     "id": "1800"
@@ -19816,7 +19816,7 @@
     "name": "GM15B GM15 Art dual-mode business wireless mouse (black)",
     "stock": 100,
     "price": 390,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_a68f92b9923b.png",
     "image": "images/HOCO_a68f92b9923b.png",
     "id": "1802"
@@ -19827,7 +19827,7 @@
     "name": "GM15W GM15 Art dual-mode business wireless mouse (white)",
     "stock": 100,
     "price": 390,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_a68f92b9923b.png",
     "image": "images/HOCO_a68f92b9923b.png",
     "id": "1803"
@@ -19838,7 +19838,7 @@
     "name": "GM14B GM14 Platinum 2.4G business wireless mouse (black)",
     "stock": 165,
     "price": 290,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_52ffbd08d992.png",
     "image": "images/HOCO_52ffbd08d992.png",
     "id": "1804"
@@ -19849,7 +19849,7 @@
     "name": "GM14W GM14 Platinum 2.4G business wireless mouse (white)",
     "stock": 132,
     "price": 290,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/HOCO_52ffbd08d992.png",
     "image": "images/HOCO_52ffbd08d992.png",
     "id": "1805"
@@ -26438,7 +26438,7 @@
     "name": "Momax 1-Folio M.IN.D optical wireless Al Mouse(MS02L2) (Gold)",
     "stock": 1,
     "price": 3260,
-    "cat": "gan",
+    "cat": "other",
     "img": "images/MOMAX_6b9184727a1e.png",
     "image": "images/MOMAX_6b9184727a1e.png",
     "id": "2404"
@@ -26779,7 +26779,7 @@
     "name": "Q.Mag Mount 5 15W magnetic wireless charging car mount Air Vent (CM25A) (Black)",
     "stock": 325,
     "price": 1750,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/MOMAX_a3483cf1a327.png",
     "image": "images/MOMAX_a3483cf1a327.png",
     "id": "2435"
@@ -26790,7 +26790,7 @@
     "name": "CM25BE Q.Mag Mount 5 15W magnetic wireless charging car mount Suction Cup (CM25B) (Black)",
     "stock": 3,
     "price": 2050,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/MOMAX_88b5a8511f76.png",
     "image": "images/MOMAX_88b5a8511f76.png",
     "id": "2436"
@@ -27142,7 +27142,7 @@
     "name": "UC17E MoVe 100W triple-port car charger (UC17) (Grey)",
     "stock": 105,
     "price": 1360,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/MOMAX_b340a94ffa26.png",
     "image": "images/MOMAX_b340a94ffa26.png",
     "id": "2468"
@@ -27153,7 +27153,7 @@
     "name": "UC18E Dual-Port USB with Type –C PD Fast Car Charger 30w (Grey)",
     "stock": 117,
     "price": 400,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/MOMAX_381394df5cd4.jpg",
     "image": "images/MOMAX_381394df5cd4.jpg",
     "id": "2469"
@@ -27164,7 +27164,7 @@
     "name": "UC15E 38W dual-port car charger (UC15) (Grey)",
     "stock": 20,
     "price": 665,
-    "cat": "cables",
+    "cat": "gan",
     "img": "images/MOMAX_74b3d86ad239.png",
     "image": "images/MOMAX_74b3d86ad239.png",
     "id": "2470"
@@ -27714,7 +27714,7 @@
     "name": "CM2401T MagEZ Car Mount Pro 2 Qi2",
     "stock": 52,
     "price": 3800,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/PITAKA_e79867360c9d.png",
     "image": "images/PITAKA_e79867360c9d.png",
     "id": "2520"
@@ -27725,7 +27725,7 @@
     "name": "CM2402n MagEZ Car Mount Pro 2 Qi2-normal",
     "stock": 153,
     "price": 3800,
-    "cat": "holders",
+    "cat": "gan",
     "img": "images/PITAKA_e79867360c9d.png",
     "image": "images/PITAKA_e79867360c9d.png",
     "id": "2521"
