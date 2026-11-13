@@ -5464,16 +5464,17 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
         
       </div>
 
-      <div class="cat-crumb" id="cat-crumb"></div>
-      <div class="ptiles" id="cat-tiles" style="margin-bottom:12px"></div>
-      <div class="chips" id="cat-chips"></div>
-
       <!-- QUICK LUXURY FILTER SCROLL -->
       <div class="catalog-search" id="catalog-search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
         <input type="search" id="catalog-search-input" placeholder="Поиск: iPhone 15, AirPods..." autocomplete="off" oninput="onCatalogSearch(this.value)">
         <button class="search-clear" type="button" onclick="clearCatalogSearch()" aria-label="Очистить">×</button>
       </div>
+
+      <div class="cat-crumb" id="cat-crumb"></div>
+      <div class="ptiles" id="cat-tiles" style="margin-bottom:12px"></div>
+      <div class="chips" id="cat-chips"></div>
+
       <div id="offline-catalog-banner" class="offline-catalog-banner" style="display:none;align-items:center;gap:8px;margin-bottom:10px;padding:10px 12px;border-radius:12px;background:#fff8eb;border:1px solid #f59e0b;color:#92400e;font-size:12px;font-weight:700;">
         <span>⚠️</span>
         <span>Связь с облаком недоступна — показаны данные из локального кэша</span>
@@ -6451,18 +6452,21 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       renderCatalogGrid();
     }
 
-    function onCatalogSearch(q) {
+    let _searchTimer = null;
+    function onCatalogSearch(q, immediate) {
       catalogQuery = String(q || "").trim().toLowerCase();
       shownCount = PAGE_SIZE;
       const wrap = document.getElementById("catalog-search");
       if (wrap) wrap.classList.toggle("has-value", !!catalogQuery);
-      renderCatalogGrid();
+      clearTimeout(_searchTimer);
+      if (immediate || !catalogQuery) renderCatalogGrid();
+      else _searchTimer = setTimeout(renderCatalogGrid, 200);
     }
 
     function clearCatalogSearch() {
       const inp = document.getElementById("catalog-search-input");
       if (inp) inp.value = "";
-      onCatalogSearch("");
+      onCatalogSearch("", true);
     }
 
     function filterBySearch(list) {
@@ -6479,10 +6483,10 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
 
       if (!catalogQuery) return res;
       return res.filter(p => {
-        const hay = [
+        const hay = p._hay || (p._hay = [
           p.base, p.article, p.unit, p.condition, p.shop,
           ...(p.vars || []).map(v => v.label + " " + v.name)
-        ].join(" ").toLowerCase();
+        ].join(" ").toLowerCase());
         return hay.includes(catalogQuery);
       });
     }
@@ -10058,7 +10062,7 @@ img[data-ld="1"]{opacity:1;animation:none;transition:opacity .45s ease}
   var io = ("IntersectionObserver" in window) && !RM ? new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} });
   },{rootMargin:"0px 0px -6% 0px",threshold:.05}) : null;
-  var SEL=".product-card,.brand-card,.ptile,.home-how-step,.hero-slide";
+  var SEL=".brand-card,.ptile,.home-how-step,.hero-slide";
   function reveal(root){
     if(!io) return;
     var list = root.matches && root.matches(SEL) ? [root] : [];
@@ -10247,5 +10251,16 @@ body::before{content:"";position:fixed;inset:-20vmax;z-index:-1;pointer-events:n
   if(hm){ new MutationObserver(hero).observe(hm,{childList:true}); }
 })();
 </script>
+<style id="perf-fix">
+/* ===== PERF: убираем всё, что перерисовывается на каждом кадре в каталоге ===== */
+.product-card, .product-card.card-enter { animation: none !important; will-change: auto !important; }
+.product-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+.product-card::after, .product-card::before { display: none !important; }
+.product-photo img, .ptile img { filter: none !important; }
+#catalog-grid > .product-card { content-visibility: auto; contain-intrinsic-size: auto 250px; }
+.ptile { content-visibility: auto; contain-intrinsic-size: auto 120px; }
+body::before { animation: none !important; }
+.tabbar { backdrop-filter: blur(12px) saturate(140%) !important; -webkit-backdrop-filter: blur(12px) saturate(140%) !important; }
+</style>
 </body>
 </html>
