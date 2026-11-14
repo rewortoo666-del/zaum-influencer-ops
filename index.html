@@ -6640,6 +6640,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       return out;
     }
     function itemModels(p) { return p._ms || (p._ms = phoneModels(normName(p.base))); }
+    function isLens(n) { return /lens|линз|camera|камер/i.test(n); }
     function otherDevice(n) {
       if (/samsung|galaxy/i.test(n)) return "Samsung Galaxy";
       if (/ipad/i.test(n)) return "iPad";
@@ -6660,11 +6661,13 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const c = CATS.find(x => x.id === currentCat);
       if (c && (c.brand || c.brands)) return { id: p.cat, label: catLabel(p.cat), sort: 1 };
       const n = normName(p.base);
-      if (p.cat === "glasses") {   /* стёкла: по брендам, линзы камеры — отдельной группой */
-        const br = String(p.brand || "Прочее").toUpperCase();
-        const lens = /lens|линз|camera|камер/i.test(n);
-        const bi = br === "SUPGLASS" ? 0 : br === "REMAX" ? 10 : 20;
-        return { id: br + (lens ? "|lens" : ""), label: br + (lens ? " · Линзы камеры" : " · Стёкла"), sort: bi + (lens ? 1 : 0) };
+      if (p.cat === "glasses") {   /* стёкла: выбираем модель, внутри — все бренды; линзы камеры — отдельно */
+        if (isLens(n)) return { id: "__lens", label: "📷 Линзы на камеру", sort: 1500 };
+        if (/плёнк|пленк|\bfilm\b|\bfsg/i.test(n)) return { id: "__film", label: "Плёнки", sort: 2500 };
+        if (/\bipad\b/i.test(n)) return { id: "iPad", label: "iPad", sort: 2000 };
+        if (/samsung|galaxy|\bsam\b/i.test(n)) return { id: "Samsung Galaxy", label: "Samsung Galaxy", sort: 2100 };
+        if (/watch|часы|\d{2}\s?mm\b/i.test(n)) return { id: "Умные часы", label: "Умные часы", sort: 2200 };
+        return { id: "Прочее", label: "Другие модели", sort: 3000 };
       }
       if (p.cat === "cases" || p.cat === "accessories") {
         const m = phoneModel(n);
@@ -6681,7 +6684,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const g = {};
       const cc = CATS.find(x => x.id === currentCat), brandCat = !!(cc && (cc.brand || cc.brands));
       listByCat(currentCat).forEach(p => {
-        const ms = (!brandCat && (p.cat === "cases" || p.cat === "accessories")) ? itemModels(p) : [];
+        const ms = (!brandCat && (p.cat === "cases" || p.cat === "accessories" || (p.cat === "glasses" && !isLens(normName(p.base))))) ? itemModels(p) : [];
         (ms.length ? ms : [subInfo(p)]).forEach(s =>
           (g[s.id] = g[s.id] || { id: s.id, label: s.label, sort: s.sort, items: [] }).items.push(p));
       });
@@ -6713,7 +6716,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const tiles = document.getElementById("cat-tiles"), grid = document.getElementById("catalog-grid"), crumb = document.getElementById("cat-crumb");
       if (!grid || !tiles || !crumb) return;
       const flat = !!catalogQuery || currentCatalogFilter !== "all";
-      const showTiles = (html, sub) => { renderSortBar(false); tiles.className = "ptiles" + (sub ? " sub" : ""); tiles.style.display = "grid"; tiles.innerHTML = html; grid.innerHTML = ""; lastList = []; updateMoreBtn(); };
+      const showTiles = (html, sub) => { renderSortBar(false); renderBrandBar(null); tiles.className = "ptiles" + (sub ? " sub" : ""); tiles.style.display = "grid"; tiles.innerHTML = html; grid.innerHTML = ""; lastList = []; updateMoreBtn(); };
 
       if (!flat && currentCat === "all") {                 /* уровень 1: категории */
         crumb.innerHTML = '<span class="cc-title">Выберите категорию <small>· товары откроются списком по ' + PAGE_SIZE + ' шт.</small></span>';
@@ -6728,7 +6731,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
         if (currentSub === null) {                         /* уровень 2: модели / бренды / типы */
           lastSubs = subs;
           const used = {};
-          crumb.innerHTML = '<span class="cc-title">' + catLabel(currentCat) + ' <small>· выберите ' + (currentCat === "cases" || currentCat === "accessories" ? "модель" : "раздел") + '</small></span>' +
+          crumb.innerHTML = '<span class="cc-title">' + catLabel(currentCat) + ' <small>· выберите ' + (currentCat === "cases" || currentCat === "glasses" || currentCat === "accessories" ? "модель" : "раздел") + '</small></span>' +
             '<button class="cc-btn" type="button" onclick="openSub(-1)">Все (' + listByCat(currentCat).length + ')</button>';
           showTiles(subs.map((g, i) => '<button class="ptile" type="button" onclick="openSub(' + i + ')">' + imgTag(coverImg(g.items, used)) +
             '<span class="ptile-shade"></span><span class="ptile-body"><b>' + coEsc(g.label) + '</b><i>' + g.items.length + ' поз.</i></span></button>').join(""), true);
@@ -6739,12 +6742,15 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       tiles.style.display = "none";
       renderSortBar(true);
       if (flat) {
+        renderBrandBar(null);
         lastList = sortList(filterBySearch(listByCat(currentCat)));
         crumb.innerHTML = '<span class="cc-title">Найдено: ' + lastList.length + '</span>';
       } else {
         const all = listByCat(currentCat);
         const g = subs.find(x => x.id === currentSub);
-        lastList = sortList(currentSub === "*" ? all : (g ? g.items : []));
+        const baseList = sortList(currentSub === "*" ? all : (g ? g.items : []));
+        renderBrandBar(baseList);
+        lastList = currentBrand ? baseList.filter(p => (p.brand || "Прочее") === currentBrand) : baseList;
         crumb.innerHTML = (subs.length > 1 ? '<button class="cc-back" type="button" onclick="backToSubs()">‹ ' + catLabel(currentCat) + '</button>' : '') +
           '<span class="cc-title">' + (currentSub === "*" ? "Все товары" : coEsc(g ? g.label : "")) + ' <small>· ' + lastList.length + ' поз.</small></span>';
       }
@@ -6766,13 +6772,27 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       updateMoreBtn();
     }
     function catalogTop() { const app = document.querySelector(".app-container"); if (app) app.scrollTo({ top: 0, behavior: "smooth" }); }
-    function openSub(i) { currentSub = i < 0 ? "*" : lastSubs[i].id; shownCount = PAGE_SIZE; renderCatalogGrid(); catalogTop(); }
-    function backToSubs() { currentSub = null; shownCount = PAGE_SIZE; renderCatalogGrid(); catalogTop(); }
+    let currentBrand = "", lastBrands = [];
+    function renderBrandBar(list) {
+      let el = document.getElementById("cat-brands");
+      if (!el) { el = document.createElement("div"); el.id = "cat-brands"; el.className = "cat-sort cat-brands"; const sb = document.getElementById("cat-sort"); sb.parentNode.insertBefore(el, sb); }
+      const cnt = {};
+      (list || []).forEach(p => { const b = p.brand || "Прочее"; cnt[b] = (cnt[b] || 0) + 1; });
+      lastBrands = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a]);
+      if (!list || lastBrands.length < 2) { el.style.display = "none"; el.innerHTML = ""; if (list) currentBrand = ""; return; }
+      if (currentBrand && !cnt[currentBrand]) currentBrand = "";
+      el.style.display = "flex";
+      el.innerHTML = '<button class="sort-chip' + (currentBrand ? "" : " on") + '" type="button" onclick="setBrand(-1)">Все бренды · ' + list.length + '</button>' +
+        lastBrands.map((b, i) => '<button class="sort-chip' + (b === currentBrand ? " on" : "") + '" type="button" onclick="setBrand(' + i + ')">' + coEsc(b) + ' · ' + cnt[b] + '</button>').join("");
+    }
+    function setBrand(i) { currentBrand = i < 0 ? "" : lastBrands[i]; shownCount = PAGE_SIZE; renderCatalogGrid(); }
+    function openSub(i) { currentBrand = ""; currentSub = i < 0 ? "*" : lastSubs[i].id; shownCount = PAGE_SIZE; renderCatalogGrid(); catalogTop(); }
+    function backToSubs() { currentBrand = ""; currentSub = null; shownCount = PAGE_SIZE; renderCatalogGrid(); catalogTop(); }
 
     function openModelSearch(q) { openCatalog("cases"); var i = document.getElementById("catalog-search-input"); if (i) { i.value = q; onCatalogSearch(q); } }
     function openCatalog(cat, keepSub) {
       const next = cat || "all";
-      if (!keepSub || next !== currentCat) { currentSub = null; shownCount = PAGE_SIZE; }
+      if (!keepSub || next !== currentCat) { currentSub = null; currentBrand = ""; shownCount = PAGE_SIZE; }
       currentCat = next;
       showScreen("catalog");
       document.getElementById("cat-chips").innerHTML = CATS.filter(c => !c.hidden || c.id === currentCat).map(c =>
@@ -7350,6 +7370,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       heroEl.src = imgs[0];
       heroEl.title = "Нажмите, чтобы рассмотреть фото";
       heroEl.onclick = function () { openLightbox(window.__pmImgs, window.__pmIdx || 0); };
+      heroEl.parentNode.classList.toggle("no-thumbs", imgs.length < 2);
       document.getElementById("pm-thumbs").innerHTML = imgs.length < 2 ? "" : imgs.map((src,i)=>
         `<img class="${i===0?"on":""}" data-i="${i}" src="${src}" onclick="pmPickImg(this)">`
       ).join("");
@@ -10424,6 +10445,8 @@ html body .product-card .stock-pill { font-size: 10.5px !important; }
 .pc-color span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 /* фото в карточке товара: можно нажать и рассмотреть */
 #pm-thumbs:empty { display: none; }
+.pm-gallery.no-thumbs { grid-template-columns: 1fr !important; }
+.pm-gallery.no-thumbs .pm-hero { grid-column: 1 / -1; }
 .pm-gallery { position: relative; }
 .pm-hero { cursor: zoom-in; }
 .pm-gallery::after { content: "🔍 Нажмите, чтобы увеличить"; position: absolute; right: 8px; bottom: 8px; padding: 4px 9px; border-radius: 99px; font-size: 10px; font-weight: 800; color: #fff; background: rgba(8,20,48,.72); backdrop-filter: blur(6px); pointer-events: none; }
