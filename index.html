@@ -5727,7 +5727,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     </div>
 
     <!-- MAIN ACTION BUTTONS -->
-    <button class="take" type="button" onclick="confirmBox()">КУПИТЬ / БРОНЬ</button>
+    <button class="take" type="button" onclick="confirmBox()">КУПИТЬ</button>
     
 
     <!-- ПОНИЖЕ: УДОБНАЯ КНОПКА ЗАКРЫТИЯ КАРТОЧКИ ПОД ОСНОВНЫМИ ДЕЙСТВИЯМИ -->
@@ -5739,10 +5739,6 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     <!-- 1. APPLE GSX HARDWARE VERIFIED BADGE -->
     <div class="pm-gsx-card">
       <div class="pm-gsx-header">
-        <div class="pm-gsx-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-          <span>Проверено складом П42/44</span>
-        </div>
         <span class="pm-gsx-status">✓ 100% Оригинал</span>
       </div>
       <div class="pm-gsx-grid">
@@ -5813,7 +5809,7 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
         <div class="vol-now"><b id="pm-live">0 ₽</b><span id="pm-live-sub">1 шт</span></div>
       </div>
       <div class="timer">⏳ Бронь фиксируется до оплаты: <span id="pm-timer">01:59:54</span></div>
-      <button class="take" type="button" onclick="confirmBox()" style="margin-top:10px;height:42px;font-size:13px">🛒 КУПИТЬ / БРОНЬ</button>
+      <button class="take" type="button" onclick="confirmBox()" style="margin-top:10px;height:42px;font-size:13px">🛒 КУПИТЬ</button>
       <button class="pm-post-btn" type="button" onclick="copyResalePost()">📋 Пост для Авито</button>
     </div>
 
@@ -6390,6 +6386,67 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
 
     function cardBadge(p) { return ""; }
 
+
+    /* ===== v17: цвет из названия, заголовок без «Стандарт», порядок фото ===== */
+    const COLOR_HEX = { black:"#15171c", white:"#f4f6fa", blue:"#2b7cff", navy:"#16306e", green:"#2fa05a", red:"#e03a3a", pink:"#ff8fb8", purple:"#8a5cff", violet:"#8a5cff", lilac:"#c8a8ff",
+      silver:"#c9cfd8", gold:"#d9b46a", gray:"#8a93a0", grey:"#8a93a0", clear:"#dfe9f5", transparent:"#dfe9f5", orange:"#ff8a1f", yellow:"#ffd24a", brown:"#8a5a3a", beige:"#e0cfae",
+      coffee:"#6f4a35", mint:"#8fe3c8", teal:"#1aa6a6", lavender:"#b9a7f0", cherry:"#b01634", burgundy:"#7a1530", titanium:"#a9a49a", natural:"#cdbfa6", desert:"#c9a77a", sierra:"#9bb7d4",
+      midnight:"#101a33", starlight:"#efe6d6", olive:"#6b7a3a", khaki:"#a39a6a", peach:"#ffb59a", rose:"#e8a0b4", sand:"#d8c3a0", cream:"#f1e8d4", wine:"#6e1a33",
+      "черный":"#15171c", "чёрный":"#15171c", "белый":"#f4f6fa", "синий":"#2b7cff", "голубой":"#6ec3ff", "зеленый":"#2fa05a", "зелёный":"#2fa05a", "красный":"#e03a3a", "розовый":"#ff8fb8",
+      "фиолетовый":"#8a5cff", "оранжевый":"#ff8a1f", "серебристый":"#c9cfd8", "серебряный":"#c9cfd8", "золотой":"#d9b46a", "серый":"#8a93a0", "прозрачный":"#dfe9f5",
+      "коричневый":"#8a5a3a", "желтый":"#ffd24a", "жёлтый":"#ffd24a", "бежевый":"#e0cfae", "бордовый":"#7a1530", "лиловый":"#c8a8ff" };
+    const COLOR_MODS = /^(deep|dark|light|sky|military|cosmic|desert|natural|rose|space|matte|army|ocean|forest|olive|dusty|cloud|sage|ice|hot|neon|sunset|тёмно|темно|светло|ярко)[-]?$/i;
+    function colorWord(w) { w = String(w).toLowerCase().replace(/^(тёмно|темно|светло|ярко)-?/, ""); return Object.prototype.hasOwnProperty.call(COLOR_HEX, w) ? w : ""; }
+    function colorTokens(str) {
+      var parts = String(str).trim().split(/[\s\/,&]+/).filter(Boolean), real = 0;
+      if (!parts.length || parts.length > 4) return 0;
+      for (var i = 0; i < parts.length; i++) {
+        if (colorWord(parts[i])) real++;
+        else if (!COLOR_MODS.test(parts[i])) return 0;
+      }
+      return real;
+    }
+    function extractColor(name) {
+      var s = String(name || "").trim(), m = /\(([^()]*)\)\s*$/.exec(s);
+      if (m && colorTokens(m[1])) return { color: m[1].trim(), title: s.slice(0, m.index).trim() };
+      var words = s.split(/\s+/), take = 0;
+      while (take < Math.min(3, words.length - 1)) {
+        var cand = words.slice(words.length - take - 1).join(" ");
+        if (colorTokens(cand)) take++; else if (colorTokens(words[words.length - take - 1]) || COLOR_MODS.test(words[words.length - take - 1])) take++; else break;
+      }
+      while (take > 0 && !colorTokens(words.slice(words.length - take).join(" "))) take--;
+      if (!take) return null;
+      return { color: words.slice(words.length - take).join(" "), title: words.slice(0, words.length - take).join(" ").replace(/[\s(,\-–]+$/, "") };
+    }
+    function colorHex(c) {
+      var parts = String(c).toLowerCase().split(/[\s\/,&]+/);
+      for (var i = parts.length - 1; i >= 0; i--) { var w = colorWord(parts[i]); if (w) return COLOR_HEX[w]; }
+      return "#9fb3cf";
+    }
+    function colorLineHTML(c) {
+      if (!c) return "";
+      return '<div class="pc-color js-color"><i style="background:' + colorHex(c) + '"></i><span>' + coEsc(c) + "</span></div>";
+    }
+    function variantSuffix(p, v) { return (p.single || !v || v.name === "std" || /^стандарт$/i.test(v.label || "")) ? "" : " " + v.label; }
+    function fullTitle(p, v) { return p.base + variantSuffix(p, v) + (p.article ? " " + p.article : ""); }
+    function cardTitleInfo(p, v) {
+      var t = fullTitle(p, v), c = extractColor(t);
+      return c ? { title: c.title, color: c.color } : { title: t, color: "" };
+    }
+    /* фото: сначала в упаковке, «голое» стекло — в конец; дубликаты убираем */
+    function imgScore(src) {
+      var f = String(src).toLowerCase();
+      if (/pack|box|упак|retail|blister|бокс/.test(f)) return -2;
+      if (/bare|naked|raw|голое|glass_only|nopack/.test(f)) return 2;
+      return 0;
+    }
+    function orderedImages(p) {
+      var arr = (Array.isArray(p.images) && p.images.length ? p.images : [p.img]).filter(Boolean), seen = {}, out = [];
+      arr.forEach(function (x, i) { if (!seen[x]) { seen[x] = 1; out.push({ x: x, i: i }); } });
+      out.sort(function (a, b) { return imgScore(a.x) - imgScore(b.x) || a.i - b.i; });
+      return out.map(function (o) { return o.x; });
+    }
+
     function cardHTML(p, animIndex) {
       const liked = fav.includes(p.id);
       const idx = p.chosen || 0;
@@ -6397,7 +6454,9 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const vars = (p.single || p.vars.length <= 1) ? "" : p.vars.map((v, i) => `<button class="var ${i === idx ? "on" : ""}" type="button" onclick="event.stopPropagation();pickVar(this,'${p.id}',${i})">${v.name}</button>`).join("");
       const priceNow = displayPrice(v0.price);
       const unitText = p.unit || (p.condition || "Оригинал");
-      const title = (p.single ? p.base : (p.base + " " + v0.label)) + (p.article ? " " + p.article : "");
+      const showUnit = !/Новый\s*•\s*Пломба\s*•\s*ТЯК/i.test(unitText);   /* дублирующая подпись убрана */
+      const ti = cardTitleInfo(p, v0);
+      const title = ti.title;
       const showOld = String(p.id).length % 3 === 0;
       const oldPrice = showOld ? Math.round(priceNow * 1.08) : 0;
       const delay = typeof animIndex === "number" ? Math.min(animIndex * 45, 360) : 0;
@@ -6413,16 +6472,12 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
           
         </div>
         <h4 class="js-title">${title}</h4>
+        ${colorLineHTML(ti.color)}
         <div class="price js-price">${money(priceNow)}${oldPrice ? `<span class="pc-old">${money(oldPrice)}</span>` : ""}</div>
-        <div class="unit js-unit">${unitText}</div>
+        ${showUnit ? `<div class="unit js-unit">${unitText}</div>` : ""}
         ${stockHtml}
         ${vars ? `<div class="vars">${vars}</div>` : ""}
         <div class="card-actions" onclick="event.stopPropagation()">
-          <div class="qa">
-            <button class="qa-b" type="button" aria-label="Меньше" onclick="qaStep('${p.id}',-1)">−</button>
-            <input class="qty-input" id="qa-${p.id}" type="number" inputmode="numeric" min="1" step="1" value="1" aria-label="Количество" onfocus="this.select()">
-            <button class="qa-b" type="button" aria-label="Больше" onclick="qaStep('${p.id}',1)">+</button>
-          </div>
           <button class="take" type="button" ${st.qty <= 0 ? "disabled" : ""} onclick="quickAdd('${p.id}')">${st.qty <= 0 ? "НЕТ В НАЛИЧИИ" : "В корзину"}</button>
         </div>
       </article>`;
@@ -6435,7 +6490,11 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const card = document.getElementById("card-" + id);
       el.parentElement.querySelectorAll(".var").forEach(n => n.classList.remove("on"));
       el.classList.add("on");
-      card.querySelector(".js-title").textContent = p.base + " " + v.label;
+      var ti2 = cardTitleInfo(p, v);
+      card.querySelector(".js-title").textContent = ti2.title;
+      var cl = card.querySelector(".js-color");
+      if (cl) cl.remove();
+      if (ti2.color) card.querySelector(".js-title").insertAdjacentHTML("afterend", colorLineHTML(ti2.color));
       card.querySelector(".js-price").textContent = money(displayPrice(v.price));
       // unit stays the same for retail
       p.chosen = index;
@@ -6497,7 +6556,10 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
 
       if (!catalogQuery) return res;
       const qRe = modelQueryRe(catalogQuery);
+      const qm = qRe ? phoneModels("iPhone " + catalogQuery) : [];
+      const qLabel = qm.length === 1 ? qm[0].label : "";
       return res.filter(p => {
+        if (qLabel) { const ms = itemModels(p); if (ms.length) return ms.some(m => m.label === qLabel); }
         const hay = p._hay || (p._hay = [
           p.base, p.article, p.unit, p.condition, p.shop,
           ...(p.vars || []).map(v => v.label + " " + v.name)
@@ -6537,6 +6599,47 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const label = "iPhone " + n + (t === "e" ? "e" : t ? " " + t.replace(/\b\w/g, c => c.toUpperCase()) : "");
       return { id: label, label: label, sort: (100 - num) * 10 + Math.max(0, MODEL_RANK.indexOf(t)) };
     }
+    /* Все модели из названия: «IP 17/18 Pro Max» → iPhone 17 Pro Max И iPhone 18 Pro Max */
+    const PM_PREFIX = /\b(?:i\s?phone|iph|ip|i\s?p)\.?\s*(?=(?:1[0-8]|[6-9]|XS|XR|X|SE)(?:\s*(?:pro|plus|air|mini|e)(?![a-z0-9])|(?![a-z0-9]|[.,]\d)))/gi;
+    const PM_TOK = /\s*(1[0-8]|[6-9]|XS|XR|X|SE)\s*(pro\s*max|promax|pro|plus|air|mini|e)?(?![a-z0-9]|[.,]\d)/iy;
+    const PM_SEP = /\s*[\/,&]\s*/y;
+    const PM_LIST2 = /\b((?:1[0-8]\s*\/\s*)*1[1-8])\s*(pro\s*max|promax|pro|plus|air)(?![a-z0-9])/i;
+    function pmNum(n) { n = String(n).toUpperCase(); return n === "XS" ? 10.5 : n === "XR" ? 10.6 : n === "X" ? 10 : n === "SE" ? 0 : Number(n); }
+    function pmInfo(n, t) {
+      n = String(n).toUpperCase(); t = (t || "").toLowerCase().replace(/\s+/g, " ");
+      if (t === "promax") t = "pro max";
+      const label = "iPhone " + n + (t === "e" ? "e" : t ? " " + t.replace(/\b\w/g, c => c.toUpperCase()) : "");
+      return { id: label, label: label, sort: (100 - pmNum(n)) * 10 + Math.max(0, MODEL_RANK.indexOf(t)) };
+    }
+    function phoneModels(name) {
+      const out = [], seen = {};
+      function add(toks) {
+        for (let i = toks.length - 2; i >= 0; i--)           /* «17/18 Pro Max»: суффикс относится ко всем номерам слева */
+          if (!toks[i][1] && toks[i + 1][1] && pmNum(toks[i][0]) < pmNum(toks[i + 1][0])) toks[i][1] = toks[i + 1][1];
+        toks.forEach(t => { const m = pmInfo(t[0], t[1]); if (!seen[m.id]) { seen[m.id] = 1; out.push(m); } });
+      }
+      PM_PREFIX.lastIndex = 0;
+      let pm;
+      while ((pm = PM_PREFIX.exec(name))) {
+        let pos = pm.index + pm[0].length; const toks = [];
+        for (;;) {
+          PM_TOK.lastIndex = pos; const t = PM_TOK.exec(name);
+          if (!t) break;
+          toks.push([t[1], (t[2] || "")]); pos = PM_TOK.lastIndex;
+          PM_SEP.lastIndex = pos; const sp = PM_SEP.exec(name);
+          if (!sp) break;
+          pos = PM_SEP.lastIndex;
+        }
+        if (toks.length) add(toks);
+        PM_PREFIX.lastIndex = Math.max(PM_PREFIX.lastIndex, pm.index + 1);
+      }
+      if (!out.length) {
+        const m = PM_LIST2.exec(name);
+        if (m) add(m[1].split(/\s*\/\s*/).map(n => [n, m[2]]));
+      }
+      return out;
+    }
+    function itemModels(p) { return p._ms || (p._ms = phoneModels(normName(p.base))); }
     function otherDevice(n) {
       if (/samsung|galaxy/i.test(n)) return "Samsung Galaxy";
       if (/ipad/i.test(n)) return "iPad";
@@ -6576,9 +6679,11 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
     }
     function buildSubs() {
       const g = {};
+      const cc = CATS.find(x => x.id === currentCat), brandCat = !!(cc && (cc.brand || cc.brands));
       listByCat(currentCat).forEach(p => {
-        const s = subInfo(p);
-        (g[s.id] = g[s.id] || { id: s.id, label: s.label, sort: s.sort, items: [] }).items.push(p);
+        const ms = (!brandCat && (p.cat === "cases" || p.cat === "accessories")) ? itemModels(p) : [];
+        (ms.length ? ms : [subInfo(p)]).forEach(s =>
+          (g[s.id] = g[s.id] || { id: s.id, label: s.label, sort: s.sort, items: [] }).items.push(p));
       });
       return Object.values(g).sort((a, b) => a.sort - b.sort || a.label.localeCompare(b.label, "ru"));
     }
@@ -7239,17 +7344,22 @@ textarea.co-input { height: auto; min-height: 58px; padding: 12px; resize: none;
       const disp = displayPrice(v.price);
       const old = Math.round(disp / 0.85);
       const sale = Math.round((1 - v.price / old) * 100);
-      const imgs = p.images || [p.img, p.img, p.img];
-      document.getElementById("pm-hero").src = imgs[0];
-      document.getElementById("pm-thumbs").innerHTML = imgs.map((src,i)=>
-        `<img class="${i===0?"on":""}" src="${src}" onclick="document.getElementById('pm-hero').src=this.src;this.parentElement.querySelectorAll('img').forEach(n=>n.classList.remove('on'));this.classList.add('on')">`
+      const imgs = orderedImages(p);
+      window.__pmImgs = imgs; window.__pmIdx = 0;
+      const heroEl = document.getElementById("pm-hero");
+      heroEl.src = imgs[0];
+      heroEl.title = "Нажмите, чтобы рассмотреть фото";
+      heroEl.onclick = function () { openLightbox(window.__pmImgs, window.__pmIdx || 0); };
+      document.getElementById("pm-thumbs").innerHTML = imgs.length < 2 ? "" : imgs.map((src,i)=>
+        `<img class="${i===0?"on":""}" data-i="${i}" src="${src}" onclick="pmPickImg(this)">`
       ).join("");
-      document.getElementById("pm-title").textContent = (p.single ? p.base : (p.base + " " + v.label)) + (p.article ? " " + p.article : "");
+      document.getElementById("pm-title").textContent = fullTitle(p, v);
       document.getElementById("pm-rate").innerHTML = "";
       document.getElementById("pm-price").textContent = money(displayPrice(v.price));
       document.getElementById("pm-old").textContent = "";
       
-      document.getElementById("pm-unit").textContent = p.unit || (p.condition || "Оригинал");
+      (function () { var u = p.unit || (p.condition || "Оригинал"), el = document.getElementById("pm-unit");
+        el.textContent = /Новый\s*•\s*Пломба\s*•\s*ТЯК/i.test(u) ? "" : u; el.style.display = el.textContent ? "" : "none"; })();
       document.getElementById("pm-specs").innerHTML = '<div class="pm-specs-title">Характеристики и комплектация</div>' + [["Бренд", p.brand || "—"], ["Артикул", p.code || "—"], ["Категория", catName(p.cat)], ["Наличие", getStockInfo(p.id).label], ["Гарантия", p.warranty || "по запросу"]].map(function(r){ return '<div class="pm-spec-row"><span>' + r[0] + '</span><b>' + r[1] + '</b></div>'; }).join('');
       try {
         var st = getStockInfo(p.id);
@@ -10296,5 +10406,157 @@ body::before { animation: none !important; }
 .catalog-search input[type=search]{-webkit-appearance:none;appearance:none;border:0!important;box-shadow:none!important;background:transparent!important}
 .catalog-search input[type=search]::-webkit-search-cancel-button,.catalog-search input[type=search]::-webkit-search-decoration{-webkit-appearance:none;display:none}
 </style>
+
+<style id="v17-ui">
+/* ===== v17: 2 колонки, крупное фото, цвет ===== */
+html body .grid, html body #catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+html body .grid > .product-card, html body .product-card { padding: 9px !important; }
+html body .product-card .product-photo, html body .product-photo { height: 176px !important; }
+html body .product-photo img { width: 100%; height: 100%; object-fit: contain !important; }
+html body .product-card h4 { font-size: 12.5px !important; line-height: 1.28 !important; min-height: 0 !important; -webkit-line-clamp: 3 !important; margin-top: 8px; }
+html body .product-card .price { font-size: 17px !important; margin-top: 6px; }
+html body .product-card .price .pc-old { font-size: 10.5px !important; }
+html body .product-card .take { height: 40px !important; font-size: 12.5px !important; letter-spacing: .01em; }
+html body .product-card .card-actions { margin-top: 8px !important; }
+html body .product-card .stock-pill { font-size: 10.5px !important; }
+.pc-color { display: flex; align-items: center; gap: 6px; margin-top: 5px; font-size: 11.5px; font-weight: 800; color: #2a3f60; line-height: 1.2; }
+.pc-color i { flex: 0 0 auto; width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid rgba(15,40,90,.28); box-shadow: inset 0 0 0 1px rgba(255,255,255,.5); }
+.pc-color span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* фото в карточке товара: можно нажать и рассмотреть */
+#pm-thumbs:empty { display: none; }
+.pm-gallery { position: relative; }
+.pm-hero { cursor: zoom-in; }
+.pm-gallery::after { content: "🔍 Нажмите, чтобы увеличить"; position: absolute; right: 8px; bottom: 8px; padding: 4px 9px; border-radius: 99px; font-size: 10px; font-weight: 800; color: #fff; background: rgba(8,20,48,.72); backdrop-filter: blur(6px); pointer-events: none; }
+/* лайтбокс */
+#lb { position: fixed; inset: 0; z-index: 10000; background: rgba(2,6,16,.98); display: none; flex-direction: column; touch-action: none; user-select: none; -webkit-user-select: none; }
+#lb.on { display: flex; }
+#lb .lb-top { display: flex; align-items: center; justify-content: space-between; padding: calc(10px + env(safe-area-inset-top,0px)) 14px 8px; color: #cfe0ff; font-size: 13px; font-weight: 800; position: relative; z-index: 3; }
+#lb button { border: 0; font-family: inherit; cursor: pointer; }
+#lb .lb-x { width: 40px; height: 40px; border-radius: 50%; font-size: 18px; background: rgba(255,255,255,.14); color: #fff; }
+#lb .lb-stage { position: relative; flex: 1; overflow: hidden; display: flex; align-items: center; justify-content: center; touch-action: none; cursor: grab; }
+#lb .lb-stage.drag { cursor: grabbing; }
+#lb img { max-width: 100%; max-height: 100%; object-fit: contain; transform-origin: 50% 50%; will-change: transform; pointer-events: none; -webkit-user-drag: none; background: #fff; border-radius: 6px; }
+#lb .lb-bar { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 14px calc(14px + env(safe-area-inset-bottom,0px)); position: relative; z-index: 3; }
+#lb .lb-bar button { min-width: 44px; height: 44px; padding: 0 14px; border-radius: 14px; font-size: 20px; font-weight: 800; color: #fff; background: rgba(255,255,255,.14); }
+#lb .lb-bar span { min-width: 56px; text-align: center; color: #cfe0ff; font-size: 13px; font-weight: 800; }
+#lb .lb-nav { position: absolute; top: 50%; width: 42px; height: 64px; margin-top: -32px; z-index: 3; border-radius: 12px; font-size: 30px; color: #fff; background: rgba(255,255,255,.14); }
+#lb .lb-nav.prev { left: 8px; } #lb .lb-nav.next { right: 8px; }
+#lb.single .lb-nav { display: none; }
+</style>
+
+<div id="lb" aria-hidden="true">
+  <div class="lb-top"><span id="lb-count"></span><button class="lb-x" type="button" id="lb-close" aria-label="Закрыть">✕</button></div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt="" draggable="false"></div>
+  <button class="lb-nav prev" type="button" id="lb-prev" aria-label="Назад">‹</button>
+  <button class="lb-nav next" type="button" id="lb-next" aria-label="Вперёд">›</button>
+  <div class="lb-bar"><button type="button" id="lb-minus" aria-label="Уменьшить">−</button><span id="lb-zoom">100%</span><button type="button" id="lb-plus" aria-label="Увеличить">+</button><button type="button" id="lb-reset" aria-label="Сбросить">⤢</button></div>
+</div>
+
+<script id="v17-lightbox">
+/* ===== Просмотр фото: щипок / колесо / двойной тап / перетаскивание / стрелки ===== */
+(function () {
+  var lb = document.getElementById("lb"), stage = document.getElementById("lb-stage"), img = document.getElementById("lb-img");
+  var st = { list: [], i: 0, k: 1, x: 0, y: 0 }, ptrs = {}, base = { w: 0, h: 0 }, pinch0 = null, pan0 = null, tapT = 0, tapX = 0, tapY = 0, swipe = null;
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+  function measure() { var r = img.getBoundingClientRect(), k = st.k; base.w = r.width / k; base.h = r.height / k; }
+  function limits() {
+    var sw = stage.clientWidth, sh = stage.clientHeight;
+    return { x: Math.max(0, (base.w * st.k - sw) / 2), y: Math.max(0, (base.h * st.k - sh) / 2) };
+  }
+  function apply(soft) {
+    var L = limits();
+    if (!soft) { st.x = clamp(st.x, -L.x, L.x); st.y = clamp(st.y, -L.y, L.y); }
+    img.style.transform = "translate(" + st.x.toFixed(1) + "px," + st.y.toFixed(1) + "px) scale(" + st.k.toFixed(3) + ")";
+    document.getElementById("lb-zoom").textContent = Math.round(st.k * 100) + "%";
+  }
+  function zoomAt(nk, cx, cy) {            /* cx,cy — точка в координатах сцены от центра */
+    nk = clamp(nk, 1, 8);
+    var f = nk / st.k;
+    st.x = cx - (cx - st.x) * f; st.y = cy - (cy - st.y) * f; st.k = nk;
+    if (nk === 1) { st.x = 0; st.y = 0; }
+    apply();
+  }
+  function centerPt(cx, cy) { var r = stage.getBoundingClientRect(); return [cx - r.left - r.width / 2, cy - r.top - r.height / 2]; }
+  function show(i) {
+    st.i = (i + st.list.length) % st.list.length; st.k = 1; st.x = 0; st.y = 0;
+    img.onload = function () { measure(); apply(); };
+    img.src = st.list[st.i]; img.style.transform = "";
+    document.getElementById("lb-count").textContent = st.list.length > 1 ? (st.i + 1) + " / " + st.list.length : "";
+    lb.classList.toggle("single", st.list.length < 2);
+    if (img.complete) { measure(); apply(); }
+    apply();
+  }
+  window.openLightbox = function (list, idx) {
+    if (!list || !list.length) return;
+    st.list = list.slice(); lb.classList.add("on"); lb.setAttribute("aria-hidden", "false"); show(idx || 0);
+  };
+  function close() { lb.classList.remove("on"); lb.setAttribute("aria-hidden", "true"); img.removeAttribute("src"); ptrs = {}; pinch0 = pan0 = null; }
+  window.pmPickImg = function (el) {
+    var i = Number(el.getAttribute("data-i")) || 0; window.__pmIdx = i;
+    document.getElementById("pm-hero").src = el.src;
+    el.parentElement.querySelectorAll("img").forEach(function (n) { n.classList.remove("on"); }); el.classList.add("on");
+  };
+  document.getElementById("lb-close").onclick = close;
+  document.getElementById("lb-prev").onclick = function () { show(st.i - 1); };
+  document.getElementById("lb-next").onclick = function () { show(st.i + 1); };
+  document.getElementById("lb-plus").onclick = function () { zoomAt(st.k * 1.5, 0, 0); };
+  document.getElementById("lb-minus").onclick = function () { zoomAt(st.k / 1.5, 0, 0); };
+  document.getElementById("lb-reset").onclick = function () { zoomAt(1, 0, 0); };
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("on")) return;
+    if (e.key === "Escape") close(); else if (e.key === "ArrowLeft") show(st.i - 1); else if (e.key === "ArrowRight") show(st.i + 1);
+    else if (e.key === "+" || e.key === "=") zoomAt(st.k * 1.5, 0, 0); else if (e.key === "-") zoomAt(st.k / 1.5, 0, 0);
+  });
+  stage.addEventListener("wheel", function (e) {
+    e.preventDefault(); var c = centerPt(e.clientX, e.clientY); zoomAt(st.k * (e.deltaY < 0 ? 1.18 : 1 / 1.18), c[0], c[1]);
+  }, { passive: false });
+  stage.addEventListener("pointerdown", function (e) {
+    stage.setPointerCapture(e.pointerId); ptrs[e.pointerId] = { x: e.clientX, y: e.clientY };
+    var ids = Object.keys(ptrs);
+    if (ids.length === 2) {
+      var a = ptrs[ids[0]], b = ptrs[ids[1]];
+      pinch0 = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, k: st.k }; pan0 = null; swipe = null;
+    } else {
+      pan0 = { x: e.clientX, y: e.clientY, sx: st.x, sy: st.y }; swipe = { x: e.clientX, y: e.clientY, t: Date.now() };
+      stage.classList.add("drag");
+    }
+  });
+  stage.addEventListener("pointermove", function (e) {
+    if (!ptrs[e.pointerId]) return;
+    ptrs[e.pointerId] = { x: e.clientX, y: e.clientY };
+    var ids = Object.keys(ptrs);
+    if (ids.length >= 2 && pinch0) {
+      var a = ptrs[ids[0]], b = ptrs[ids[1]], d = Math.hypot(a.x - b.x, a.y - b.y) || 1, c = centerPt((a.x + b.x) / 2, (a.y + b.y) / 2);
+      zoomAt(pinch0.k * d / pinch0.d, c[0], c[1]);
+    } else if (pan0 && st.k > 1) {
+      st.x = pan0.sx + (e.clientX - pan0.x); st.y = pan0.sy + (e.clientY - pan0.y); apply();
+    }
+  });
+  function up(e) {
+    var had = ptrs[e.pointerId]; delete ptrs[e.pointerId];
+    if (Object.keys(ptrs).length < 2) pinch0 = null;
+    if (!Object.keys(ptrs).length) {
+      stage.classList.remove("drag");
+      if (had && swipe) {
+        var dx = e.clientX - swipe.x, dy = e.clientY - swipe.y, moved = Math.hypot(dx, dy);
+        if (st.k <= 1.02 && moved > 60 && Math.abs(dx) > Math.abs(dy) * 1.2 && st.list.length > 1) show(st.i + (dx < 0 ? 1 : -1));
+        else if (st.k <= 1.02 && dy > 110 && Math.abs(dy) > Math.abs(dx) * 1.2) close();
+        else if (moved < 10) {                                    /* тап / двойной тап */
+          var now = Date.now();
+          if (now - tapT < 320 && Math.hypot(e.clientX - tapX, e.clientY - tapY) < 30) {
+            var c = centerPt(e.clientX, e.clientY); zoomAt(st.k > 1.05 ? 1 : 2.6, c[0], c[1]); tapT = 0;
+          } else { tapT = now; tapX = e.clientX; tapY = e.clientY; }
+        }
+      }
+      swipe = null; pan0 = null;
+    } else if (Object.keys(ptrs).length === 1) {
+      var id = Object.keys(ptrs)[0]; pan0 = { x: ptrs[id].x, y: ptrs[id].y, sx: st.x, sy: st.y }; swipe = null;
+    }
+  }
+  stage.addEventListener("pointerup", up);
+  stage.addEventListener("pointercancel", up);
+  window.addEventListener("resize", function () { if (lb.classList.contains("on")) { measure(); apply(); } });
+})();
+</script>
 </body>
 </html>
